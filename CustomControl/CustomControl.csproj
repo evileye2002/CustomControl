@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7C8B039A-BAAD-4C41-A8AD-17623A56F983}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>CustomControl</RootNamespace>
     <AssemblyName>CustomControl</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
@@ -84,6 +84,7 @@
     <Compile Include="CFlatForm.Designer.cs">
       <DependentUpon>CFlatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CMessageBox.cs" />
     <Compile Include="FormMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>

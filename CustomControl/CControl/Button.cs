@@ -13,7 +13,7 @@ namespace CustomControl
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
         private Color hoverColor = Color.Red;
-        private Color leaveColor = Color.PaleVioletRed;
+        private Color leaveColor = Color.MediumSlateBlue;
 
         //Properties
         [Category("CButton Setting")]
@@ -52,8 +52,12 @@ namespace CustomControl
         [Category("CButton Setting")]
         public Color BackgroundColor
         {
-            get { return this.BackColor; }
-            set { this.BackColor = value; }
+            get { return BackColor; }
+            set
+            {
+                BackColor = value;
+                LeaveColor = BackColor;
+            }
         }
 
         [Category("CButton Setting")]
@@ -74,7 +78,10 @@ namespace CustomControl
         public Color LeaveColor
         {
             get { return leaveColor; }
-            set { leaveColor = value; }
+            set
+            {
+                leaveColor = value;
+            }
         }
 
         //Constructor

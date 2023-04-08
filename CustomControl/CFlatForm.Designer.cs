@@ -35,7 +35,7 @@
             // cDragAblePanel1
             // 
             this.cDragAblePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cDragAblePanel1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.cDragAblePanel1.FillColor = System.Drawing.Color.MediumPurple;
             this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.SeaGreen;
             this.cDragAblePanel1.Location = new System.Drawing.Point(0, 0);
             this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);

@@ -64,10 +64,10 @@
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.HoverColor = System.Drawing.Color.SlateBlue;
             this.btnMinimize.Image = global::CustomControl.Properties.Resources.subtract_20px;
+            this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMinimize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMinimize.Location = new System.Drawing.Point(480, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.btnMinimize.Size = new System.Drawing.Size(40, 40);
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.TextColor = System.Drawing.Color.White;
@@ -91,7 +91,6 @@
             this.btnMaximize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMaximize.Location = new System.Drawing.Point(520, 0);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.btnMaximize.Size = new System.Drawing.Size(40, 40);
             this.btnMaximize.TabIndex = 1;
             this.btnMaximize.TextColor = System.Drawing.Color.White;
@@ -115,7 +114,6 @@
             this.btnClose.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnClose.Location = new System.Drawing.Point(560, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
             this.btnClose.Size = new System.Drawing.Size(40, 40);
             this.btnClose.TabIndex = 0;
             this.btnClose.TextColor = System.Drawing.Color.White;
