@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7C8B039A-BAAD-4C41-A8AD-17623A56F983}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>CustomControl</RootNamespace>
     <AssemblyName>CustomControl</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
@@ -59,6 +59,18 @@
     <Compile Include="CControl\CDateTimePicker.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CControl\CDragAblePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CControl\CDragAblePanel.Designer.cs">
+      <DependentUpon>CDragAblePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CControl\CLinePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CControl\CLinePanel.Designer.cs">
+      <DependentUpon>CLinePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CControl\CRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -66,18 +78,28 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CControl\CTextbox.Designer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="CFlatForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CFlatForm.Designer.cs">
+      <DependentUpon>CFlatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBox.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CControl\CComboBox.resx" />
+    <EmbeddedResource Include="CControl\CDragAblePanel.resx">
+      <DependentUpon>CDragAblePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CControl\CLinePanel.resx">
+      <DependentUpon>CLinePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CControl\CTextbox.resx" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CFlatForm.resx">
+      <DependentUpon>CFlatForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +129,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\schedule_16px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close10_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button_10px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract10_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,6 +12,8 @@ namespace CustomControl
         private int borderSize = 0;
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
+        private Color hoverColor = Color.Red;
+        private Color leaveColor = Color.PaleVioletRed;
 
         //Properties
         [Category("CButton Setting")]
@@ -61,6 +63,20 @@ namespace CustomControl
             set { this.ForeColor = value; }
         }
 
+        [Category("CButton Setting")]
+        public Color HoverColor
+        {
+            get { return hoverColor; }
+            set { hoverColor = value; }
+        }
+
+        [Category("CButton Setting")]
+        public Color LeaveColor
+        {
+            get { return leaveColor; }
+            set { leaveColor = value; }
+        }
+
         //Constructor
         public CButton()
         {
@@ -70,6 +86,8 @@ namespace CustomControl
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
             this.Resize += new EventHandler(Button_Resize);
+            this.MouseEnter += new EventHandler(Button_MouseEnter);
+            this.MouseLeave += new EventHandler(Button_MouseLeave);
         }
 
         //Methods
@@ -147,6 +165,16 @@ namespace CustomControl
         {
             if (borderRadius > this.Height)
                 borderRadius = this.Height;
+        }
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = hoverColor;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = leaveColor;
         }
     }
 }
