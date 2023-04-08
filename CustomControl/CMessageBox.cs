@@ -2,7 +2,7 @@
 
 namespace CustomControl
 {
-public abstract class CMessageBox
+public static class CMessageBox
 {
     public static DialogResult Show(string text)
     {

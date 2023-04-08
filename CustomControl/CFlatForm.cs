@@ -24,7 +24,7 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
-
+            CMessageBox.Show("a","b");
         }
     }
 }
