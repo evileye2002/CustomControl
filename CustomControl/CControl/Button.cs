@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
     public class CButton : Button
     {

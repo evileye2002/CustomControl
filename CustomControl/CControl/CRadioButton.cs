@@ -2,7 +2,7 @@
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
     public class CRadioButton : RadioButton
     {

@@ -1,6 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
     partial class CTextbox
     {
@@ -38,8 +39,11 @@ namespace CustomControl.CControl
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Location = new System.Drawing.Point(10, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 16);
+            this.textBox1.Size = new System.Drawing.Size(230, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.MinimumSize = new Size(0, 35);
+            this.textBox1.Dock = DockStyle.Fill;
+            this.textBox1.Font = new Font(this.Font.Name, 9.5F);
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -55,6 +59,7 @@ namespace CustomControl.CControl
             this.Name = "Textbox";
             this.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.Size = new System.Drawing.Size(250, 40);
+            this.Font = new Font(this.Font.Name, 9.5F);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -5,7 +5,7 @@ using System.Drawing.Design;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
     [DefaultEvent("OnSelectedIndexChanged")]
     public partial class CComboBox : UserControl

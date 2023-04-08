@@ -1,4 +1,4 @@
-﻿namespace CustomControl.CControl
+﻿namespace CustomControl
 {
     partial class CComboBox
     {

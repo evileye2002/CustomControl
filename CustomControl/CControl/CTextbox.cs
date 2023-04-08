@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
     public partial class CTextbox : UserControl
     {
@@ -359,5 +359,6 @@ namespace CustomControl.CControl
         }
         ///::::+
         #endregion
+
     }
 }
