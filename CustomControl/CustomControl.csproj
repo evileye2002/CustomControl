@@ -71,6 +71,12 @@
     <Compile Include="CControl\CLinePanel.Designer.cs">
       <DependentUpon>CLinePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CControl\CNumbricLeftRight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CControl\CNumbricLeftRight.Designer.cs">
+      <DependentUpon>CNumbricLeftRight.cs</DependentUpon>
+    </Compile>
     <Compile Include="CControl\CRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CLinePanel.resx">
       <DependentUpon>CLinePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CControl\CNumbricLeftRight.resx">
+      <DependentUpon>CNumbricLeftRight.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CTextbox.resx" />
     <EmbeddedResource Include="CFlatForm.resx">
@@ -197,6 +206,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_right_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron_left_20px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

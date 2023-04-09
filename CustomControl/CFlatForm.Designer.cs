@@ -29,19 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CFlatForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CustomControl.Properties.Resources.warning;
-            this.pictureBox1.Location = new System.Drawing.Point(428, 108);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // cDragAblePanel1
             // 
@@ -64,7 +53,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 554);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cDragAblePanel1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -73,14 +61,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CFlatForm";
             this.Load += new System.EventHandler(this.CFlatForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private CDragAblePanel cDragAblePanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -1,11 +1,12 @@
-﻿using System.Drawing;
+﻿using System.Data.SqlClient;
+using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Globalization;
 using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public static class SharedClass
+    public class SharedClass
     {
         #region NotFix
 
@@ -16,16 +17,15 @@ namespace CustomControl
 
         #region Other
         //Đổ dữ liệu vào DataGridView
-        public static void FillDGV(DataGridView dgv, string sql)
+        public static void FillDGV(DataGridView dgv, string sql, SqlConnection sqlConnection)
         {
-            SqlClass.Connect();
-            dgv.DataSource = SqlClass.FillTable(sql);
+            dgv.DataSource = SqlClass.FillTable(sql, sqlConnection);
         }
 
         //Đổ dữ liệu vào ComboBox
-        public static void FillCBB(string sql, CComboBox cbo/*, string ma*/, string ten)
+        public static void FillCBB(string sql, CComboBox cbo/*, string ma*/, string ten, SqlConnection sqlConnection)
         {
-            cbo.DataSource = SqlClass.FillTable(sql);
+            cbo.DataSource = SqlClass.FillTable(sql, sqlConnection);
             //cbo.ValueMember = ma; //Trường giá trị
             cbo.DisplayMember = ten; //Trường hiển thị
         }
@@ -97,6 +97,21 @@ namespace CustomControl
         {
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
+        }
+        public static void OpenChildForm(Form childForm, object btnSender, Form activateForm, Panel pnMain)
+        {
+            if (activateForm != null)
+            {
+                activateForm.Close();
+            }
+            activateForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnMain.Controls.Add(childForm);
+            pnMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
         #endregion
 

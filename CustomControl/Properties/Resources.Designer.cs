@@ -73,6 +73,26 @@ namespace CustomControl.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chevron_left_20px {
+            get {
+                object obj = ResourceManager.GetObject("chevron_left_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chevron_right_20px {
+            get {
+                object obj = ResourceManager.GetObject("chevron_right_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_20px {
             get {
                 object obj = ResourceManager.GetObject("close_20px", resourceCulture);

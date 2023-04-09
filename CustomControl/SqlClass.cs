@@ -5,51 +5,31 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public static class SqlClass
+    public class SqlClass
     {
         #region Fix
-        //Chuỗi kết nối
-        public static string connectionString = @"Data Source=DESKTOP-J6D7SL6\SQLEXPRESS;Initial Catalog=TripleX;Integrated Security=True";
-        
-        //Connection
-        public static SqlConnection Connection = new SqlConnection(connectionString);
-
-        //Kết nối
-        public static void Connect()
-        {
-            if(Connection.State != ConnectionState.Open)
-                Connection.Open();
-        }
-
-        //Ngắt kết nối
-        public static void Disconnect()
-        {
-            if (Connection.State != ConnectionState.Closed)
-                Connection.Close();
-        }
-
         //Đổ dữ liệu vào bảng
-        public static DataTable FillTable(string sql)
+        public static DataTable FillTable(string sql, SqlConnection sqlConnection)
         {
             DataTable table = new DataTable();
-            SqlDataAdapter sda = new SqlDataAdapter(sql, Connection);
+            SqlDataAdapter sda = new SqlDataAdapter(sql, sqlConnection);
             sda.Fill(table);
             return (table);
         }
 
         //Update, Insert
-        public static void RunSql(string sql)
+        public static void RunSql(string sql, SqlConnection sqlConnection)
         {
-            SqlCommand cmd = new SqlCommand(sql, Connection);
+            SqlCommand cmd = new SqlCommand(sql, sqlConnection);
             cmd.ExecuteNonQuery();
             cmd.Dispose();//Giải phóng bộ nhớ
         }
 
         //Select 1 dữ liệu duy nhất từ Sql
-        public static string GetOneValue(string sql)
+        public static string GetOneValue(string sql, SqlConnection sqlConnection)
         {
             string kq = "";
-            SqlCommand cmd = new SqlCommand(sql, Connection);
+            SqlCommand cmd = new SqlCommand(sql, sqlConnection);
             SqlDataReader reader;
 
             reader = cmd.ExecuteReader();
@@ -61,9 +41,9 @@ namespace CustomControl
         }
 
         //Reader
-        public static SqlDataReader ReadData(string sql)
+        public static SqlDataReader ReadData(string sql, SqlConnection sqlConnection)
         {
-            SqlCommand cmd = new SqlCommand(sql, Connection);
+            SqlCommand cmd = new SqlCommand(sql, sqlConnection);
             SqlDataReader rd;
 
             rd = cmd.ExecuteReader();
@@ -72,20 +52,20 @@ namespace CustomControl
         }
 
         //Dataset
-        public static DataSet DataSet(string sql)
+        public static DataSet DataSet(string sql, SqlConnection sqlConnection)
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(new SqlCommand(sql, Connection));
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(new SqlCommand(sql, sqlConnection));
             DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
             return ds;
         }
 
         //Delete
-        public static void RunSqlDel(string sql)
+        public static void RunSqlDel(string sql, SqlConnection sqlConnection)
         {
             try
             {
-                RunSql(sql);
+                RunSql(sql, sqlConnection);
                 SharedClass.Alert("Xóa Thành Công!", Form_Alert.enmType.Success);
             }
             catch (Exception ex)
