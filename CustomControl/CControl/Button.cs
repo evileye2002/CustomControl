@@ -12,8 +12,12 @@ namespace CustomControl
         private int borderSize = 0;
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
-        private Color hoverColor = Color.Red;
-        private Color leaveColor = Color.MediumSlateBlue;
+        private Color hoverColor = Color.Empty;
+        private Color leaveColor = Color.Empty;
+        private Color hoverBorderColor = Color.Empty;
+        private Color leaveBorderColor = Color.Empty;
+        private Image hoverImage;
+        private Image leaveImage;
 
         //Properties
         [Category("CButton Setting")]
@@ -45,6 +49,7 @@ namespace CustomControl
             set
             {
                 borderColor = value;
+                LeaveBorderColor = borderColor;
                 this.Invalidate();
             }
         }
@@ -78,10 +83,32 @@ namespace CustomControl
         public Color LeaveColor
         {
             get { return leaveColor; }
-            set
-            {
-                leaveColor = value;
-            }
+            set { leaveColor = value; }
+        }
+        [Category("CButton Setting")]
+        public Color HoverBorderColor
+        {
+            get { return hoverBorderColor; }
+            set { hoverBorderColor = value; }
+        }
+
+        [Category("CButton Setting")]
+        public Color LeaveBorderColor
+        {
+            get { return leaveBorderColor; }
+            set { leaveBorderColor = value; }
+        }
+        [Category("CButton Setting")]
+        public Image HoverImage
+        {
+            get { return hoverImage; }
+            set { hoverImage = value; }
+        }
+        [Category("CButton Setting")]
+        public Image LeaveImage
+        {
+            get { return leaveImage; }
+            set { leaveImage = value; }
         }
 
         //Constructor
@@ -92,6 +119,7 @@ namespace CustomControl
             this.Size = new Size(150, 40);
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
+            this.Cursor = Cursors.Hand;
             this.Resize += new EventHandler(Button_Resize);
             this.MouseEnter += new EventHandler(Button_MouseEnter);
             this.MouseLeave += new EventHandler(Button_MouseLeave);
@@ -176,12 +204,22 @@ namespace CustomControl
 
         private void Button_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = hoverColor;
+            if (HoverColor != Color.Empty)
+                this.BackColor = HoverColor;
+            if (HoverBorderColor != Color.Empty && BorderSize > 0)
+                this.BorderColor = HoverBorderColor;
+            if (HoverImage != null)
+                this.Image = HoverImage;
         }
 
         private void Button_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = leaveColor;
+            if (LeaveColor != Color.Empty)
+                this.BackColor = LeaveColor;
+            if (LeaveBorderColor != Color.Empty && BorderSize > 0)
+                this.BorderColor = LeaveBorderColor;
+            if (LeaveImage != null)
+                this.Image = LeaveImage;
         }
     }
 }

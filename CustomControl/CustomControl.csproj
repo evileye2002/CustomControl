@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7C8B039A-BAAD-4C41-A8AD-17623A56F983}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>CustomControl</RootNamespace>
     <AssemblyName>CustomControl</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
@@ -80,6 +80,12 @@
     <Compile Include="CControl\CRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CControl\CSideBarMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CControl\CSideBarMenu.Designer.cs">
+      <DependentUpon>CSideBarMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="CControl\CTextbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CNumbricLeftRight.resx">
       <DependentUpon>CNumbricLeftRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CControl\CSideBarMenu.resx">
+      <DependentUpon>CSideBarMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CTextbox.resx" />
     <EmbeddedResource Include="CFlatForm.resx">
@@ -212,6 +221,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chevron_left_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\307458227_183097110912069_8713095141205203505_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleted_list_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cutlery-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_arrow_20px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

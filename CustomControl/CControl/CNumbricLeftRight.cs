@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
     public partial class CNumbricLeftRight : UserControl
     {
