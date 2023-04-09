@@ -81,7 +81,7 @@
             this.pnSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSideBar.Location = new System.Drawing.Point(0, 0);
             this.pnSideBar.Name = "pnSideBar";
-            this.pnSideBar.Size = new System.Drawing.Size(300, 600);
+            this.pnSideBar.Size = new System.Drawing.Size(250, 600);
             this.pnSideBar.TabIndex = 0;
             // 
             // panel4
@@ -93,7 +93,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 550);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 160);
+            this.panel4.Size = new System.Drawing.Size(250, 160);
             this.panel4.TabIndex = 10;
             // 
             // cButton16
@@ -119,9 +119,9 @@
             this.cButton16.Location = new System.Drawing.Point(0, 120);
             this.cButton16.Name = "cButton16";
             this.cButton16.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton16.Size = new System.Drawing.Size(300, 40);
+            this.cButton16.Size = new System.Drawing.Size(250, 40);
             this.cButton16.TabIndex = 2;
-            this.cButton16.Text = "cButton15";
+            this.cButton16.Text = "cButton16";
             this.cButton16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton16.TextColor = System.Drawing.Color.White;
             this.cButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -151,9 +151,9 @@
             this.cButton15.Location = new System.Drawing.Point(0, 80);
             this.cButton15.Name = "cButton15";
             this.cButton15.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton15.Size = new System.Drawing.Size(300, 40);
+            this.cButton15.Size = new System.Drawing.Size(250, 40);
             this.cButton15.TabIndex = 3;
-            this.cButton15.Text = "cButton14";
+            this.cButton15.Text = "cButton15";
             this.cButton15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton15.TextColor = System.Drawing.Color.White;
             this.cButton15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -183,9 +183,9 @@
             this.cButton14.Location = new System.Drawing.Point(0, 40);
             this.cButton14.Name = "cButton14";
             this.cButton14.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton14.Size = new System.Drawing.Size(300, 40);
+            this.cButton14.Size = new System.Drawing.Size(250, 40);
             this.cButton14.TabIndex = 4;
-            this.cButton14.Text = "cButton13";
+            this.cButton14.Text = "cButton14";
             this.cButton14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton14.TextColor = System.Drawing.Color.White;
             this.cButton14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,9 +215,9 @@
             this.cButton13.LeaveImage = null;
             this.cButton13.Location = new System.Drawing.Point(0, 0);
             this.cButton13.Name = "cButton13";
-            this.cButton13.Size = new System.Drawing.Size(300, 40);
+            this.cButton13.Size = new System.Drawing.Size(250, 40);
             this.cButton13.TabIndex = 1;
-            this.cButton13.Text = "cButton16";
+            this.cButton13.Text = "cButton13";
             this.cButton13.TextColor = System.Drawing.Color.White;
             this.cButton13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton13.UseVisualStyleBackColor = false;
@@ -232,7 +232,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 390);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 160);
+            this.panel3.Size = new System.Drawing.Size(250, 160);
             this.panel3.TabIndex = 9;
             // 
             // cButton12
@@ -258,9 +258,9 @@
             this.cButton12.Location = new System.Drawing.Point(0, 120);
             this.cButton12.Name = "cButton12";
             this.cButton12.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton12.Size = new System.Drawing.Size(300, 40);
+            this.cButton12.Size = new System.Drawing.Size(250, 40);
             this.cButton12.TabIndex = 2;
-            this.cButton12.Text = "cButton11";
+            this.cButton12.Text = "cButton12";
             this.cButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton12.TextColor = System.Drawing.Color.White;
             this.cButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -290,9 +290,9 @@
             this.cButton11.Location = new System.Drawing.Point(0, 80);
             this.cButton11.Name = "cButton11";
             this.cButton11.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton11.Size = new System.Drawing.Size(300, 40);
+            this.cButton11.Size = new System.Drawing.Size(250, 40);
             this.cButton11.TabIndex = 3;
-            this.cButton11.Text = "cButton10";
+            this.cButton11.Text = "cButton11";
             this.cButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton11.TextColor = System.Drawing.Color.White;
             this.cButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -322,9 +322,9 @@
             this.cButton10.Location = new System.Drawing.Point(0, 40);
             this.cButton10.Name = "cButton10";
             this.cButton10.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton10.Size = new System.Drawing.Size(300, 40);
+            this.cButton10.Size = new System.Drawing.Size(250, 40);
             this.cButton10.TabIndex = 4;
-            this.cButton10.Text = "cButton9";
+            this.cButton10.Text = "cButton10";
             this.cButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton10.TextColor = System.Drawing.Color.White;
             this.cButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -354,9 +354,9 @@
             this.cButton9.LeaveImage = null;
             this.cButton9.Location = new System.Drawing.Point(0, 0);
             this.cButton9.Name = "cButton9";
-            this.cButton9.Size = new System.Drawing.Size(300, 40);
+            this.cButton9.Size = new System.Drawing.Size(250, 40);
             this.cButton9.TabIndex = 1;
-            this.cButton9.Text = "cButton12";
+            this.cButton9.Text = "cButton9";
             this.cButton9.TextColor = System.Drawing.Color.White;
             this.cButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton9.UseVisualStyleBackColor = false;
@@ -371,7 +371,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 230);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 160);
+            this.panel2.Size = new System.Drawing.Size(250, 160);
             this.panel2.TabIndex = 8;
             // 
             // cButton8
@@ -397,7 +397,7 @@
             this.cButton8.Location = new System.Drawing.Point(0, 120);
             this.cButton8.Name = "cButton8";
             this.cButton8.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton8.Size = new System.Drawing.Size(300, 40);
+            this.cButton8.Size = new System.Drawing.Size(250, 40);
             this.cButton8.TabIndex = 2;
             this.cButton8.Text = "cButton7";
             this.cButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -429,7 +429,7 @@
             this.cButton7.Location = new System.Drawing.Point(0, 80);
             this.cButton7.Name = "cButton7";
             this.cButton7.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton7.Size = new System.Drawing.Size(300, 40);
+            this.cButton7.Size = new System.Drawing.Size(250, 40);
             this.cButton7.TabIndex = 3;
             this.cButton7.Text = "cButton6";
             this.cButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -461,7 +461,7 @@
             this.cButton6.Location = new System.Drawing.Point(0, 40);
             this.cButton6.Name = "cButton6";
             this.cButton6.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton6.Size = new System.Drawing.Size(300, 40);
+            this.cButton6.Size = new System.Drawing.Size(250, 40);
             this.cButton6.TabIndex = 4;
             this.cButton6.Text = "cButton5";
             this.cButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -493,9 +493,9 @@
             this.cButton5.LeaveImage = null;
             this.cButton5.Location = new System.Drawing.Point(0, 0);
             this.cButton5.Name = "cButton5";
-            this.cButton5.Size = new System.Drawing.Size(300, 40);
+            this.cButton5.Size = new System.Drawing.Size(250, 40);
             this.cButton5.TabIndex = 1;
-            this.cButton5.Text = "cButton8";
+            this.cButton5.Text = "cButton5";
             this.cButton5.TextColor = System.Drawing.Color.White;
             this.cButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton5.UseVisualStyleBackColor = false;
@@ -510,7 +510,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 160);
+            this.panel1.Size = new System.Drawing.Size(250, 160);
             this.panel1.TabIndex = 7;
             // 
             // cButton4
@@ -536,7 +536,7 @@
             this.cButton4.Location = new System.Drawing.Point(0, 120);
             this.cButton4.Name = "cButton4";
             this.cButton4.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton4.Size = new System.Drawing.Size(300, 40);
+            this.cButton4.Size = new System.Drawing.Size(250, 40);
             this.cButton4.TabIndex = 4;
             this.cButton4.Text = "cButton4";
             this.cButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -568,7 +568,7 @@
             this.cButton3.Location = new System.Drawing.Point(0, 80);
             this.cButton3.Name = "cButton3";
             this.cButton3.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton3.Size = new System.Drawing.Size(300, 40);
+            this.cButton3.Size = new System.Drawing.Size(250, 40);
             this.cButton3.TabIndex = 3;
             this.cButton3.Text = "cButton3";
             this.cButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -600,7 +600,7 @@
             this.cButton2.Location = new System.Drawing.Point(0, 40);
             this.cButton2.Name = "cButton2";
             this.cButton2.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton2.Size = new System.Drawing.Size(300, 40);
+            this.cButton2.Size = new System.Drawing.Size(250, 40);
             this.cButton2.TabIndex = 2;
             this.cButton2.Text = "cButton2";
             this.cButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -632,7 +632,7 @@
             this.cButton1.LeaveImage = null;
             this.cButton1.Location = new System.Drawing.Point(0, 0);
             this.cButton1.Name = "cButton1";
-            this.cButton1.Size = new System.Drawing.Size(300, 40);
+            this.cButton1.Size = new System.Drawing.Size(250, 40);
             this.cButton1.TabIndex = 1;
             this.cButton1.Text = "cButton1";
             this.cButton1.TextColor = System.Drawing.Color.White;
@@ -650,7 +650,7 @@
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnFooter.Location = new System.Drawing.Point(0, 560);
             this.pnFooter.Name = "pnFooter";
-            this.pnFooter.Size = new System.Drawing.Size(300, 40);
+            this.pnFooter.Size = new System.Drawing.Size(250, 40);
             this.pnFooter.TabIndex = 6;
             // 
             // lbDetail
@@ -683,7 +683,7 @@
             this.btnFooter.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnFooter.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnFooter.LeaveImage = null;
-            this.btnFooter.Location = new System.Drawing.Point(260, 0);
+            this.btnFooter.Location = new System.Drawing.Point(210, 0);
             this.btnFooter.Name = "btnFooter";
             this.btnFooter.Size = new System.Drawing.Size(40, 40);
             this.btnFooter.TabIndex = 2;
@@ -721,12 +721,11 @@
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Name = "pnHeader";
-            this.pnHeader.Size = new System.Drawing.Size(300, 70);
+            this.pnHeader.Size = new System.Drawing.Size(250, 70);
             this.pnHeader.TabIndex = 0;
             // 
             // btnMenu
             // 
-            this.btnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMenu.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMenu.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMenu.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -743,7 +742,7 @@
             this.btnMenu.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMenu.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMenu.LeaveImage = null;
-            this.btnMenu.Location = new System.Drawing.Point(260, 0);
+            this.btnMenu.Location = new System.Drawing.Point(210, 0);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(40, 40);
             this.btnMenu.TabIndex = 2;
@@ -754,11 +753,11 @@
             // lbNameHeader
             // 
             this.lbNameHeader.AutoSize = true;
-            this.lbNameHeader.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameHeader.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNameHeader.ForeColor = System.Drawing.Color.White;
-            this.lbNameHeader.Location = new System.Drawing.Point(71, 24);
+            this.lbNameHeader.Location = new System.Drawing.Point(71, 26);
             this.lbNameHeader.Name = "lbNameHeader";
-            this.lbNameHeader.Size = new System.Drawing.Size(118, 22);
+            this.lbNameHeader.Size = new System.Drawing.Size(100, 19);
             this.lbNameHeader.TabIndex = 1;
             this.lbNameHeader.Text = "Label Name";
             // 
@@ -778,7 +777,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnSideBar);
             this.Name = "CSideBarMenu";
-            this.Size = new System.Drawing.Size(300, 600);
+            this.Size = new System.Drawing.Size(250, 600);
             this.pnSideBar.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -796,35 +795,35 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnSideBar;
+        public System.Windows.Forms.Panel pnSideBar;
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.PictureBox pbHeader;
         private CButton btnMenu;
-        private System.Windows.Forms.Label lbNameHeader;
-        private CButton cButton1;
+        public System.Windows.Forms.Label lbNameHeader;
+        public CButton cButton1;
         private System.Windows.Forms.Panel pnFooter;
-        private System.Windows.Forms.Label lbDetail;
+        public System.Windows.Forms.Label lbDetail;
         private CButton btnFooter;
-        private System.Windows.Forms.Label lbNameFooter;
+        public System.Windows.Forms.Label lbNameFooter;
         private System.Windows.Forms.PictureBox pbFooter;
-        private CButton cButton2;
+        public CButton cButton2;
         private System.Windows.Forms.Panel panel4;
-        private CButton cButton16;
-        private CButton cButton15;
-        private CButton cButton14;
-        private CButton cButton13;
+        public CButton cButton16;
+        public CButton cButton15;
+        public CButton cButton14;
+        public CButton cButton13;
         private System.Windows.Forms.Panel panel3;
-        private CButton cButton12;
-        private CButton cButton11;
-        private CButton cButton10;
-        private CButton cButton9;
+        public CButton cButton12;
+        public CButton cButton11;
+        public CButton cButton10;
+        public CButton cButton9;
         private System.Windows.Forms.Panel panel2;
-        private CButton cButton8;
-        private CButton cButton7;
-        private CButton cButton6;
-        private CButton cButton5;
+        public CButton cButton8;
+        public CButton cButton7;
+        public CButton cButton6;
+        public CButton cButton5;
         private System.Windows.Forms.Panel panel1;
-        private CButton cButton4;
-        private CButton cButton3;
+        public CButton cButton4;
+        public CButton cButton3;
     }
 }

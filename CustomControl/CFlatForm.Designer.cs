@@ -40,15 +40,15 @@
             this.cSideBarMenu1.Dock = System.Windows.Forms.DockStyle.Left;
             this.cSideBarMenu1.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.cSideBarMenu1.HeaderImage = ((System.Drawing.Image)(resources.GetObject("cSideBarMenu1.HeaderImage")));
-            this.cSideBarMenu1.Location = new System.Drawing.Point(0, 40);
+            this.cSideBarMenu1.Location = new System.Drawing.Point(0, 24);
             this.cSideBarMenu1.Margin = new System.Windows.Forms.Padding(4);
             this.cSideBarMenu1.Name = "cSideBarMenu1";
-            this.cSideBarMenu1.NumberButton = 3;
+            this.cSideBarMenu1.NumberButton = 4;
             this.cSideBarMenu1.NumberSubButton1 = 0;
-            this.cSideBarMenu1.NumberSubButton2 = 2;
-            this.cSideBarMenu1.NumberSubButton3 = 1;
-            this.cSideBarMenu1.NumberSubButton4 = 1;
-            this.cSideBarMenu1.Size = new System.Drawing.Size(300, 514);
+            this.cSideBarMenu1.NumberSubButton2 = 0;
+            this.cSideBarMenu1.NumberSubButton3 = 0;
+            this.cSideBarMenu1.NumberSubButton4 = 0;
+            this.cSideBarMenu1.Size = new System.Drawing.Size(60, 530);
             this.cSideBarMenu1.TabIndex = 4;
             this.cSideBarMenu1._Logout_Click += new System.EventHandler(this.cSideBarMenu1__Logout_Click);
             // 
@@ -107,16 +107,15 @@
             // cDragAblePanel1
             // 
             this.cDragAblePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cDragAblePanel1.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.SeaGreen;
+            this.cDragAblePanel1.FillColor = System.Drawing.Color.MediumPurple;
+            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.DarkSlateBlue;
             this.cDragAblePanel1.Location = new System.Drawing.Point(0, 0);
             this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.cDragAblePanel1.MaximizeImage = ((System.Drawing.Image)(resources.GetObject("cDragAblePanel1.MaximizeImage")));
-            this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 40);
-            this.cDragAblePanel1.MinimumSize = new System.Drawing.Size(700, 40);
+            this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 49);
             this.cDragAblePanel1.Name = "cDragAblePanel1";
-            this.cDragAblePanel1.Size = new System.Drawing.Size(933, 40);
-            this.cDragAblePanel1.TabIndex = 1;
+            this.cDragAblePanel1.Size = new System.Drawing.Size(933, 24);
+            this.cDragAblePanel1.TabIndex = 5;
             this.cDragAblePanel1.TargetForm = this;
             this.cDragAblePanel1._MaximizeClick += new System.EventHandler(this.cDragAblePanel1__MaximizeClick);
             // 
@@ -141,10 +140,10 @@
         }
 
         #endregion
-        private CDragAblePanel cDragAblePanel1;
         private CButton cButton1;
         private CButton cButton2;
         private CSideBarMenu cSideBarMenu1;
+        private CDragAblePanel cDragAblePanel1;
     }
 }
 

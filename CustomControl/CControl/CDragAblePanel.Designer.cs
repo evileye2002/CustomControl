@@ -43,8 +43,6 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.MaximumSize = new System.Drawing.Size(0, 40);
-            this.panel1.MinimumSize = new System.Drawing.Size(0, 40);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 40);
             this.panel1.TabIndex = 0;
@@ -62,10 +60,14 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnMinimize.HoverColor = System.Drawing.Color.SlateBlue;
+            this.btnMinimize.HoverImage = null;
             this.btnMinimize.Image = global::CustomControl.Properties.Resources.subtract_20px;
             this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimize.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMinimize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnMinimize.LeaveImage = null;
             this.btnMinimize.Location = new System.Drawing.Point(480, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(40, 40);
@@ -86,9 +88,13 @@
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnMaximize.HoverColor = System.Drawing.Color.SlateBlue;
+            this.btnMaximize.HoverImage = null;
             this.btnMaximize.Image = global::CustomControl.Properties.Resources.maximize_button_15px;
+            this.btnMaximize.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMaximize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnMaximize.LeaveImage = null;
             this.btnMaximize.Location = new System.Drawing.Point(520, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(40, 40);
@@ -109,9 +115,13 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnClose.HoverColor = System.Drawing.Color.Red;
+            this.btnClose.HoverImage = null;
             this.btnClose.Image = global::CustomControl.Properties.Resources.close_20px;
+            this.btnClose.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnClose.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnClose.LeaveImage = null;
             this.btnClose.Location = new System.Drawing.Point(560, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(40, 40);
@@ -126,7 +136,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(3000, 40);
-            this.MinimumSize = new System.Drawing.Size(600, 40);
             this.Name = "CDragAblePanel";
             this.Size = new System.Drawing.Size(600, 40);
             this.panel1.ResumeLayout(false);
@@ -138,7 +147,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private CButton btnClose;
-        private CButton btnMinimize;
+        public CButton btnMinimize;
         private CButton btnMaximize;
     }
 }

@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomControl
@@ -19,12 +14,13 @@ namespace CustomControl
         private int numberSubButton2 = 3;
         private int numberSubButton3 = 3;
         private int numberSubButton4 = 3;
-        private int SubButton1 = 200;
-        private int SubButton2 = 200;
-        private int SubButton3 = 200;
-        private int SubButton4 = 200;
+        private int subButton1 = 200;
+        private int subButton2 = 200;
+        private int subButton3 = 200;
+        private int subButton4 = 200;
         private Image headerImage = Properties.Resources._307458227_183097110912069_8713095141205203505_n;
 
+        #region Event
         public event EventHandler _Logout_Click;
         public event EventHandler _MenuClick;
         public event EventHandler _Button1_Click;
@@ -47,6 +43,7 @@ namespace CustomControl
         public event EventHandler _SubButton4_Click1;
         public event EventHandler _SubButton4_Click2;
         public event EventHandler _SubButton4_Click3;
+        #endregion
 
         [Category("CSideBar Setting")]
         public Color FillColor
@@ -185,16 +182,16 @@ namespace CustomControl
             }
         }
 
-
         public CSideBarMenu()
         {
             InitializeComponent();
-            pnHeader.Size = new Size(300, 70);
-            pnFooter.Size = new Size(300, 40);
-            panel1.Height = 49;
-            panel2.Height = 49;
-            panel3.Height = 49;
-            panel4.Height = 49;
+            pnHeader.Size = new Size(250, 70);
+            pnFooter.Size = new Size(250, 40);
+            panel1.Height = 40;
+            panel2.Height = 40;
+            panel3.Height = 40;
+            panel4.Height = 40;
+            MiniSideBar();
         }
 
         private void cButton1_Click(object sender, EventArgs e)
@@ -203,10 +200,10 @@ namespace CustomControl
                 _Button1_Click.Invoke(sender, e);
             else
             {
-                if (panel1.Height != SubButton1)
+                if (panel1.Height != subButton1)
                 {
                     OffSize();
-                    panel1.Height = SubButton1;
+                    panel1.Height = subButton1;
                 }
                 else
                     panel1.Height = 49;
@@ -219,10 +216,10 @@ namespace CustomControl
                 _Button2_Click.Invoke(sender, e);
             else
             {
-                if (panel2.Height != SubButton2)
+                if (panel2.Height != subButton2)
                 {
                     OffSize();
-                    panel2.Height = SubButton2;
+                    panel2.Height = subButton2;
                 }
                 else
                     panel2.Height = 49;
@@ -235,10 +232,10 @@ namespace CustomControl
                 _Button3_Click.Invoke(sender, e);
             else
             {
-                if (panel3.Height != SubButton3)
+                if (panel3.Height != subButton3)
                 {
                     OffSize();
-                    panel3.Height = SubButton3;
+                    panel3.Height = subButton3;
                 }
                 else
                     panel3.Height = 49;
@@ -251,10 +248,10 @@ namespace CustomControl
                 _Button4_Click.Invoke(sender, e);
             else
             {
-                if (panel4.Height != SubButton4)
+                if (panel4.Height != subButton4)
                 {
                     OffSize();
-                    panel4.Height = SubButton4;
+                    panel4.Height = subButton4;
                 }
                 else
                     panel4.Height = 49;
@@ -263,8 +260,8 @@ namespace CustomControl
         private void OffSize()
         {
             foreach (Panel panel in pnSideBar.Controls)
-                if (panel != pnFooter && panel != pnHeader && panel.Height != 50)
-                    panel.Height = 50;
+                if (panel != pnFooter && panel != pnHeader && panel.Height != 48)
+                    panel.Height = 48;
         }
         private void SetSubButton(int n,int btn)
         {
@@ -274,16 +271,16 @@ namespace CustomControl
                     switch (n)
                     {
                         case 0:
-                            SubButton1 = 49;
+                            subButton1 = 49;
                             break;
                         case 1:
-                            SubButton1 = 98;
+                            subButton1 = 98;
                             break;
                         case 2:
-                            SubButton1 = 147;
+                            subButton1 = 147;
                             break;
                         default:
-                            SubButton1 = 200;
+                            subButton1 = 200;
                             break;
                     }
                     break;
@@ -291,16 +288,16 @@ namespace CustomControl
                     switch (n)
                     {
                         case 0:
-                            SubButton2 = 49;
+                            subButton2 = 49;
                             break;
                         case 1:
-                            SubButton2 = 98;
+                            subButton2 = 98;
                             break;
                         case 2:
-                            SubButton2 = 147;
+                            subButton2 = 147;
                             break;
                         default:
-                            SubButton2 = 200;
+                            subButton2 = 200;
                             break;
                     }
                     break;
@@ -308,16 +305,16 @@ namespace CustomControl
                     switch (n)
                     {
                         case 0:
-                            SubButton3 = 49;
+                            subButton3 = 49;
                             break;
                         case 1:
-                            SubButton3 = 98;
+                            subButton3 = 98;
                             break;
                         case 2:
-                            SubButton3 = 147;
+                            subButton3 = 147;
                             break;
                         default:
-                            SubButton3 = 200;
+                            subButton3 = 200;
                             break;
                     }
                     break;
@@ -325,16 +322,16 @@ namespace CustomControl
                     switch (n)
                     {
                         case 0:
-                            SubButton4 = 49;
+                            subButton4 = 49;
                             break;
                         case 1:
-                            SubButton4 = 98;
+                            subButton4 = 98;
                             break;
                         case 2:
-                            SubButton4 = 147;
+                            subButton4 = 147;
                             break;
                         default:
-                            SubButton4 = 200;
+                            subButton4 = 200;
                             break;
                     }
                     break;
@@ -423,8 +420,70 @@ namespace CustomControl
         {
             if (_MenuClick != null)
                 _MenuClick.Invoke(sender, e);
+            else
+            {
+                if(this.Width != 60)
+                    MiniSideBar();
+                else
+                    ShowSideBar();
+                
+            }
         }
         #endregion
+        public void MiniSideBar()
+        {
+            this.Width = 60;
+            pbHeader.Visible = false;
+            pbFooter.Visible = false;
+            lbDetail.Visible = false;
+            lbNameFooter.Visible = false;
+            lbNameHeader.Visible = false;
 
+            btnFooter.Dock = DockStyle.Fill;
+            pnHeader.Height = 60;
+            btnMenu.Dock = DockStyle.Fill;
+
+            foreach (Panel panel in pnSideBar.Controls)
+            {
+                if (panel != pnFooter && panel != pnHeader)
+                {
+                    foreach (CButton button in panel.Controls)
+                    {
+                        button.Tag = button.Text;
+                        button.Text = "";
+                        button.TextImageRelation = TextImageRelation.Overlay;
+                        button.ImageAlign = ContentAlignment.MiddleCenter;
+                    }
+                }
+            }
+        }
+        public void ShowSideBar()
+        {
+            this.Width = 250;
+            pbHeader.Visible = true;
+            pbFooter.Visible = true;
+            lbDetail.Visible = true;
+            lbNameFooter.Visible = true;
+            lbNameHeader.Visible = true;
+
+            btnFooter.Dock = DockStyle.Right;
+            btnFooter.Width = 50;
+            pnHeader.Height = 75;
+            btnMenu.Dock = DockStyle.Right;
+            btnMenu.Width = 50;
+
+            foreach (Panel panel in pnSideBar.Controls)
+            {
+                if (panel != pnFooter && panel != pnHeader)
+                {
+                    foreach (CButton button in panel.Controls)
+                    {
+                        button.Text = button.Tag.ToString();
+                        button.TextImageRelation = TextImageRelation.ImageBeforeText;
+                        button.ImageAlign = ContentAlignment.MiddleLeft;
+                    }
+                }
+            }
+        }
     }
 }
