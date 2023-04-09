@@ -126,6 +126,7 @@
             this.cButton16.TextColor = System.Drawing.Color.White;
             this.cButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton16.UseVisualStyleBackColor = false;
+            this.cButton16.Click += new System.EventHandler(this.cButton16_Click);
             // 
             // cButton15
             // 
@@ -157,6 +158,7 @@
             this.cButton15.TextColor = System.Drawing.Color.White;
             this.cButton15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton15.UseVisualStyleBackColor = false;
+            this.cButton15.Click += new System.EventHandler(this.cButton15_Click);
             // 
             // cButton14
             // 
@@ -188,6 +190,7 @@
             this.cButton14.TextColor = System.Drawing.Color.White;
             this.cButton14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton14.UseVisualStyleBackColor = false;
+            this.cButton14.Click += new System.EventHandler(this.cButton14_Click);
             // 
             // cButton13
             // 
@@ -262,6 +265,7 @@
             this.cButton12.TextColor = System.Drawing.Color.White;
             this.cButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton12.UseVisualStyleBackColor = false;
+            this.cButton12.Click += new System.EventHandler(this.cButton12_Click);
             // 
             // cButton11
             // 
@@ -293,6 +297,7 @@
             this.cButton11.TextColor = System.Drawing.Color.White;
             this.cButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton11.UseVisualStyleBackColor = false;
+            this.cButton11.Click += new System.EventHandler(this.cButton11_Click);
             // 
             // cButton10
             // 
@@ -324,6 +329,7 @@
             this.cButton10.TextColor = System.Drawing.Color.White;
             this.cButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton10.UseVisualStyleBackColor = false;
+            this.cButton10.Click += new System.EventHandler(this.cButton10_Click);
             // 
             // cButton9
             // 
@@ -398,6 +404,7 @@
             this.cButton8.TextColor = System.Drawing.Color.White;
             this.cButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton8.UseVisualStyleBackColor = false;
+            this.cButton8.Click += new System.EventHandler(this.cButton8_Click);
             // 
             // cButton7
             // 
@@ -429,6 +436,7 @@
             this.cButton7.TextColor = System.Drawing.Color.White;
             this.cButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton7.UseVisualStyleBackColor = false;
+            this.cButton7.Click += new System.EventHandler(this.cButton7_Click);
             // 
             // cButton6
             // 
@@ -460,6 +468,7 @@
             this.cButton6.TextColor = System.Drawing.Color.White;
             this.cButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton6.UseVisualStyleBackColor = false;
+            this.cButton6.Click += new System.EventHandler(this.cButton6_Click);
             // 
             // cButton5
             // 
@@ -534,6 +543,7 @@
             this.cButton4.TextColor = System.Drawing.Color.White;
             this.cButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton4.UseVisualStyleBackColor = false;
+            this.cButton4.Click += new System.EventHandler(this.cButton4_Click);
             // 
             // cButton3
             // 
@@ -565,6 +575,7 @@
             this.cButton3.TextColor = System.Drawing.Color.White;
             this.cButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton3.UseVisualStyleBackColor = false;
+            this.cButton3.Click += new System.EventHandler(this.cButton3_Click);
             // 
             // cButton2
             // 
@@ -596,6 +607,7 @@
             this.cButton2.TextColor = System.Drawing.Color.White;
             this.cButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton2.UseVisualStyleBackColor = false;
+            this.cButton2.Click += new System.EventHandler(this.cButton2_Click);
             // 
             // cButton1
             // 
@@ -677,6 +689,7 @@
             this.btnFooter.TabIndex = 2;
             this.btnFooter.TextColor = System.Drawing.Color.White;
             this.btnFooter.UseVisualStyleBackColor = false;
+            this.btnFooter.Click += new System.EventHandler(this.btnFooter_Click);
             // 
             // lbNameFooter
             // 
@@ -736,6 +749,7 @@
             this.btnMenu.TabIndex = 2;
             this.btnMenu.TextColor = System.Drawing.Color.White;
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // lbNameHeader
             // 

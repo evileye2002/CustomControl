@@ -44,8 +44,13 @@
             this.cSideBarMenu1.Margin = new System.Windows.Forms.Padding(4);
             this.cSideBarMenu1.Name = "cSideBarMenu1";
             this.cSideBarMenu1.NumberButton = 3;
+            this.cSideBarMenu1.NumberSubButton1 = 0;
+            this.cSideBarMenu1.NumberSubButton2 = 2;
+            this.cSideBarMenu1.NumberSubButton3 = 1;
+            this.cSideBarMenu1.NumberSubButton4 = 1;
             this.cSideBarMenu1.Size = new System.Drawing.Size(300, 514);
             this.cSideBarMenu1.TabIndex = 4;
+            this.cSideBarMenu1._Logout_Click += new System.EventHandler(this.cSideBarMenu1__Logout_Click);
             // 
             // cButton2
             // 

@@ -11,6 +11,11 @@ namespace CustomControl
             InitializeComponent();
         }
 
+        private void CFlatForm_Load(object sender, EventArgs e)
+        {
+            //CMessageBox.Show("a","b");
+        }
+
         private void cDragAblePanel1__MaximizeClick(object sender, EventArgs e)
         {
             if (WindowState != FormWindowState.Maximized)
@@ -22,9 +27,9 @@ namespace CustomControl
                 WindowState = FormWindowState.Normal;
         }
 
-        private void CFlatForm_Load(object sender, EventArgs e)
+        private void cSideBarMenu1__Logout_Click(object sender, EventArgs e)
         {
-            CMessageBox.Show("a","b");
+            
         }
     }
 }
