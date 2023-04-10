@@ -11,9 +11,6 @@ namespace CustomControl
     public partial class CDragAblePanel : UserControl
     {
         private Form form;
-        private int radius = 0;
-        private int borderSize = 0;
-        private Color borderColor = Color.MediumSlateBlue;
         private Color backColor = Color.MediumSlateBlue;
         private Color hoverBtnColor = Color.MediumSlateBlue;
         private Image iconImage = Resources.bulleted_list_32px;

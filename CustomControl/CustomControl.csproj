@@ -71,6 +71,12 @@
     <Compile Include="CControl\CLinePanel.Designer.cs">
       <DependentUpon>CLinePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CControl\CMenuButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CControl\CMenuButton.Designer.cs">
+      <DependentUpon>CMenuButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="CControl\CNumbricLeftRight.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CLinePanel.resx">
       <DependentUpon>CLinePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CControl\CMenuButton.resx">
+      <DependentUpon>CMenuButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CNumbricLeftRight.resx">
       <DependentUpon>CNumbricLeftRight.cs</DependentUpon>

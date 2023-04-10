@@ -8,6 +8,7 @@ namespace CustomControl
 {
     public partial class CFlatForm : Form
     {
+        string b;
         public CFlatForm()
         {
             InitializeComponent();
@@ -15,6 +16,14 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
+            foreach (CButton button in cMenuButton1.Controls)
+                if(button.Name.ToString() == "NewSubButton4")
+                    button.Click += NewSubButton4_Click;
+        }
+
+        private void NewSubButton4_Click(object sender, EventArgs e)
+        {
+            CMessageBox.Show("success");
         }
 
         private void cDragAblePanel1__MaximizeClick(object sender, EventArgs e)
@@ -34,6 +43,13 @@ namespace CustomControl
         {
 
             //SharedClass.RoundedForm(this, 18, e.Graphics, Color.Empty, 0);
+        }
+
+        private void cMenuButton1__MainButtonClick(object sender, EventArgs e)
+        {
+            foreach (CButton button in cMenuButton1.Controls)
+                b += button.Name.ToString() + " \n";
+            CMessageBox.Show(b);
         }
     }
 }
