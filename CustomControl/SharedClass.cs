@@ -70,12 +70,13 @@ namespace CustomControl
             }
         }
         //Vẽ đường bo tròn cho Control (không có border)
-        public static void RoundedControl(Control c, int borderRadius, Graphics graphics, int borderSize)
+        public static void RoundedControl(Control c, int radius, Graphics graph, Color borderColor, int borderSize)
         {
-            using (GraphicsPath roundPath = GetRoundedPath(c.ClientRectangle, borderRadius))
+            using (GraphicsPath roundPath = GetRoundedPath(c.ClientRectangle, radius))
+            using (Pen penBorder = new Pen(borderColor, borderSize))
             using (Matrix transform = new Matrix())
             {
-                graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                graph.SmoothingMode = SmoothingMode.AntiAlias;
                 c.Region = new Region(roundPath);
                 if (borderSize >= 1)
                 {
@@ -86,9 +87,9 @@ namespace CustomControl
                     transform.Scale(scaleX, scaleY);
                     transform.Translate(borderSize / 1.6F, borderSize / 1.6F);
 
-                    graphics.Transform = transform;
+                    graph.Transform = transform;
+                    graph.DrawPath(penBorder, roundPath);
                 }
-
             }
         }
 

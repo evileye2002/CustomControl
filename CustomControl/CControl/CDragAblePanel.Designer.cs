@@ -29,24 +29,40 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbIcon = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new CustomControl.CButton();
             this.btnMaximize = new CustomControl.CButton();
             this.btnClose = new CustomControl.CButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel1.Controls.Add(this.pbIcon);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnMaximize);
             this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 40);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CDragAblePanel_MouseDown);
+            // 
+            // pbIcon
+            // 
+            this.pbIcon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbIcon.Image = global::CustomControl.Properties.Resources.bulleted_list_32px;
+            this.pbIcon.Location = new System.Drawing.Point(5, 0);
+            this.pbIcon.Name = "pbIcon";
+            this.pbIcon.Size = new System.Drawing.Size(40, 40);
+            this.pbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbIcon.TabIndex = 3;
+            this.pbIcon.TabStop = false;
             // 
             // btnMinimize
             // 
@@ -56,6 +72,7 @@
             this.btnMinimize.BorderRadius = 0;
             this.btnMinimize.BorderSize = 0;
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.CustomTag = "";
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -84,6 +101,7 @@
             this.btnMaximize.BorderRadius = 0;
             this.btnMaximize.BorderSize = 0;
             this.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaximize.CustomTag = "";
             this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -111,6 +129,7 @@
             this.btnClose.BorderRadius = 0;
             this.btnClose.BorderSize = 0;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.CustomTag = "";
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,6 +149,14 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnCloseClick_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 40);
+            this.panel2.TabIndex = 4;
+            // 
             // CDragAblePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,6 +166,7 @@
             this.Name = "CDragAblePanel";
             this.Size = new System.Drawing.Size(600, 40);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,8 +174,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private CButton btnClose;
+        public CButton btnClose;
         public CButton btnMinimize;
-        private CButton btnMaximize;
+        public CButton btnMaximize;
+        public System.Windows.Forms.PictureBox pbIcon;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using CustomControl.Properties;
@@ -10,8 +11,12 @@ namespace CustomControl
     public partial class CDragAblePanel : UserControl
     {
         private Form form;
+        private int radius = 0;
+        private int borderSize = 0;
+        private Color borderColor = Color.MediumSlateBlue;
         private Color backColor = Color.MediumSlateBlue;
         private Color hoverBtnColor = Color.MediumSlateBlue;
+        private Image iconImage = Resources.bulleted_list_32px;
 
         public event EventHandler _MaximizeClick;
 
@@ -61,14 +66,18 @@ namespace CustomControl
             get { return form; }
             set { form = value; }
         }
-        
+        [Category("CDragAblePanel Setting")]
+        public Image IconImage
+        {
+            get { return iconImage; }
+            set { iconImage = value; }
+        }
 
         public CDragAblePanel()
         {
             InitializeComponent();
             MaximumSize = new Size(3000, 40);
             Size = new Size(600, 40);
-            Dock = DockStyle.Top;
         }
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

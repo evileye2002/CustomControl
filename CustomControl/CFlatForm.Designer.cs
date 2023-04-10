@@ -28,31 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CFlatForm));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
             this.cSideBarMenu1 = new CustomControl.CSideBarMenu();
             this.cButton2 = new CustomControl.CButton();
             this.cButton1 = new CustomControl.CButton();
-            this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(10, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(913, 10);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 554);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(923, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 554);
+            this.panel3.TabIndex = 11;
+            // 
+            // cDragAblePanel1
+            // 
+            this.cDragAblePanel1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.MediumSlateBlue;
+            this.cDragAblePanel1.IconImage = ((System.Drawing.Image)(resources.GetObject("cDragAblePanel1.IconImage")));
+            this.cDragAblePanel1.Location = new System.Drawing.Point(90, 17);
+            this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 49);
+            this.cDragAblePanel1.Name = "cDragAblePanel1";
+            this.cDragAblePanel1.Size = new System.Drawing.Size(600, 40);
+            this.cDragAblePanel1.TabIndex = 13;
+            this.cDragAblePanel1.TargetForm = this;
+            this.cDragAblePanel1._MaximizeClick += new System.EventHandler(this.cDragAblePanel1__MaximizeClick);
             // 
             // cSideBarMenu1
             // 
-            this.cSideBarMenu1.BtnForeColor = System.Drawing.Color.White;
-            this.cSideBarMenu1.BtnHoverForeColor = System.Drawing.Color.White;
-            this.cSideBarMenu1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cSideBarMenu1.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.cSideBarMenu1.FooterImage = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
-            this.cSideBarMenu1.HeaderImage = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
-            this.cSideBarMenu1.Location = new System.Drawing.Point(0, 26);
+            this.cSideBarMenu1.ActiveBtnColor = System.Drawing.Color.Peru;
+            this.cSideBarMenu1.BtnForeColor = System.Drawing.Color.Bisque;
+            this.cSideBarMenu1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cSideBarMenu1.FooterImage = null;
+            this.cSideBarMenu1.HeaderImage = null;
+            this.cSideBarMenu1.Location = new System.Drawing.Point(190, 83);
             this.cSideBarMenu1.Margin = new System.Windows.Forms.Padding(4);
             this.cSideBarMenu1.Name = "cSideBarMenu1";
             this.cSideBarMenu1.NumberButton = 4;
             this.cSideBarMenu1.NumberSubButton1 = 3;
-            this.cSideBarMenu1.NumberSubButton2 = 2;
-            this.cSideBarMenu1.NumberSubButton3 = 2;
+            this.cSideBarMenu1.NumberSubButton2 = 3;
+            this.cSideBarMenu1.NumberSubButton3 = 3;
             this.cSideBarMenu1.NumberSubButton4 = 3;
             this.cSideBarMenu1.ShowStatus = true;
-            this.cSideBarMenu1.Size = new System.Drawing.Size(250, 528);
-            this.cSideBarMenu1.TabIndex = 6;
+            this.cSideBarMenu1.Size = new System.Drawing.Size(250, 600);
+            this.cSideBarMenu1.SubBtnColor = System.Drawing.Color.Sienna;
+            this.cSideBarMenu1.TabIndex = 12;
             // 
             // cButton2
             // 
@@ -108,30 +150,18 @@
             this.cButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton1.UseVisualStyleBackColor = false;
             // 
-            // cDragAblePanel1
-            // 
-            this.cDragAblePanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.cDragAblePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cDragAblePanel1.FillColor = System.Drawing.SystemColors.ButtonShadow;
-            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.DarkSlateBlue;
-            this.cDragAblePanel1.Location = new System.Drawing.Point(0, 0);
-            this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 49);
-            this.cDragAblePanel1.Name = "cDragAblePanel1";
-            this.cDragAblePanel1.Size = new System.Drawing.Size(933, 26);
-            this.cDragAblePanel1.TabIndex = 5;
-            this.cDragAblePanel1.TargetForm = this;
-            this.cDragAblePanel1._MaximizeClick += new System.EventHandler(this.cDragAblePanel1__MaximizeClick);
-            // 
             // CFlatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 554);
+            this.Controls.Add(this.cDragAblePanel1);
             this.Controls.Add(this.cSideBarMenu1);
             this.Controls.Add(this.cButton2);
             this.Controls.Add(this.cButton1);
-            this.Controls.Add(this.cDragAblePanel1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -139,6 +169,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CFlatForm";
             this.Load += new System.EventHandler(this.CFlatForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.CFlatForm_Paint);
             this.ResumeLayout(false);
 
         }
@@ -146,8 +177,11 @@
         #endregion
         private CButton cButton1;
         private CButton cButton2;
-        private CDragAblePanel cDragAblePanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
         private CSideBarMenu cSideBarMenu1;
+        private CDragAblePanel cDragAblePanel1;
     }
 }
 

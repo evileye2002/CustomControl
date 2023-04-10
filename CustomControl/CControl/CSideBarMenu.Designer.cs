@@ -100,8 +100,8 @@
             // 
             // cButton43
             // 
-            this.cButton43.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton43.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton43.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton43.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton43.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton43.BorderRadius = 0;
             this.cButton43.BorderSize = 0;
@@ -117,7 +117,7 @@
             this.cButton43.HoverImage = null;
             this.cButton43.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton43.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton43.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton43.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton43.LeaveImage = null;
             this.cButton43.Location = new System.Drawing.Point(0, 120);
             this.cButton43.Name = "cButton43";
@@ -132,8 +132,8 @@
             // 
             // cButton42
             // 
-            this.cButton42.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton42.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton42.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton42.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton42.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton42.BorderRadius = 0;
             this.cButton42.BorderSize = 0;
@@ -149,7 +149,7 @@
             this.cButton42.HoverImage = null;
             this.cButton42.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton42.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton42.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton42.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton42.LeaveImage = null;
             this.cButton42.Location = new System.Drawing.Point(0, 80);
             this.cButton42.Name = "cButton42";
@@ -164,8 +164,8 @@
             // 
             // cButton41
             // 
-            this.cButton41.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton41.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton41.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton41.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton41.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton41.BorderRadius = 0;
             this.cButton41.BorderSize = 0;
@@ -181,7 +181,7 @@
             this.cButton41.HoverImage = null;
             this.cButton41.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton41.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton41.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton41.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton41.LeaveImage = null;
             this.cButton41.Location = new System.Drawing.Point(0, 40);
             this.cButton41.Name = "cButton41";
@@ -241,8 +241,8 @@
             // 
             // cButton33
             // 
-            this.cButton33.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton33.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton33.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton33.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton33.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton33.BorderRadius = 0;
             this.cButton33.BorderSize = 0;
@@ -258,7 +258,7 @@
             this.cButton33.HoverImage = null;
             this.cButton33.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton33.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton33.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton33.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton33.LeaveImage = null;
             this.cButton33.Location = new System.Drawing.Point(0, 120);
             this.cButton33.Name = "cButton33";
@@ -273,8 +273,8 @@
             // 
             // cButton32
             // 
-            this.cButton32.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton32.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton32.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton32.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton32.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton32.BorderRadius = 0;
             this.cButton32.BorderSize = 0;
@@ -290,7 +290,7 @@
             this.cButton32.HoverImage = null;
             this.cButton32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton32.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton32.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton32.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton32.LeaveImage = null;
             this.cButton32.Location = new System.Drawing.Point(0, 80);
             this.cButton32.Name = "cButton32";
@@ -305,8 +305,8 @@
             // 
             // cButton31
             // 
-            this.cButton31.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton31.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton31.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton31.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton31.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton31.BorderRadius = 0;
             this.cButton31.BorderSize = 0;
@@ -322,14 +322,14 @@
             this.cButton31.HoverImage = null;
             this.cButton31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton31.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton31.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton31.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton31.LeaveImage = null;
             this.cButton31.Location = new System.Drawing.Point(0, 40);
             this.cButton31.Name = "cButton31";
             this.cButton31.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.cButton31.Size = new System.Drawing.Size(250, 40);
             this.cButton31.TabIndex = 4;
-            this.cButton31.Text = "cButton21";
+            this.cButton31.Text = "cButton31";
             this.cButton31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton31.TextColor = System.Drawing.Color.White;
             this.cButton31.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -382,8 +382,8 @@
             // 
             // cButton23
             // 
-            this.cButton23.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton23.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton23.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton23.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton23.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton23.BorderRadius = 0;
             this.cButton23.BorderSize = 0;
@@ -399,7 +399,7 @@
             this.cButton23.HoverImage = null;
             this.cButton23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton23.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton23.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton23.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton23.LeaveImage = null;
             this.cButton23.Location = new System.Drawing.Point(0, 120);
             this.cButton23.Name = "cButton23";
@@ -414,8 +414,8 @@
             // 
             // cButton22
             // 
-            this.cButton22.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton22.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton22.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton22.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton22.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton22.BorderRadius = 0;
             this.cButton22.BorderSize = 0;
@@ -431,7 +431,7 @@
             this.cButton22.HoverImage = null;
             this.cButton22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton22.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton22.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton22.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton22.LeaveImage = null;
             this.cButton22.Location = new System.Drawing.Point(0, 80);
             this.cButton22.Name = "cButton22";
@@ -446,8 +446,8 @@
             // 
             // cButton21
             // 
-            this.cButton21.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton21.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton21.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton21.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton21.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton21.BorderRadius = 0;
             this.cButton21.BorderSize = 0;
@@ -463,7 +463,7 @@
             this.cButton21.HoverImage = null;
             this.cButton21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton21.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton21.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton21.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton21.LeaveImage = null;
             this.cButton21.Location = new System.Drawing.Point(0, 40);
             this.cButton21.Name = "cButton21";
@@ -523,8 +523,8 @@
             // 
             // cButton13
             // 
-            this.cButton13.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton13.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton13.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton13.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton13.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton13.BorderRadius = 0;
             this.cButton13.BorderSize = 0;
@@ -540,7 +540,7 @@
             this.cButton13.HoverImage = null;
             this.cButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton13.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton13.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton13.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton13.LeaveImage = null;
             this.cButton13.Location = new System.Drawing.Point(0, 120);
             this.cButton13.Name = "cButton13";
@@ -555,8 +555,8 @@
             // 
             // cButton12
             // 
-            this.cButton12.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton12.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton12.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton12.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton12.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton12.BorderRadius = 0;
             this.cButton12.BorderSize = 0;
@@ -572,7 +572,7 @@
             this.cButton12.HoverImage = null;
             this.cButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton12.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton12.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton12.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton12.LeaveImage = null;
             this.cButton12.Location = new System.Drawing.Point(0, 80);
             this.cButton12.Name = "cButton12";
@@ -587,8 +587,8 @@
             // 
             // cButton11
             // 
-            this.cButton11.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton11.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton11.BackColor = System.Drawing.Color.SlateBlue;
+            this.cButton11.BackgroundColor = System.Drawing.Color.SlateBlue;
             this.cButton11.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton11.BorderRadius = 0;
             this.cButton11.BorderSize = 0;
@@ -604,7 +604,7 @@
             this.cButton11.HoverImage = null;
             this.cButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton11.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton11.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton11.LeaveColor = System.Drawing.Color.SlateBlue;
             this.cButton11.LeaveImage = null;
             this.cButton11.Location = new System.Drawing.Point(0, 40);
             this.cButton11.Name = "cButton11";
@@ -811,6 +811,7 @@
             this.Controls.Add(this.pnSideBar);
             this.Name = "CSideBarMenu";
             this.Size = new System.Drawing.Size(250, 600);
+            this.FontChanged += new System.EventHandler(this.CSideBarMenu_FontChanged);
             this.pnSideBar.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

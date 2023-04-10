@@ -1,5 +1,7 @@
 ﻿using CustomControl.Properties;
 using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace CustomControl
@@ -13,8 +15,6 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
-            cDragAblePanel1.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            cDragAblePanel1.btnMinimize.Padding = new Padding(0, 9, 0, 0);
         }
 
         private void cDragAblePanel1__MaximizeClick(object sender, EventArgs e)
@@ -25,12 +25,15 @@ namespace CustomControl
                 WindowState = FormWindowState.Maximized;
             }
             else
+            {
                 WindowState = FormWindowState.Normal;
+            }
         }
 
-        private void cSideBarMenu1__Logout_Click(object sender, EventArgs e)
+        private void CFlatForm_Paint(object sender, PaintEventArgs e)
         {
 
+            //SharedClass.RoundedForm(this, 18, e.Graphics, Color.Empty, 0);
         }
     }
 }

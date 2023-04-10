@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CustomControl
 {
@@ -18,11 +19,21 @@ namespace CustomControl
         private int subButton2 = 200;
         private int subButton3 = 200;
         private int subButton4 = 200;
+
         private bool isShow = false;
+        private Color activeBtnColor = Color.Red;
         private Color fillColor = Color.MediumSlateBlue;
         private Color btnForeColor = Color.White;
+        private Color subBtnColor = Color.SlateBlue;
         private Image headerImage = null;
         private Image footerImage = null;
+        private CButton currencyButton;
+
+        private Font font = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point);
+        private string fontName = "Arial";
+        private float fontSize = 10F;
+        private FontStyle fontStyle = FontStyle.Regular;
+        private GraphicsUnit graphicsUnit = GraphicsUnit.Point;
 
         #region Event
         public event EventHandler _Logout_Click;
@@ -48,7 +59,13 @@ namespace CustomControl
                     btnFooter.BackgroundColor = fillColor;
                     if (pn != pnFooter && pn != pnHeader)
                         foreach (CButton cButton in pn.Controls)
-                            cButton.BackgroundColor = fillColor;
+                        {
+                            if (cButton.CustomTag == "MainBtn")
+                                cButton.BackgroundColor = fillColor;
+                            else
+                                cButton.BackgroundColor = subBtnColor;
+                        }
+                            
                 }
             }
         }
@@ -69,6 +86,33 @@ namespace CustomControl
                         foreach (CButton cButton in pn.Controls)
                             cButton.ForeColor = btnForeColor;
                 }
+            }
+        }
+        [Category("CSideBar Setting")]
+        public Color ActiveBtnColor
+        {
+            get { return activeBtnColor; }
+            set
+            {
+                activeBtnColor = value;
+            }
+        }
+        [Category("CSideBar Setting")]
+        public Color SubBtnColor
+        {
+            get { return subBtnColor; }
+            set
+            {
+                subBtnColor = value;
+                foreach(Panel panel in pnSideBar.Controls)
+                    if (panel != pnFooter && panel != pnHeader)
+                        foreach(CButton cButton in panel.Controls)
+                        {
+                            if(cButton.CustomTag != "MainBtn")
+                                cButton.BackgroundColor = subBtnColor;
+                        }
+
+                    
             }
         }
 
@@ -114,7 +158,7 @@ namespace CustomControl
             set
             {
                 numberSubButton1 = ValidationValue(value);
-                SetSubButton(numberSubButton1, 1);
+                AvtivatePanelBtn(numberSubButton1, 1);
             }
         }
         [Category("CSideBar Setting")]
@@ -124,8 +168,7 @@ namespace CustomControl
             set
             {
                 numberSubButton2 = ValidationValue(value);
-
-                SetSubButton(numberSubButton2, 2);
+                AvtivatePanelBtn(numberSubButton2, 2);
             }
         }
         [Category("CSideBar Setting")]
@@ -135,8 +178,7 @@ namespace CustomControl
             set
             {
                 numberSubButton3 = ValidationValue(value);
-
-                SetSubButton(numberSubButton3,3);
+                AvtivatePanelBtn(numberSubButton3,3);
             }
         }
         [Category("CSideBar Setting")]
@@ -146,8 +188,20 @@ namespace CustomControl
             set
             {
                 numberSubButton4 = ValidationValue(value);
-
-                SetSubButton(numberSubButton4,4);
+                AvtivatePanelBtn(numberSubButton4,4);
+            }
+        }
+        [Category("CSideBar Setting")]
+        public bool ShowStatus
+        {
+            get { return isShow; }
+            set
+            {
+                isShow = value;
+                if (isShow)
+                    ShowSideBar();
+                else
+                    HideSideBar();
             }
         }
 
@@ -172,20 +226,6 @@ namespace CustomControl
             }
         }
 
-        [Category("CSideBar Setting")]
-        public bool ShowStatus
-        {
-            get { return isShow; }
-            set
-            {
-                isShow = value;
-                if (isShow)
-                    ShowSideBar();
-                else
-                    HideSideBar();
-            }
-        }
-
         public CSideBarMenu()
         {
             InitializeComponent();
@@ -202,7 +242,7 @@ namespace CustomControl
             cButton4.CustomTag = "MainBtn";
             HideSideBar();
         }
-        private void OffSize()
+        private void DisablePanelBtn()
         {
             foreach (Panel panel in pnSideBar.Controls)
                 if (panel != pnFooter && panel != pnHeader && panel.Height != 48)
@@ -231,7 +271,7 @@ namespace CustomControl
             else
                 return incoming;
         }
-        private void SetSubButton(int n,int btn)
+        private void AvtivatePanelBtn(int n,int btn)
         {
             switch (btn)
             {
@@ -259,11 +299,14 @@ namespace CustomControl
             {
                 if (panel1.Height != subButton1)
                 {
-                    OffSize();
+                    DisablePanelBtn();
+                    ActivateButton(sender);
                     panel1.Height = subButton1;
                 }
                 else
+                {
                     panel1.Height = 49;
+                }
             }
         }
 
@@ -275,7 +318,8 @@ namespace CustomControl
             {
                 if (panel2.Height != subButton2)
                 {
-                    OffSize();
+                    DisablePanelBtn();
+                    ActivateButton(sender);
                     panel2.Height = subButton2;
                 }
                 else
@@ -291,7 +335,8 @@ namespace CustomControl
             {
                 if (panel3.Height != subButton3)
                 {
-                    OffSize();
+                    DisablePanelBtn();
+                    ActivateButton(sender);
                     panel3.Height = subButton3;
                 }
                 else
@@ -307,7 +352,8 @@ namespace CustomControl
             {
                 if (panel4.Height != subButton4)
                 {
-                    OffSize();
+                    DisablePanelBtn();
+                    ActivateButton(sender);
                     panel4.Height = subButton4;
                 }
                 else
@@ -396,12 +442,50 @@ namespace CustomControl
                         else
                         {
                             button.Text = button.Tag.ToString();
+                            button.BackgroundColor = subBtnColor;
                             button.Padding = new Padding(31, 0, 0, 0);
                         }
                         
                     }
                 }
             }
+        }
+        public void ActivateButton(object btnSender)
+        {
+            if (btnSender != null)
+            {
+                if (currencyButton != (CButton)btnSender)
+                {
+                    DisableButton();
+                    currencyButton = (CButton)btnSender;
+                    currencyButton.BackgroundColor = activeBtnColor;
+                    currencyButton.Font = new Font(fontName, fontSize, FontStyle.Bold, graphicsUnit);
+
+                }
+            }
+        }
+
+        public void DisableButton()
+        {
+            foreach (Panel pn in pnSideBar.Controls)
+                if(pn != pnFooter && pn != pnHeader)
+                    foreach (CButton previousBtn in pn.Controls)
+                    {
+                        if(previousBtn.CustomTag == "MainBtn")
+                        {
+                            previousBtn.BackgroundColor = fillColor;
+                            previousBtn.Font = font;
+                        }
+                    }
+        }
+
+        private void CSideBarMenu_FontChanged(object sender, EventArgs e)
+        {
+            fontName = Font.Name;
+            fontSize = Font.Size;
+            fontStyle = Font.Style;
+            graphicsUnit = Font.Unit;
+            font = Font;
         }
     }
 }
