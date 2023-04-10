@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CFlatForm));
             this.cSideBarMenu1 = new CustomControl.CSideBarMenu();
             this.cButton2 = new CustomControl.CButton();
             this.cButton1 = new CustomControl.CButton();
@@ -37,37 +36,41 @@
             // 
             // cSideBarMenu1
             // 
+            this.cSideBarMenu1.BtnForeColor = System.Drawing.Color.White;
+            this.cSideBarMenu1.BtnHoverForeColor = System.Drawing.Color.White;
             this.cSideBarMenu1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cSideBarMenu1.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.cSideBarMenu1.HeaderImage = ((System.Drawing.Image)(resources.GetObject("cSideBarMenu1.HeaderImage")));
-            this.cSideBarMenu1.Location = new System.Drawing.Point(0, 24);
+            this.cSideBarMenu1.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.cSideBarMenu1.FooterImage = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
+            this.cSideBarMenu1.HeaderImage = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
+            this.cSideBarMenu1.Location = new System.Drawing.Point(0, 26);
             this.cSideBarMenu1.Margin = new System.Windows.Forms.Padding(4);
             this.cSideBarMenu1.Name = "cSideBarMenu1";
             this.cSideBarMenu1.NumberButton = 4;
-            this.cSideBarMenu1.NumberSubButton1 = 0;
-            this.cSideBarMenu1.NumberSubButton2 = 0;
-            this.cSideBarMenu1.NumberSubButton3 = 0;
-            this.cSideBarMenu1.NumberSubButton4 = 0;
-            this.cSideBarMenu1.Size = new System.Drawing.Size(60, 530);
-            this.cSideBarMenu1.TabIndex = 4;
-            this.cSideBarMenu1._Logout_Click += new System.EventHandler(this.cSideBarMenu1__Logout_Click);
+            this.cSideBarMenu1.NumberSubButton1 = 3;
+            this.cSideBarMenu1.NumberSubButton2 = 2;
+            this.cSideBarMenu1.NumberSubButton3 = 2;
+            this.cSideBarMenu1.NumberSubButton4 = 3;
+            this.cSideBarMenu1.ShowStatus = true;
+            this.cSideBarMenu1.Size = new System.Drawing.Size(250, 528);
+            this.cSideBarMenu1.TabIndex = 6;
             // 
             // cButton2
             // 
-            this.cButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton2.BackColor = System.Drawing.Color.LimeGreen;
+            this.cButton2.BackgroundColor = System.Drawing.Color.LimeGreen;
             this.cButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton2.BorderRadius = 0;
             this.cButton2.BorderSize = 0;
             this.cButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton2.CustomTag = "";
             this.cButton2.FlatAppearance.BorderSize = 0;
             this.cButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cButton2.ForeColor = System.Drawing.Color.White;
             this.cButton2.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton2.HoverColor = System.Drawing.Color.Empty;
+            this.cButton2.HoverColor = System.Drawing.Color.DarkGray;
             this.cButton2.HoverImage = null;
             this.cButton2.LeaveBorderColor = System.Drawing.Color.Empty;
-            this.cButton2.LeaveColor = System.Drawing.Color.Empty;
+            this.cButton2.LeaveColor = System.Drawing.Color.LimeGreen;
             this.cButton2.LeaveImage = null;
             this.cButton2.Location = new System.Drawing.Point(464, 207);
             this.cButton2.Name = "cButton2";
@@ -85,6 +88,7 @@
             this.cButton1.BorderRadius = 0;
             this.cButton1.BorderSize = 2;
             this.cButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton1.CustomTag = "";
             this.cButton1.FlatAppearance.BorderSize = 0;
             this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cButton1.ForeColor = System.Drawing.Color.Black;
@@ -106,15 +110,15 @@
             // 
             // cDragAblePanel1
             // 
+            this.cDragAblePanel1.BackColor = System.Drawing.SystemColors.Control;
             this.cDragAblePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cDragAblePanel1.FillColor = System.Drawing.Color.MediumPurple;
+            this.cDragAblePanel1.FillColor = System.Drawing.SystemColors.ButtonShadow;
             this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.DarkSlateBlue;
             this.cDragAblePanel1.Location = new System.Drawing.Point(0, 0);
             this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.cDragAblePanel1.MaximizeImage = ((System.Drawing.Image)(resources.GetObject("cDragAblePanel1.MaximizeImage")));
             this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 49);
             this.cDragAblePanel1.Name = "cDragAblePanel1";
-            this.cDragAblePanel1.Size = new System.Drawing.Size(933, 24);
+            this.cDragAblePanel1.Size = new System.Drawing.Size(933, 26);
             this.cDragAblePanel1.TabIndex = 5;
             this.cDragAblePanel1.TargetForm = this;
             this.cDragAblePanel1._MaximizeClick += new System.EventHandler(this.cDragAblePanel1__MaximizeClick);
@@ -142,8 +146,8 @@
         #endregion
         private CButton cButton1;
         private CButton cButton2;
-        private CSideBarMenu cSideBarMenu1;
         private CDragAblePanel cDragAblePanel1;
+        private CSideBarMenu cSideBarMenu1;
     }
 }
 

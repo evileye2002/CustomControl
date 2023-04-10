@@ -30,24 +30,24 @@
         {
             this.pnSideBar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cButton16 = new CustomControl.CButton();
-            this.cButton15 = new CustomControl.CButton();
-            this.cButton14 = new CustomControl.CButton();
-            this.cButton13 = new CustomControl.CButton();
+            this.cButton43 = new CustomControl.CButton();
+            this.cButton42 = new CustomControl.CButton();
+            this.cButton41 = new CustomControl.CButton();
+            this.cButton4 = new CustomControl.CButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cButton33 = new CustomControl.CButton();
+            this.cButton32 = new CustomControl.CButton();
+            this.cButton31 = new CustomControl.CButton();
+            this.cButton3 = new CustomControl.CButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cButton23 = new CustomControl.CButton();
+            this.cButton22 = new CustomControl.CButton();
+            this.cButton21 = new CustomControl.CButton();
+            this.cButton2 = new CustomControl.CButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cButton13 = new CustomControl.CButton();
             this.cButton12 = new CustomControl.CButton();
             this.cButton11 = new CustomControl.CButton();
-            this.cButton10 = new CustomControl.CButton();
-            this.cButton9 = new CustomControl.CButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.cButton8 = new CustomControl.CButton();
-            this.cButton7 = new CustomControl.CButton();
-            this.cButton6 = new CustomControl.CButton();
-            this.cButton5 = new CustomControl.CButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cButton4 = new CustomControl.CButton();
-            this.cButton3 = new CustomControl.CButton();
-            this.cButton2 = new CustomControl.CButton();
             this.cButton1 = new CustomControl.CButton();
             this.pnFooter = new System.Windows.Forms.Panel();
             this.lbDetail = new System.Windows.Forms.Label();
@@ -58,6 +58,8 @@
             this.btnMenu = new CustomControl.CButton();
             this.lbNameHeader = new System.Windows.Forms.Label();
             this.pbHeader = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pnSideBar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,111 +88,438 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.cButton16);
-            this.panel4.Controls.Add(this.cButton15);
-            this.panel4.Controls.Add(this.cButton14);
-            this.panel4.Controls.Add(this.cButton13);
+            this.panel4.Controls.Add(this.cButton43);
+            this.panel4.Controls.Add(this.cButton42);
+            this.panel4.Controls.Add(this.cButton41);
+            this.panel4.Controls.Add(this.cButton4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 550);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 160);
             this.panel4.TabIndex = 10;
             // 
-            // cButton16
+            // cButton43
             // 
-            this.cButton16.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton16.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton16.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton16.BorderRadius = 0;
-            this.cButton16.BorderSize = 0;
-            this.cButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton16.FlatAppearance.BorderSize = 0;
-            this.cButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton16.ForeColor = System.Drawing.Color.White;
-            this.cButton16.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton16.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton16.HoverImage = null;
-            this.cButton16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton16.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton16.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton16.LeaveImage = null;
-            this.cButton16.Location = new System.Drawing.Point(0, 120);
-            this.cButton16.Name = "cButton16";
-            this.cButton16.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton16.Size = new System.Drawing.Size(250, 40);
-            this.cButton16.TabIndex = 2;
-            this.cButton16.Text = "cButton16";
-            this.cButton16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton16.TextColor = System.Drawing.Color.White;
-            this.cButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton16.UseVisualStyleBackColor = false;
-            this.cButton16.Click += new System.EventHandler(this.cButton16_Click);
+            this.cButton43.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton43.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton43.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton43.BorderRadius = 0;
+            this.cButton43.BorderSize = 0;
+            this.cButton43.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton43.CustomTag = "";
+            this.cButton43.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton43.FlatAppearance.BorderSize = 0;
+            this.cButton43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton43.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton43.ForeColor = System.Drawing.Color.White;
+            this.cButton43.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton43.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton43.HoverImage = null;
+            this.cButton43.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton43.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton43.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton43.LeaveImage = null;
+            this.cButton43.Location = new System.Drawing.Point(0, 120);
+            this.cButton43.Name = "cButton43";
+            this.cButton43.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton43.Size = new System.Drawing.Size(250, 40);
+            this.cButton43.TabIndex = 2;
+            this.cButton43.Text = "cButton43";
+            this.cButton43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton43.TextColor = System.Drawing.Color.White;
+            this.cButton43.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton43.UseVisualStyleBackColor = false;
             // 
-            // cButton15
+            // cButton42
             // 
-            this.cButton15.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton15.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton15.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton15.BorderRadius = 0;
-            this.cButton15.BorderSize = 0;
-            this.cButton15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton15.FlatAppearance.BorderSize = 0;
-            this.cButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton15.ForeColor = System.Drawing.Color.White;
-            this.cButton15.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton15.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton15.HoverImage = null;
-            this.cButton15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton15.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton15.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton15.LeaveImage = null;
-            this.cButton15.Location = new System.Drawing.Point(0, 80);
-            this.cButton15.Name = "cButton15";
-            this.cButton15.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton15.Size = new System.Drawing.Size(250, 40);
-            this.cButton15.TabIndex = 3;
-            this.cButton15.Text = "cButton15";
-            this.cButton15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton15.TextColor = System.Drawing.Color.White;
-            this.cButton15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton15.UseVisualStyleBackColor = false;
-            this.cButton15.Click += new System.EventHandler(this.cButton15_Click);
+            this.cButton42.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton42.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton42.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton42.BorderRadius = 0;
+            this.cButton42.BorderSize = 0;
+            this.cButton42.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton42.CustomTag = "";
+            this.cButton42.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton42.FlatAppearance.BorderSize = 0;
+            this.cButton42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton42.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton42.ForeColor = System.Drawing.Color.White;
+            this.cButton42.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton42.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton42.HoverImage = null;
+            this.cButton42.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton42.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton42.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton42.LeaveImage = null;
+            this.cButton42.Location = new System.Drawing.Point(0, 80);
+            this.cButton42.Name = "cButton42";
+            this.cButton42.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton42.Size = new System.Drawing.Size(250, 40);
+            this.cButton42.TabIndex = 3;
+            this.cButton42.Text = "cButton42";
+            this.cButton42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton42.TextColor = System.Drawing.Color.White;
+            this.cButton42.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton42.UseVisualStyleBackColor = false;
             // 
-            // cButton14
+            // cButton41
             // 
-            this.cButton14.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton14.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton14.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton14.BorderRadius = 0;
-            this.cButton14.BorderSize = 0;
-            this.cButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton14.FlatAppearance.BorderSize = 0;
-            this.cButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton14.ForeColor = System.Drawing.Color.White;
-            this.cButton14.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton14.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton14.HoverImage = null;
-            this.cButton14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton14.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton14.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton14.LeaveImage = null;
-            this.cButton14.Location = new System.Drawing.Point(0, 40);
-            this.cButton14.Name = "cButton14";
-            this.cButton14.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton14.Size = new System.Drawing.Size(250, 40);
-            this.cButton14.TabIndex = 4;
-            this.cButton14.Text = "cButton14";
-            this.cButton14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton14.TextColor = System.Drawing.Color.White;
-            this.cButton14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton14.UseVisualStyleBackColor = false;
-            this.cButton14.Click += new System.EventHandler(this.cButton14_Click);
+            this.cButton41.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton41.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton41.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton41.BorderRadius = 0;
+            this.cButton41.BorderSize = 0;
+            this.cButton41.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton41.CustomTag = "";
+            this.cButton41.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton41.FlatAppearance.BorderSize = 0;
+            this.cButton41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton41.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton41.ForeColor = System.Drawing.Color.White;
+            this.cButton41.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton41.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton41.HoverImage = null;
+            this.cButton41.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton41.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton41.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton41.LeaveImage = null;
+            this.cButton41.Location = new System.Drawing.Point(0, 40);
+            this.cButton41.Name = "cButton41";
+            this.cButton41.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton41.Size = new System.Drawing.Size(250, 40);
+            this.cButton41.TabIndex = 4;
+            this.cButton41.Text = "cButton41";
+            this.cButton41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton41.TextColor = System.Drawing.Color.White;
+            this.cButton41.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton41.UseVisualStyleBackColor = false;
+            // 
+            // cButton4
+            // 
+            this.cButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton4.BorderRadius = 0;
+            this.cButton4.BorderSize = 0;
+            this.cButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton4.CustomTag = "";
+            this.cButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton4.FlatAppearance.BorderSize = 0;
+            this.cButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton4.ForeColor = System.Drawing.Color.White;
+            this.cButton4.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton4.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton4.HoverImage = null;
+            this.cButton4.Image = global::CustomControl.Properties.Resources.Cutlery_32;
+            this.cButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton4.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton4.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton4.LeaveImage = null;
+            this.cButton4.Location = new System.Drawing.Point(0, 0);
+            this.cButton4.Name = "cButton4";
+            this.cButton4.Size = new System.Drawing.Size(250, 40);
+            this.cButton4.TabIndex = 1;
+            this.cButton4.Tag = "MainBtn";
+            this.cButton4.Text = "cButton4";
+            this.cButton4.TextColor = System.Drawing.Color.White;
+            this.cButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton4.UseVisualStyleBackColor = false;
+            this.cButton4.Click += new System.EventHandler(this.cButton13_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cButton33);
+            this.panel3.Controls.Add(this.cButton32);
+            this.panel3.Controls.Add(this.cButton31);
+            this.panel3.Controls.Add(this.cButton3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 390);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 160);
+            this.panel3.TabIndex = 9;
+            // 
+            // cButton33
+            // 
+            this.cButton33.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton33.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton33.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton33.BorderRadius = 0;
+            this.cButton33.BorderSize = 0;
+            this.cButton33.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton33.CustomTag = "";
+            this.cButton33.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton33.FlatAppearance.BorderSize = 0;
+            this.cButton33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton33.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton33.ForeColor = System.Drawing.Color.White;
+            this.cButton33.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton33.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton33.HoverImage = null;
+            this.cButton33.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton33.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton33.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton33.LeaveImage = null;
+            this.cButton33.Location = new System.Drawing.Point(0, 120);
+            this.cButton33.Name = "cButton33";
+            this.cButton33.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton33.Size = new System.Drawing.Size(250, 40);
+            this.cButton33.TabIndex = 2;
+            this.cButton33.Text = "cButton33";
+            this.cButton33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton33.TextColor = System.Drawing.Color.White;
+            this.cButton33.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton33.UseVisualStyleBackColor = false;
+            // 
+            // cButton32
+            // 
+            this.cButton32.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton32.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton32.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton32.BorderRadius = 0;
+            this.cButton32.BorderSize = 0;
+            this.cButton32.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton32.CustomTag = "";
+            this.cButton32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton32.FlatAppearance.BorderSize = 0;
+            this.cButton32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton32.ForeColor = System.Drawing.Color.White;
+            this.cButton32.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton32.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton32.HoverImage = null;
+            this.cButton32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton32.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton32.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton32.LeaveImage = null;
+            this.cButton32.Location = new System.Drawing.Point(0, 80);
+            this.cButton32.Name = "cButton32";
+            this.cButton32.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton32.Size = new System.Drawing.Size(250, 40);
+            this.cButton32.TabIndex = 3;
+            this.cButton32.Text = "cButton32";
+            this.cButton32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton32.TextColor = System.Drawing.Color.White;
+            this.cButton32.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton32.UseVisualStyleBackColor = false;
+            // 
+            // cButton31
+            // 
+            this.cButton31.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton31.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton31.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton31.BorderRadius = 0;
+            this.cButton31.BorderSize = 0;
+            this.cButton31.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton31.CustomTag = "";
+            this.cButton31.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton31.FlatAppearance.BorderSize = 0;
+            this.cButton31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton31.ForeColor = System.Drawing.Color.White;
+            this.cButton31.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton31.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton31.HoverImage = null;
+            this.cButton31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton31.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton31.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton31.LeaveImage = null;
+            this.cButton31.Location = new System.Drawing.Point(0, 40);
+            this.cButton31.Name = "cButton31";
+            this.cButton31.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton31.Size = new System.Drawing.Size(250, 40);
+            this.cButton31.TabIndex = 4;
+            this.cButton31.Text = "cButton21";
+            this.cButton31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton31.TextColor = System.Drawing.Color.White;
+            this.cButton31.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton31.UseVisualStyleBackColor = false;
+            // 
+            // cButton3
+            // 
+            this.cButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton3.BorderRadius = 0;
+            this.cButton3.BorderSize = 0;
+            this.cButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton3.CustomTag = "";
+            this.cButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton3.FlatAppearance.BorderSize = 0;
+            this.cButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton3.ForeColor = System.Drawing.Color.White;
+            this.cButton3.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton3.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton3.HoverImage = null;
+            this.cButton3.Image = global::CustomControl.Properties.Resources.Cutlery_32;
+            this.cButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton3.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton3.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton3.LeaveImage = null;
+            this.cButton3.Location = new System.Drawing.Point(0, 0);
+            this.cButton3.Name = "cButton3";
+            this.cButton3.Size = new System.Drawing.Size(250, 40);
+            this.cButton3.TabIndex = 1;
+            this.cButton3.Tag = "MainBtn";
+            this.cButton3.Text = "cButton3";
+            this.cButton3.TextColor = System.Drawing.Color.White;
+            this.cButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton3.UseVisualStyleBackColor = false;
+            this.cButton3.Click += new System.EventHandler(this.cButton9_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cButton23);
+            this.panel2.Controls.Add(this.cButton22);
+            this.panel2.Controls.Add(this.cButton21);
+            this.panel2.Controls.Add(this.cButton2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 230);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 160);
+            this.panel2.TabIndex = 8;
+            // 
+            // cButton23
+            // 
+            this.cButton23.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton23.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton23.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton23.BorderRadius = 0;
+            this.cButton23.BorderSize = 0;
+            this.cButton23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton23.CustomTag = "";
+            this.cButton23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton23.FlatAppearance.BorderSize = 0;
+            this.cButton23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton23.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton23.ForeColor = System.Drawing.Color.White;
+            this.cButton23.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton23.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton23.HoverImage = null;
+            this.cButton23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton23.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton23.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton23.LeaveImage = null;
+            this.cButton23.Location = new System.Drawing.Point(0, 120);
+            this.cButton23.Name = "cButton23";
+            this.cButton23.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton23.Size = new System.Drawing.Size(250, 40);
+            this.cButton23.TabIndex = 2;
+            this.cButton23.Text = "cButton23";
+            this.cButton23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton23.TextColor = System.Drawing.Color.White;
+            this.cButton23.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton23.UseVisualStyleBackColor = false;
+            // 
+            // cButton22
+            // 
+            this.cButton22.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton22.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton22.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton22.BorderRadius = 0;
+            this.cButton22.BorderSize = 0;
+            this.cButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton22.CustomTag = "";
+            this.cButton22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton22.FlatAppearance.BorderSize = 0;
+            this.cButton22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton22.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton22.ForeColor = System.Drawing.Color.White;
+            this.cButton22.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton22.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton22.HoverImage = null;
+            this.cButton22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton22.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton22.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton22.LeaveImage = null;
+            this.cButton22.Location = new System.Drawing.Point(0, 80);
+            this.cButton22.Name = "cButton22";
+            this.cButton22.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton22.Size = new System.Drawing.Size(250, 40);
+            this.cButton22.TabIndex = 3;
+            this.cButton22.Text = "cButton22";
+            this.cButton22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton22.TextColor = System.Drawing.Color.White;
+            this.cButton22.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton22.UseVisualStyleBackColor = false;
+            // 
+            // cButton21
+            // 
+            this.cButton21.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton21.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton21.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton21.BorderRadius = 0;
+            this.cButton21.BorderSize = 0;
+            this.cButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton21.CustomTag = "";
+            this.cButton21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton21.FlatAppearance.BorderSize = 0;
+            this.cButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton21.ForeColor = System.Drawing.Color.White;
+            this.cButton21.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton21.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton21.HoverImage = null;
+            this.cButton21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton21.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton21.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton21.LeaveImage = null;
+            this.cButton21.Location = new System.Drawing.Point(0, 40);
+            this.cButton21.Name = "cButton21";
+            this.cButton21.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
+            this.cButton21.Size = new System.Drawing.Size(250, 40);
+            this.cButton21.TabIndex = 4;
+            this.cButton21.Text = "cButton21";
+            this.cButton21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton21.TextColor = System.Drawing.Color.White;
+            this.cButton21.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton21.UseVisualStyleBackColor = false;
+            // 
+            // cButton2
+            // 
+            this.cButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton2.BorderRadius = 0;
+            this.cButton2.BorderSize = 0;
+            this.cButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton2.CustomTag = "";
+            this.cButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cButton2.FlatAppearance.BorderSize = 0;
+            this.cButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cButton2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cButton2.ForeColor = System.Drawing.Color.White;
+            this.cButton2.HoverBorderColor = System.Drawing.Color.Empty;
+            this.cButton2.HoverColor = System.Drawing.Color.DarkSlateBlue;
+            this.cButton2.HoverImage = null;
+            this.cButton2.Image = global::CustomControl.Properties.Resources.Cutlery_32;
+            this.cButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cButton2.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cButton2.LeaveColor = System.Drawing.Color.MediumSlateBlue;
+            this.cButton2.LeaveImage = null;
+            this.cButton2.Location = new System.Drawing.Point(0, 0);
+            this.cButton2.Name = "cButton2";
+            this.cButton2.Size = new System.Drawing.Size(250, 40);
+            this.cButton2.TabIndex = 1;
+            this.cButton2.Tag = "MainBtn";
+            this.cButton2.Text = "cButton2";
+            this.cButton2.TextColor = System.Drawing.Color.White;
+            this.cButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cButton2.UseVisualStyleBackColor = false;
+            this.cButton2.Click += new System.EventHandler(this.cButton5_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cButton13);
+            this.panel1.Controls.Add(this.cButton12);
+            this.panel1.Controls.Add(this.cButton11);
+            this.panel1.Controls.Add(this.cButton1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 70);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 160);
+            this.panel1.TabIndex = 7;
             // 
             // cButton13
             // 
@@ -200,6 +529,7 @@
             this.cButton13.BorderRadius = 0;
             this.cButton13.BorderSize = 0;
             this.cButton13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton13.CustomTag = "";
             this.cButton13.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButton13.FlatAppearance.BorderSize = 0;
             this.cButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -208,32 +538,20 @@
             this.cButton13.HoverBorderColor = System.Drawing.Color.Empty;
             this.cButton13.HoverColor = System.Drawing.Color.DarkSlateBlue;
             this.cButton13.HoverImage = null;
-            this.cButton13.Image = global::CustomControl.Properties.Resources.Cutlery_32;
             this.cButton13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton13.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton13.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.cButton13.LeaveImage = null;
-            this.cButton13.Location = new System.Drawing.Point(0, 0);
+            this.cButton13.Location = new System.Drawing.Point(0, 120);
             this.cButton13.Name = "cButton13";
+            this.cButton13.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.cButton13.Size = new System.Drawing.Size(250, 40);
-            this.cButton13.TabIndex = 1;
+            this.cButton13.TabIndex = 4;
             this.cButton13.Text = "cButton13";
+            this.cButton13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton13.TextColor = System.Drawing.Color.White;
             this.cButton13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton13.UseVisualStyleBackColor = false;
-            this.cButton13.Click += new System.EventHandler(this.cButton13_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.cButton12);
-            this.panel3.Controls.Add(this.cButton11);
-            this.panel3.Controls.Add(this.cButton10);
-            this.panel3.Controls.Add(this.cButton9);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 390);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 160);
-            this.panel3.TabIndex = 9;
             // 
             // cButton12
             // 
@@ -243,6 +561,7 @@
             this.cButton12.BorderRadius = 0;
             this.cButton12.BorderSize = 0;
             this.cButton12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton12.CustomTag = "";
             this.cButton12.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButton12.FlatAppearance.BorderSize = 0;
             this.cButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -255,17 +574,16 @@
             this.cButton12.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton12.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.cButton12.LeaveImage = null;
-            this.cButton12.Location = new System.Drawing.Point(0, 120);
+            this.cButton12.Location = new System.Drawing.Point(0, 80);
             this.cButton12.Name = "cButton12";
             this.cButton12.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.cButton12.Size = new System.Drawing.Size(250, 40);
-            this.cButton12.TabIndex = 2;
+            this.cButton12.TabIndex = 3;
             this.cButton12.Text = "cButton12";
             this.cButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton12.TextColor = System.Drawing.Color.White;
             this.cButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton12.UseVisualStyleBackColor = false;
-            this.cButton12.Click += new System.EventHandler(this.cButton12_Click);
             // 
             // cButton11
             // 
@@ -275,6 +593,7 @@
             this.cButton11.BorderRadius = 0;
             this.cButton11.BorderSize = 0;
             this.cButton11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton11.CustomTag = "";
             this.cButton11.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButton11.FlatAppearance.BorderSize = 0;
             this.cButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -287,327 +606,16 @@
             this.cButton11.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.cButton11.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.cButton11.LeaveImage = null;
-            this.cButton11.Location = new System.Drawing.Point(0, 80);
+            this.cButton11.Location = new System.Drawing.Point(0, 40);
             this.cButton11.Name = "cButton11";
             this.cButton11.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.cButton11.Size = new System.Drawing.Size(250, 40);
-            this.cButton11.TabIndex = 3;
+            this.cButton11.TabIndex = 2;
             this.cButton11.Text = "cButton11";
             this.cButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton11.TextColor = System.Drawing.Color.White;
             this.cButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButton11.UseVisualStyleBackColor = false;
-            this.cButton11.Click += new System.EventHandler(this.cButton11_Click);
-            // 
-            // cButton10
-            // 
-            this.cButton10.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton10.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton10.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton10.BorderRadius = 0;
-            this.cButton10.BorderSize = 0;
-            this.cButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton10.FlatAppearance.BorderSize = 0;
-            this.cButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton10.ForeColor = System.Drawing.Color.White;
-            this.cButton10.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton10.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton10.HoverImage = null;
-            this.cButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton10.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton10.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton10.LeaveImage = null;
-            this.cButton10.Location = new System.Drawing.Point(0, 40);
-            this.cButton10.Name = "cButton10";
-            this.cButton10.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton10.Size = new System.Drawing.Size(250, 40);
-            this.cButton10.TabIndex = 4;
-            this.cButton10.Text = "cButton10";
-            this.cButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton10.TextColor = System.Drawing.Color.White;
-            this.cButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton10.UseVisualStyleBackColor = false;
-            this.cButton10.Click += new System.EventHandler(this.cButton10_Click);
-            // 
-            // cButton9
-            // 
-            this.cButton9.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton9.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton9.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton9.BorderRadius = 0;
-            this.cButton9.BorderSize = 0;
-            this.cButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton9.FlatAppearance.BorderSize = 0;
-            this.cButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton9.ForeColor = System.Drawing.Color.White;
-            this.cButton9.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton9.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton9.HoverImage = null;
-            this.cButton9.Image = global::CustomControl.Properties.Resources.Cutlery_32;
-            this.cButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton9.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton9.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton9.LeaveImage = null;
-            this.cButton9.Location = new System.Drawing.Point(0, 0);
-            this.cButton9.Name = "cButton9";
-            this.cButton9.Size = new System.Drawing.Size(250, 40);
-            this.cButton9.TabIndex = 1;
-            this.cButton9.Text = "cButton9";
-            this.cButton9.TextColor = System.Drawing.Color.White;
-            this.cButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton9.UseVisualStyleBackColor = false;
-            this.cButton9.Click += new System.EventHandler(this.cButton9_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.cButton8);
-            this.panel2.Controls.Add(this.cButton7);
-            this.panel2.Controls.Add(this.cButton6);
-            this.panel2.Controls.Add(this.cButton5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 230);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 160);
-            this.panel2.TabIndex = 8;
-            // 
-            // cButton8
-            // 
-            this.cButton8.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton8.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton8.BorderRadius = 0;
-            this.cButton8.BorderSize = 0;
-            this.cButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton8.FlatAppearance.BorderSize = 0;
-            this.cButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton8.ForeColor = System.Drawing.Color.White;
-            this.cButton8.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton8.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton8.HoverImage = null;
-            this.cButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton8.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton8.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton8.LeaveImage = null;
-            this.cButton8.Location = new System.Drawing.Point(0, 120);
-            this.cButton8.Name = "cButton8";
-            this.cButton8.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton8.Size = new System.Drawing.Size(250, 40);
-            this.cButton8.TabIndex = 2;
-            this.cButton8.Text = "cButton7";
-            this.cButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton8.TextColor = System.Drawing.Color.White;
-            this.cButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton8.UseVisualStyleBackColor = false;
-            this.cButton8.Click += new System.EventHandler(this.cButton8_Click);
-            // 
-            // cButton7
-            // 
-            this.cButton7.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton7.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton7.BorderRadius = 0;
-            this.cButton7.BorderSize = 0;
-            this.cButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton7.FlatAppearance.BorderSize = 0;
-            this.cButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton7.ForeColor = System.Drawing.Color.White;
-            this.cButton7.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton7.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton7.HoverImage = null;
-            this.cButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton7.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton7.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton7.LeaveImage = null;
-            this.cButton7.Location = new System.Drawing.Point(0, 80);
-            this.cButton7.Name = "cButton7";
-            this.cButton7.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton7.Size = new System.Drawing.Size(250, 40);
-            this.cButton7.TabIndex = 3;
-            this.cButton7.Text = "cButton6";
-            this.cButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton7.TextColor = System.Drawing.Color.White;
-            this.cButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton7.UseVisualStyleBackColor = false;
-            this.cButton7.Click += new System.EventHandler(this.cButton7_Click);
-            // 
-            // cButton6
-            // 
-            this.cButton6.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton6.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton6.BorderRadius = 0;
-            this.cButton6.BorderSize = 0;
-            this.cButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton6.FlatAppearance.BorderSize = 0;
-            this.cButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton6.ForeColor = System.Drawing.Color.White;
-            this.cButton6.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton6.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton6.HoverImage = null;
-            this.cButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton6.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton6.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton6.LeaveImage = null;
-            this.cButton6.Location = new System.Drawing.Point(0, 40);
-            this.cButton6.Name = "cButton6";
-            this.cButton6.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton6.Size = new System.Drawing.Size(250, 40);
-            this.cButton6.TabIndex = 4;
-            this.cButton6.Text = "cButton5";
-            this.cButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton6.TextColor = System.Drawing.Color.White;
-            this.cButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton6.UseVisualStyleBackColor = false;
-            this.cButton6.Click += new System.EventHandler(this.cButton6_Click);
-            // 
-            // cButton5
-            // 
-            this.cButton5.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton5.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton5.BorderRadius = 0;
-            this.cButton5.BorderSize = 0;
-            this.cButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton5.FlatAppearance.BorderSize = 0;
-            this.cButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton5.ForeColor = System.Drawing.Color.White;
-            this.cButton5.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton5.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton5.HoverImage = null;
-            this.cButton5.Image = global::CustomControl.Properties.Resources.Cutlery_32;
-            this.cButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton5.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton5.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton5.LeaveImage = null;
-            this.cButton5.Location = new System.Drawing.Point(0, 0);
-            this.cButton5.Name = "cButton5";
-            this.cButton5.Size = new System.Drawing.Size(250, 40);
-            this.cButton5.TabIndex = 1;
-            this.cButton5.Text = "cButton5";
-            this.cButton5.TextColor = System.Drawing.Color.White;
-            this.cButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton5.UseVisualStyleBackColor = false;
-            this.cButton5.Click += new System.EventHandler(this.cButton5_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cButton4);
-            this.panel1.Controls.Add(this.cButton3);
-            this.panel1.Controls.Add(this.cButton2);
-            this.panel1.Controls.Add(this.cButton1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 70);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 160);
-            this.panel1.TabIndex = 7;
-            // 
-            // cButton4
-            // 
-            this.cButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton4.BorderRadius = 0;
-            this.cButton4.BorderSize = 0;
-            this.cButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton4.FlatAppearance.BorderSize = 0;
-            this.cButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton4.ForeColor = System.Drawing.Color.White;
-            this.cButton4.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton4.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton4.HoverImage = null;
-            this.cButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton4.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton4.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton4.LeaveImage = null;
-            this.cButton4.Location = new System.Drawing.Point(0, 120);
-            this.cButton4.Name = "cButton4";
-            this.cButton4.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton4.Size = new System.Drawing.Size(250, 40);
-            this.cButton4.TabIndex = 4;
-            this.cButton4.Text = "cButton4";
-            this.cButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton4.TextColor = System.Drawing.Color.White;
-            this.cButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton4.UseVisualStyleBackColor = false;
-            this.cButton4.Click += new System.EventHandler(this.cButton4_Click);
-            // 
-            // cButton3
-            // 
-            this.cButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton3.BorderRadius = 0;
-            this.cButton3.BorderSize = 0;
-            this.cButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton3.FlatAppearance.BorderSize = 0;
-            this.cButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton3.ForeColor = System.Drawing.Color.White;
-            this.cButton3.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton3.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton3.HoverImage = null;
-            this.cButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton3.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton3.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton3.LeaveImage = null;
-            this.cButton3.Location = new System.Drawing.Point(0, 80);
-            this.cButton3.Name = "cButton3";
-            this.cButton3.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton3.Size = new System.Drawing.Size(250, 40);
-            this.cButton3.TabIndex = 3;
-            this.cButton3.Text = "cButton3";
-            this.cButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton3.TextColor = System.Drawing.Color.White;
-            this.cButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton3.UseVisualStyleBackColor = false;
-            this.cButton3.Click += new System.EventHandler(this.cButton3_Click);
-            // 
-            // cButton2
-            // 
-            this.cButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton2.BorderRadius = 0;
-            this.cButton2.BorderSize = 0;
-            this.cButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cButton2.FlatAppearance.BorderSize = 0;
-            this.cButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cButton2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cButton2.ForeColor = System.Drawing.Color.White;
-            this.cButton2.HoverBorderColor = System.Drawing.Color.Empty;
-            this.cButton2.HoverColor = System.Drawing.Color.DarkSlateBlue;
-            this.cButton2.HoverImage = null;
-            this.cButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton2.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cButton2.LeaveColor = System.Drawing.Color.MediumSlateBlue;
-            this.cButton2.LeaveImage = null;
-            this.cButton2.Location = new System.Drawing.Point(0, 40);
-            this.cButton2.Name = "cButton2";
-            this.cButton2.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
-            this.cButton2.Size = new System.Drawing.Size(250, 40);
-            this.cButton2.TabIndex = 2;
-            this.cButton2.Text = "cButton2";
-            this.cButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cButton2.TextColor = System.Drawing.Color.White;
-            this.cButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cButton2.UseVisualStyleBackColor = false;
-            this.cButton2.Click += new System.EventHandler(this.cButton2_Click);
             // 
             // cButton1
             // 
@@ -617,6 +625,7 @@
             this.cButton1.BorderRadius = 0;
             this.cButton1.BorderSize = 0;
             this.cButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cButton1.CustomTag = "";
             this.cButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButton1.FlatAppearance.BorderSize = 0;
             this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -634,6 +643,7 @@
             this.cButton1.Name = "cButton1";
             this.cButton1.Size = new System.Drawing.Size(250, 40);
             this.cButton1.TabIndex = 1;
+            this.cButton1.Tag = "MainBtn";
             this.cButton1.Text = "cButton1";
             this.cButton1.TextColor = System.Drawing.Color.White;
             this.cButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -672,6 +682,7 @@
             this.btnFooter.BorderRadius = 0;
             this.btnFooter.BorderSize = 0;
             this.btnFooter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFooter.CustomTag = "";
             this.btnFooter.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnFooter.FlatAppearance.BorderSize = 0;
             this.btnFooter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -715,9 +726,11 @@
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.pnHeader.Controls.Add(this.btnMenu);
             this.pnHeader.Controls.Add(this.lbNameHeader);
             this.pnHeader.Controls.Add(this.pbHeader);
+            this.pnHeader.Controls.Add(this.btnMenu);
+            this.pnHeader.Controls.Add(this.panel5);
+            this.pnHeader.Controls.Add(this.panel6);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
             this.pnHeader.Name = "pnHeader";
@@ -732,6 +745,8 @@
             this.btnMenu.BorderRadius = 0;
             this.btnMenu.BorderSize = 0;
             this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.CustomTag = "";
+            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.ForeColor = System.Drawing.Color.White;
@@ -742,9 +757,9 @@
             this.btnMenu.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMenu.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMenu.LeaveImage = null;
-            this.btnMenu.Location = new System.Drawing.Point(210, 0);
+            this.btnMenu.Location = new System.Drawing.Point(0, 5);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(40, 40);
+            this.btnMenu.Size = new System.Drawing.Size(40, 60);
             this.btnMenu.TabIndex = 2;
             this.btnMenu.TextColor = System.Drawing.Color.White;
             this.btnMenu.UseVisualStyleBackColor = false;
@@ -752,24 +767,42 @@
             // 
             // lbNameHeader
             // 
-            this.lbNameHeader.AutoSize = true;
+            this.lbNameHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbNameHeader.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNameHeader.ForeColor = System.Drawing.Color.White;
-            this.lbNameHeader.Location = new System.Drawing.Point(71, 26);
+            this.lbNameHeader.Location = new System.Drawing.Point(100, 5);
             this.lbNameHeader.Name = "lbNameHeader";
-            this.lbNameHeader.Size = new System.Drawing.Size(100, 19);
+            this.lbNameHeader.Size = new System.Drawing.Size(150, 60);
             this.lbNameHeader.TabIndex = 1;
             this.lbNameHeader.Text = "Label Name";
+            this.lbNameHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pbHeader
             // 
+            this.pbHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbHeader.Image = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
-            this.pbHeader.Location = new System.Drawing.Point(5, 5);
+            this.pbHeader.Location = new System.Drawing.Point(40, 5);
             this.pbHeader.Name = "pbHeader";
             this.pbHeader.Size = new System.Drawing.Size(60, 60);
             this.pbHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHeader.TabIndex = 0;
             this.pbHeader.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 65);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(250, 5);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(250, 5);
+            this.panel6.TabIndex = 4;
             // 
             // CSideBarMenu
             // 
@@ -787,7 +820,6 @@
             this.pnFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFooter)).EndInit();
             this.pnHeader.ResumeLayout(false);
-            this.pnHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHeader)).EndInit();
             this.ResumeLayout(false);
 
@@ -806,24 +838,26 @@
         private CButton btnFooter;
         public System.Windows.Forms.Label lbNameFooter;
         private System.Windows.Forms.PictureBox pbFooter;
-        public CButton cButton2;
-        private System.Windows.Forms.Panel panel4;
-        public CButton cButton16;
-        public CButton cButton15;
-        public CButton cButton14;
-        public CButton cButton13;
-        private System.Windows.Forms.Panel panel3;
-        public CButton cButton12;
         public CButton cButton11;
-        public CButton cButton10;
-        public CButton cButton9;
-        private System.Windows.Forms.Panel panel2;
-        public CButton cButton8;
-        public CButton cButton7;
-        public CButton cButton6;
-        public CButton cButton5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        public CButton cButton43;
+        public CButton cButton42;
+        public CButton cButton41;
         public CButton cButton4;
+        private System.Windows.Forms.Panel panel3;
+        public CButton cButton33;
+        public CButton cButton32;
+        public CButton cButton31;
         public CButton cButton3;
+        private System.Windows.Forms.Panel panel2;
+        public CButton cButton23;
+        public CButton cButton22;
+        public CButton cButton21;
+        public CButton cButton2;
+        private System.Windows.Forms.Panel panel1;
+        public CButton cButton13;
+        public CButton cButton12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
     }
 }

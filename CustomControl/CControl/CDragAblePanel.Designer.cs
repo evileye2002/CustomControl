@@ -63,7 +63,7 @@
             this.btnMinimize.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnMinimize.HoverColor = System.Drawing.Color.SlateBlue;
             this.btnMinimize.HoverImage = null;
-            this.btnMinimize.Image = global::CustomControl.Properties.Resources.subtract_20px;
+            this.btnMinimize.Image = global::CustomControl.Properties.Resources.subtract10_20px1;
             this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMinimize.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMinimize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
@@ -91,7 +91,7 @@
             this.btnMaximize.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnMaximize.HoverColor = System.Drawing.Color.SlateBlue;
             this.btnMaximize.HoverImage = null;
-            this.btnMaximize.Image = global::CustomControl.Properties.Resources.maximize_button_15px;
+            this.btnMaximize.Image = global::CustomControl.Properties.Resources.restore_down_18px1;
             this.btnMaximize.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMaximize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMaximize.LeaveImage = null;
@@ -118,7 +118,7 @@
             this.btnClose.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnClose.HoverColor = System.Drawing.Color.Red;
             this.btnClose.HoverImage = null;
-            this.btnClose.Image = global::CustomControl.Properties.Resources.close_20px;
+            this.btnClose.Image = global::CustomControl.Properties.Resources.close10_20px1;
             this.btnClose.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnClose.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnClose.LeaveImage = null;

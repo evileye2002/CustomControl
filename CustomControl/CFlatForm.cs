@@ -13,10 +13,6 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
-            /*cSideBarMenu1.cButton1.Text = "Anime";
-            cSideBarMenu1.cButton5.Text = "Manga";
-            cSideBarMenu1.cButton9.Text = "Manhwa";
-            cSideBarMenu1.cButton13.Text = "Manhua";*/
             cDragAblePanel1.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             cDragAblePanel1.btnMinimize.Padding = new Padding(0, 9, 0, 0);
         }

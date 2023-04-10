@@ -10,7 +10,6 @@ namespace CustomControl
     public partial class CDragAblePanel : UserControl
     {
         private Form form;
-        private Image image = Resources.maximize_button_15px;
         private Color backColor = Color.MediumSlateBlue;
         private Color hoverBtnColor = Color.MediumSlateBlue;
 
@@ -41,6 +40,19 @@ namespace CustomControl
                 btnClose.LeaveColor = backColor;
                 btnMaximize.LeaveColor = backColor;
                 btnMinimize.LeaveColor= backColor;
+
+                if (backColor.GetBrightness() >= 0.6F) 
+                {
+                    btnMinimize.Image = Resources.subtract10_20px1;
+                    btnMaximize.Image = Resources.maximize_button10_20px1;
+                    btnClose.Image = Resources.close10_20px1;
+                }
+                else
+                {
+                    btnMinimize.Image = Resources.subtract10_20px;
+                    btnMaximize.Image = Resources.maximize_button10_20px;
+                    btnClose.Image = Resources.close10_20px;
+                }
             }
         }
         [Category("CDragAblePanel Setting")]
@@ -49,17 +61,8 @@ namespace CustomControl
             get { return form; }
             set { form = value; }
         }
-        [Category("CDragAblePanel Setting")]
-        public Image MaximizeImage
-        {
-            get { return image; }
-            set
-            {
-                image = value;
-                btnMaximize.Image = value;
-            }
-        }
-        [Category("CDragAblePanel Setting")]
+        
+
         public CDragAblePanel()
         {
             InitializeComponent();
@@ -94,9 +97,19 @@ namespace CustomControl
                 _MaximizeClick.Invoke(sender, e);
 
                 if (form.WindowState == FormWindowState.Maximized && form != null)
-                    btnMaximize.Image = Resources.restore_down_18px;
+                {
+                    if (FillColor.GetBrightness() >= 0.6F)
+                        btnMaximize.Image = Resources.restore_down_18px1;
+                    else
+                        btnMaximize.Image = Resources.restore_down_18px;
+                }
                 else
-                    btnMaximize.Image = Resources.maximize_button_15px;
+                {
+                    if (FillColor.GetBrightness() >= 0.6F)
+                        btnMaximize.Image = Resources.maximize_button10_20px1;
+                    else
+                        btnMaximize.Image = Resources.maximize_button10_20px;
+                }
             }
         }
 

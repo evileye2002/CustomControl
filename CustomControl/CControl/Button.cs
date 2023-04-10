@@ -11,6 +11,7 @@ namespace CustomControl
         //Fields
         private int borderSize = 0;
         private int borderRadius = 0;
+        private string customTag = "";
         private Color borderColor = Color.PaleVioletRed;
         private Color hoverColor = Color.Empty;
         private Color leaveColor = Color.Empty;
@@ -109,6 +110,12 @@ namespace CustomControl
         {
             get { return leaveImage; }
             set { leaveImage = value; }
+        }
+        [Category("CButton Setting")]
+        public string CustomTag
+        {
+            get { return customTag; }
+            set { customTag = value; }
         }
 
         //Constructor

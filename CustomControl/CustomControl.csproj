@@ -243,5 +243,41 @@
   <ItemGroup>
     <None Include="Resources\expand_arrow_20px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button_15px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down_18px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract10_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close10_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close10_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subtract10_20px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button10_15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button10_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button10_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down10_16px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

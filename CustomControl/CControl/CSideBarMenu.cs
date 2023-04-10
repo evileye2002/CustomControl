@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace CustomControl
 {
     public partial class CSideBarMenu : UserControl
     {
-        private Color fillColor = Color.MediumSlateBlue;
         private int numberButton = 4;
         private int numberSubButton1 = 3;
         private int numberSubButton2 = 3;
@@ -18,7 +18,11 @@ namespace CustomControl
         private int subButton2 = 200;
         private int subButton3 = 200;
         private int subButton4 = 200;
-        private Image headerImage = Properties.Resources._307458227_183097110912069_8713095141205203505_n;
+        private bool isShow = false;
+        private Color fillColor = Color.MediumSlateBlue;
+        private Color btnForeColor = Color.White;
+        private Image headerImage = null;
+        private Image footerImage = null;
 
         #region Event
         public event EventHandler _Logout_Click;
@@ -27,22 +31,6 @@ namespace CustomControl
         public event EventHandler _Button2_Click;
         public event EventHandler _Button3_Click;
         public event EventHandler _Button4_Click;
-
-        public event EventHandler _SubButton1_Click1;
-        public event EventHandler _SubButton1_Click2;
-        public event EventHandler _SubButton1_Click3;
-
-        public event EventHandler _SubButton2_Click1;
-        public event EventHandler _SubButton2_Click2;
-        public event EventHandler _SubButton2_Click3;
-
-        public event EventHandler _SubButton3_Click1;
-        public event EventHandler _SubButton3_Click2;
-        public event EventHandler _SubButton3_Click3;
-
-        public event EventHandler _SubButton4_Click1;
-        public event EventHandler _SubButton4_Click2;
-        public event EventHandler _SubButton4_Click3;
         #endregion
 
         [Category("CSideBar Setting")]
@@ -52,25 +40,38 @@ namespace CustomControl
             set
             {
                 fillColor = value;
-                pnFooter.BackColor = fillColor;
-                btnFooter.BackColor = fillColor;
-                lbNameFooter.BackColor = fillColor;
-                lbDetail.BackColor = fillColor;
-                pnHeader.BackColor = fillColor;
-                btnMenu.BackColor = fillColor;
-                lbNameHeader.BackColor = fillColor;
-                pnSideBar.BackColor = fillColor;
-
-                foreach(CButton cButton in panel1.Controls)
-                    cButton.BackgroundColor = fillColor;
-                foreach (CButton cButton in panel2.Controls)
-                    cButton.BackgroundColor = fillColor;
-                foreach (CButton cButton in panel3.Controls)
-                    cButton.BackgroundColor = fillColor;
-                foreach (CButton cButton in panel4.Controls)
-                    cButton.BackgroundColor = fillColor;
+                foreach (Panel pn in pnSideBar.Controls)
+                {
+                    pn.BackColor = fillColor;
+                    pnSideBar.BackColor = fillColor;
+                    btnMenu.BackgroundColor = fillColor;
+                    btnFooter.BackgroundColor = fillColor;
+                    if (pn != pnFooter && pn != pnHeader)
+                        foreach (CButton cButton in pn.Controls)
+                            cButton.BackgroundColor = fillColor;
+                }
             }
         }
+        [Category("CSideBar Setting")]
+        public Color BtnForeColor
+        {
+            get { return btnForeColor; }
+            set
+            {
+                btnForeColor = value;
+                foreach (Panel pn in pnSideBar.Controls)
+                {
+                    pn.ForeColor = btnForeColor;
+                    lbDetail.ForeColor = btnForeColor;
+                    lbNameFooter.ForeColor = btnForeColor;
+                    lbNameHeader.ForeColor = btnForeColor;
+                    if (pn != pnFooter && pn != pnHeader)
+                        foreach (CButton cButton in pn.Controls)
+                            cButton.ForeColor = btnForeColor;
+                }
+            }
+        }
+
         [Category("CSideBar Setting")]
         public int NumberButton
         {
@@ -112,13 +113,7 @@ namespace CustomControl
             get { return numberSubButton1; }
             set
             {
-                if (value > 3)
-                    numberSubButton1 = 3;
-                else if (value < 0)
-                    numberSubButton1 = 0;
-                else
-                    numberSubButton1 = value;
-
+                numberSubButton1 = ValidationValue(value);
                 SetSubButton(numberSubButton1, 1);
             }
         }
@@ -128,12 +123,7 @@ namespace CustomControl
             get { return numberSubButton2; }
             set
             {
-                if (value > 3)
-                    numberSubButton2 = 3;
-                else if (value < 0)
-                    numberSubButton1 = 0;
-                else
-                    numberSubButton2 = value;
+                numberSubButton2 = ValidationValue(value);
 
                 SetSubButton(numberSubButton2, 2);
             }
@@ -144,12 +134,7 @@ namespace CustomControl
             get { return numberSubButton3; }
             set
             {
-                if (value > 3)
-                    numberSubButton3 = 3;
-                else if (value < 0)
-                    numberSubButton3 = 0;
-                else
-                    numberSubButton3 = value;
+                numberSubButton3 = ValidationValue(value);
 
                 SetSubButton(numberSubButton3,3);
             }
@@ -160,12 +145,7 @@ namespace CustomControl
             get { return numberSubButton4; }
             set
             {
-                if (value > 3)
-                    numberSubButton4 = 3;
-                else if (value < 0)
-                    numberSubButton4 = 0;
-                else
-                    numberSubButton4 = value;
+                numberSubButton4 = ValidationValue(value);
 
                 SetSubButton(numberSubButton4,4);
             }
@@ -181,19 +161,96 @@ namespace CustomControl
                 pbHeader.Image = headerImage;
             }
         }
+        [Category("CSideBar Setting")]
+        public Image FooterImage
+        {
+            get { return footerImage; }
+            set
+            {
+                footerImage = value;
+                pbFooter.Image = footerImage;
+            }
+        }
+
+        [Category("CSideBar Setting")]
+        public bool ShowStatus
+        {
+            get { return isShow; }
+            set
+            {
+                isShow = value;
+                if (isShow)
+                    ShowSideBar();
+                else
+                    HideSideBar();
+            }
+        }
 
         public CSideBarMenu()
         {
             InitializeComponent();
             pnHeader.Size = new Size(250, 70);
             pnFooter.Size = new Size(250, 40);
+            
             panel1.Height = 40;
             panel2.Height = 40;
             panel3.Height = 40;
             panel4.Height = 40;
-            MiniSideBar();
+            cButton1.CustomTag = "MainBtn";
+            cButton2.CustomTag = "MainBtn";
+            cButton3.CustomTag = "MainBtn";
+            cButton4.CustomTag = "MainBtn";
+            HideSideBar();
+        }
+        private void OffSize()
+        {
+            foreach (Panel panel in pnSideBar.Controls)
+                if (panel != pnFooter && panel != pnHeader && panel.Height != 48)
+                    panel.Height = 48;
+        }
+        private int PnHeight(int a)
+        {
+            switch (a)
+            {
+                case 0:
+                    return 49;
+                case 1:
+                    return 98;
+                case 2:
+                    return 147;
+                default:
+                    return 196;
+            }
+        }
+        private int ValidationValue(int incoming)
+        {
+            if (incoming > 3)
+                return 3;
+            else if (incoming < 0)
+                return 0;
+            else
+                return incoming;
+        }
+        private void SetSubButton(int n,int btn)
+        {
+            switch (btn)
+            {
+                case 1:
+                    subButton1 = PnHeight(n);
+                    break;
+                case 2:
+                    subButton2 = PnHeight(n);
+                    break;
+                case 3:
+                    subButton3 = PnHeight(n);
+                    break;
+                default:
+                    subButton4 = PnHeight(n);
+                    break;
+            }
         }
 
+        #region Click Event
         private void cButton1_Click(object sender, EventArgs e)
         {
             if (_Button1_Click != null)
@@ -257,159 +314,7 @@ namespace CustomControl
                     panel4.Height = 49;
             }
         }
-        private void OffSize()
-        {
-            foreach (Panel panel in pnSideBar.Controls)
-                if (panel != pnFooter && panel != pnHeader && panel.Height != 48)
-                    panel.Height = 48;
-        }
-        private void SetSubButton(int n,int btn)
-        {
-            switch (btn)
-            {
-                case 1:
-                    switch (n)
-                    {
-                        case 0:
-                            subButton1 = 49;
-                            break;
-                        case 1:
-                            subButton1 = 98;
-                            break;
-                        case 2:
-                            subButton1 = 147;
-                            break;
-                        default:
-                            subButton1 = 200;
-                            break;
-                    }
-                    break;
-                case 2:
-                    switch (n)
-                    {
-                        case 0:
-                            subButton2 = 49;
-                            break;
-                        case 1:
-                            subButton2 = 98;
-                            break;
-                        case 2:
-                            subButton2 = 147;
-                            break;
-                        default:
-                            subButton2 = 200;
-                            break;
-                    }
-                    break;
-                case 3:
-                    switch (n)
-                    {
-                        case 0:
-                            subButton3 = 49;
-                            break;
-                        case 1:
-                            subButton3 = 98;
-                            break;
-                        case 2:
-                            subButton3 = 147;
-                            break;
-                        default:
-                            subButton3 = 200;
-                            break;
-                    }
-                    break;
-                default:
-                    switch (n)
-                    {
-                        case 0:
-                            subButton4 = 49;
-                            break;
-                        case 1:
-                            subButton4 = 98;
-                            break;
-                        case 2:
-                            subButton4 = 147;
-                            break;
-                        default:
-                            subButton4 = 200;
-                            break;
-                    }
-                    break;
-            }
-        }
 
-        #region Click Event
-        private void cButton2_Click(object sender, EventArgs e)
-        {
-            if (_SubButton1_Click1 != null)
-                _SubButton1_Click1.Invoke(sender, e);
-        }
-
-        private void cButton3_Click(object sender, EventArgs e)
-        {
-            if (_SubButton1_Click2 != null)
-                _SubButton1_Click2.Invoke(sender, e);
-        }
-
-        private void cButton4_Click(object sender, EventArgs e)
-        {
-            if (_SubButton1_Click3 != null)
-                _SubButton1_Click3.Invoke(sender, e);
-        }
-
-        private void cButton6_Click(object sender, EventArgs e)
-        {
-            if (_SubButton2_Click1 != null)
-                _SubButton2_Click1.Invoke(sender, e);
-        }
-
-        private void cButton7_Click(object sender, EventArgs e)
-        {
-            if (_SubButton2_Click2 != null)
-                _SubButton2_Click2.Invoke(sender, e);
-        }
-
-        private void cButton8_Click(object sender, EventArgs e)
-        {
-            if (_SubButton2_Click3 != null)
-                _SubButton2_Click3.Invoke(sender, e);
-        }
-
-        private void cButton10_Click(object sender, EventArgs e)
-        {
-            if (_SubButton3_Click1 != null)
-                _SubButton3_Click1.Invoke(sender, e);
-        }
-
-        private void cButton11_Click(object sender, EventArgs e)
-        {
-            if (_SubButton3_Click2 != null)
-                _SubButton3_Click2.Invoke(sender, e);
-        }
-
-        private void cButton12_Click(object sender, EventArgs e)
-        {
-            if (_SubButton3_Click3 != null)
-                _SubButton3_Click3.Invoke(sender, e);
-        }
-
-        private void cButton14_Click(object sender, EventArgs e)
-        {
-            if (_SubButton4_Click1 != null)
-                _SubButton4_Click1.Invoke(sender, e);
-        }
-
-        private void cButton15_Click(object sender, EventArgs e)
-        {
-            if (_SubButton4_Click2 != null)
-                _SubButton4_Click2.Invoke(sender, e);
-        }
-
-        private void cButton16_Click(object sender, EventArgs e)
-        {
-            if (_SubButton4_Click3 != null)
-                _SubButton4_Click3.Invoke(sender, e);
-        }
         private void btnFooter_Click(object sender, EventArgs e)
         {
             if (_Logout_Click != null)
@@ -423,14 +328,13 @@ namespace CustomControl
             else
             {
                 if(this.Width != 60)
-                    MiniSideBar();
+                    HideSideBar();
                 else
                     ShowSideBar();
-                
             }
         }
         #endregion
-        public void MiniSideBar()
+        public void HideSideBar()
         {
             this.Width = 60;
             pbHeader.Visible = false;
@@ -440,7 +344,6 @@ namespace CustomControl
             lbNameHeader.Visible = false;
 
             btnFooter.Dock = DockStyle.Fill;
-            pnHeader.Height = 60;
             btnMenu.Dock = DockStyle.Fill;
 
             foreach (Panel panel in pnSideBar.Controls)
@@ -451,6 +354,7 @@ namespace CustomControl
                     {
                         button.Tag = button.Text;
                         button.Text = "";
+                        button.Padding = new Padding(0);
                         button.TextImageRelation = TextImageRelation.Overlay;
                         button.ImageAlign = ContentAlignment.MiddleCenter;
                     }
@@ -468,9 +372,13 @@ namespace CustomControl
 
             btnFooter.Dock = DockStyle.Right;
             btnFooter.Width = 50;
-            pnHeader.Height = 75;
-            btnMenu.Dock = DockStyle.Right;
+
+            btnMenu.Dock = DockStyle.Left;
             btnMenu.Width = 50;
+            pbHeader.Dock = DockStyle.Left;
+            pbHeader.BringToFront();
+            lbNameHeader.Dock = DockStyle.Fill;
+            lbNameHeader.BringToFront();
 
             foreach (Panel panel in pnSideBar.Controls)
             {
@@ -478,9 +386,19 @@ namespace CustomControl
                 {
                     foreach (CButton button in panel.Controls)
                     {
-                        button.Text = button.Tag.ToString();
-                        button.TextImageRelation = TextImageRelation.ImageBeforeText;
-                        button.ImageAlign = ContentAlignment.MiddleLeft;
+                        if(button.CustomTag == "MainBtn")
+                        {
+                            button.Text = button.Tag.ToString();
+                            button.Padding = new Padding(5, 0, 0, 0);
+                            button.TextImageRelation = TextImageRelation.ImageBeforeText;
+                            button.ImageAlign = ContentAlignment.MiddleLeft;
+                        }
+                        else
+                        {
+                            button.Text = button.Tag.ToString();
+                            button.Padding = new Padding(31, 0, 0, 0);
+                        }
+                        
                     }
                 }
             }
