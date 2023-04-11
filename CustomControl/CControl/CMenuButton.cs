@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomControl.Properties;
 namespace CustomControl
 {
+    /// <summary>
+    /// Use "foreach (CButton button in cMenuButton1.Controls)
+    ///         if (button.Name.ToString() == <name>)"
+    ///             button.Click += <ClickEvent>;
+    /// to add "Click Event" or every other Event
+    /// </summary>
     public partial class CMenuButton : UserControl
     {
         #region Fields
@@ -18,7 +19,8 @@ namespace CustomControl
         private Color fillColor = Color.MediumSlateBlue;
         private Color subButtonFillColor = Color.SlateBlue;
         private Color buttonForeColor = Color.White;
-        private Color ativeButtonColor = Color.Red;
+        private Color activeButtonColor = Color.Red;
+        private Color hoverButtonColor = Color.Red;
         public CButton newCButton;
         private CButton currencyButton;
         private Image mainButtonImage = Resources.Cutlery_32;
@@ -45,6 +47,17 @@ namespace CustomControl
             }
         }
         [Category("CMenuButton Setting")]
+        public Color HoverButtonColor
+        {
+            get { return hoverButtonColor; }
+            set
+            {
+                hoverButtonColor = value;
+                foreach (CButton cButton in Controls)
+                    cButton.HoverColor = hoverButtonColor;
+            }
+        }
+        [Category("CMenuButton Setting")]
         public Color SubButtonFillColor
         {
             get { return subButtonFillColor; }
@@ -64,17 +77,16 @@ namespace CustomControl
             {
                 buttonForeColor = value;
                 foreach (CButton btn in Controls)
-                    if (btn != cButtonMain)
-                        btn.ForeColor = buttonForeColor;
+                    btn.ForeColor = buttonForeColor;
             }
         }
         [Category("CMenuButton Setting")]
-        public Color AtiveButtonColor
+        public Color ActiveButtonColor
         {
-            get { return ativeButtonColor; }
+            get { return activeButtonColor; }
             set
             {
-                ativeButtonColor = value;
+                activeButtonColor = value;
             }
         }
         [Category("CMenuButton Setting")]
@@ -178,7 +190,7 @@ namespace CustomControl
                 Text = "NewSubButton" + n,
                 Name = "NewSubButton" + n,
                 Height = 40,
-                BackgroundColor = Color.SlateBlue,
+                BackgroundColor = subButtonFillColor,
                 BorderColor = Color.PaleVioletRed,
                 BorderRadius = 0,
                 BorderSize = 0,
@@ -186,9 +198,9 @@ namespace CustomControl
                 CustomTag = "",
                 FlatStyle = FlatStyle.Flat,
                 Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0))),
-                ForeColor = Color.White,
+                ForeColor = buttonForeColor,
                 HoverBorderColor = Color.Empty,
-                HoverColor = Color.DarkSlateBlue,
+                HoverColor = hoverButtonColor,
                 HoverImage = null,
                 ImageAlign = ContentAlignment.MiddleLeft,
                 LeaveBorderColor = Color.PaleVioletRed,
@@ -197,7 +209,7 @@ namespace CustomControl
                 Margin = new Padding(0),
                 Padding = new Padding(32, 0, 0, 0),
                 TextAlign = ContentAlignment.MiddleLeft,
-                TextColor = Color.White,
+                TextColor = buttonForeColor,
                 TextImageRelation = TextImageRelation.ImageBeforeText,
             };
             this.Controls.Add(btn);
@@ -208,7 +220,7 @@ namespace CustomControl
             if (btnSender != null)
             {
                 currencyButton = (CButton)btnSender;
-                currencyButton.BackgroundColor = ativeButtonColor;
+                currencyButton.BackgroundColor = activeButtonColor;
                 currencyButton.Font = new Font(fontName, fontSize, FontStyle.Bold, graphicsUnit);
             }
         }

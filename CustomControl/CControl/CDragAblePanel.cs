@@ -11,8 +11,8 @@ namespace CustomControl
     public partial class CDragAblePanel : UserControl
     {
         private Form form;
-        private Color backColor = Color.MediumSlateBlue;
-        private Color hoverBtnColor = Color.MediumSlateBlue;
+        private Color backColor = Color.LightSlateGray;
+        private Color hoverBtnColor = Color.SlateGray;
         private Image iconImage = Resources.bulleted_list_32px;
 
         public event EventHandler _MaximizeClick;

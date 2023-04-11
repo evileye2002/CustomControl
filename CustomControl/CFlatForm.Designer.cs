@@ -32,8 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
+            this.cSideBarMenu1 = new CustomControl.CSideBarMenu();
             this.cMenuButton1 = new CustomControl.CMenuButton();
+            this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,10 +61,46 @@
             this.panel3.Size = new System.Drawing.Size(10, 554);
             this.panel3.TabIndex = 11;
             // 
+            // cSideBarMenu1
+            // 
+            this.cSideBarMenu1.ActiveBtnColor = System.Drawing.Color.Red;
+            this.cSideBarMenu1.BtnForeColor = System.Drawing.Color.White;
+            this.cSideBarMenu1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cSideBarMenu1.FillColor = System.Drawing.Color.LightSlateGray;
+            this.cSideBarMenu1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cSideBarMenu1.FooterImage = null;
+            this.cSideBarMenu1.HeaderImage = null;
+            this.cSideBarMenu1.HoverButtonColor = System.Drawing.Color.SkyBlue;
+            this.cSideBarMenu1.Location = new System.Drawing.Point(10, 10);
+            this.cSideBarMenu1.Margin = new System.Windows.Forms.Padding(4);
+            this.cSideBarMenu1.MenuButtonQuantity = 5;
+            this.cSideBarMenu1.Name = "cSideBarMenu1";
+            this.cSideBarMenu1.ShowStatus = true;
+            this.cSideBarMenu1.Size = new System.Drawing.Size(250, 544);
+            this.cSideBarMenu1.SubButtonFillColor = System.Drawing.Color.SlateBlue;
+            this.cSideBarMenu1.TabIndex = 15;
+            // 
+            // cMenuButton1
+            // 
+            this.cMenuButton1.ActiveButtonColor = System.Drawing.Color.Red;
+            this.cMenuButton1.ButtonForeColor = System.Drawing.Color.White;
+            this.cMenuButton1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cMenuButton1.HoverButtonColor = System.Drawing.Color.RoyalBlue;
+            this.cMenuButton1.Location = new System.Drawing.Point(448, 72);
+            this.cMenuButton1.MainButtonImage = ((System.Drawing.Image)(resources.GetObject("cMenuButton1.MainButtonImage")));
+            this.cMenuButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.cMenuButton1.Name = "cMenuButton1";
+            this.cMenuButton1.ShowStatus = true;
+            this.cMenuButton1.Size = new System.Drawing.Size(250, 401);
+            this.cMenuButton1.SubButtonFillColor = System.Drawing.Color.SlateBlue;
+            this.cMenuButton1.SubButtonQuantity = 4;
+            this.cMenuButton1.TabIndex = 14;
+            this.cMenuButton1._MainButtonClick += new System.EventHandler(this.cMenuButton1__MainButtonClick);
+            // 
             // cDragAblePanel1
             // 
-            this.cDragAblePanel1.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.MediumSlateBlue;
+            this.cDragAblePanel1.FillColor = System.Drawing.Color.LightSlateGray;
+            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.SlateGray;
             this.cDragAblePanel1.IconImage = ((System.Drawing.Image)(resources.GetObject("cDragAblePanel1.IconImage")));
             this.cDragAblePanel1.Location = new System.Drawing.Point(72, 28);
             this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -74,27 +111,12 @@
             this.cDragAblePanel1.TargetForm = this;
             this.cDragAblePanel1._MaximizeClick += new System.EventHandler(this.cDragAblePanel1__MaximizeClick);
             // 
-            // cMenuButton1
-            // 
-            this.cMenuButton1.AtiveButtonColor = System.Drawing.Color.Red;
-            this.cMenuButton1.ButtonForeColor = System.Drawing.Color.White;
-            this.cMenuButton1.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.cMenuButton1.Location = new System.Drawing.Point(501, 161);
-            this.cMenuButton1.MainButtonImage = ((System.Drawing.Image)(resources.GetObject("cMenuButton1.MainButtonImage")));
-            this.cMenuButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.cMenuButton1.Name = "cMenuButton1";
-            this.cMenuButton1.ShowStatus = true;
-            this.cMenuButton1.Size = new System.Drawing.Size(250, 49);
-            this.cMenuButton1.SubButtonFillColor = System.Drawing.Color.SlateBlue;
-            this.cMenuButton1.SubButtonQuantity = 5;
-            this.cMenuButton1.TabIndex = 14;
-            this.cMenuButton1._MainButtonClick += new System.EventHandler(this.cMenuButton1__MainButtonClick);
-            // 
             // CFlatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 554);
+            this.Controls.Add(this.cSideBarMenu1);
             this.Controls.Add(this.cMenuButton1);
             this.Controls.Add(this.cDragAblePanel1);
             this.Controls.Add(this.panel1);
@@ -118,6 +140,7 @@
         private System.Windows.Forms.Panel panel3;
         private CDragAblePanel cDragAblePanel1;
         private CMenuButton cMenuButton1;
+        private CSideBarMenu cSideBarMenu1;
     }
 }
 
