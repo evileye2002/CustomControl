@@ -16,14 +16,17 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
-            foreach (CButton button in cMenuButton1.Controls)
-                if(button.Name.ToString() == "NewSubButton4")
-                    button.Click += NewSubButton4_Click;
+            cSideBarMenu1.SetMenuButtonMainText("cMenuButton1", "Anime");
+            cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton1", "Anime 1");
+            cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton2", "Anime 2");
+            cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton3", "Anime 3");
+            cSideBarMenu1.SetMenuButtonMainClick("cMenuButton1", clickEvent);
+
         }
 
-        private void NewSubButton4_Click(object sender, EventArgs e)
+        private void clickEvent(object sender, EventArgs e)
         {
-            CMessageBox.Show("success");
+            
         }
 
         private void cDragAblePanel1__MaximizeClick(object sender, EventArgs e)
@@ -47,9 +50,16 @@ namespace CustomControl
 
         private void cMenuButton1__MainButtonClick(object sender, EventArgs e)
         {
-            foreach (CButton button in cMenuButton1.Controls)
-                b += button.Name.ToString() + " \n";
-            CMessageBox.Show(b);
+            foreach(Control c in cSideBarMenu1.Controls)
+            {
+                string a = "";
+                if (c.Name == "pnSideBar")
+                    foreach(Control c2 in c.Controls)
+                        if(c2.Name == "cMenuButton1")
+                            foreach(CButton button in c2.Controls)
+                                a += button.CustomTag;
+                CMessageBox.Show(a);
+            }
         }
     }
 }

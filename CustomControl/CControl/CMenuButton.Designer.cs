@@ -42,7 +42,7 @@
             this.cButton3.BorderRadius = 0;
             this.cButton3.BorderSize = 0;
             this.cButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton3.CustomTag = "DefaultButton";
+            this.cButton3.CustomTag = "cButton3";
             this.cButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButton3.FlatAppearance.BorderSize = 0;
             this.cButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -61,6 +61,7 @@
             this.cButton3.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.cButton3.Size = new System.Drawing.Size(250, 50);
             this.cButton3.TabIndex = 5;
+            this.cButton3.Tag = "DefaultButton";
             this.cButton3.Text = "cButton3";
             this.cButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton3.TextColor = System.Drawing.Color.White;
@@ -75,7 +76,7 @@
             this.cButton2.BorderRadius = 0;
             this.cButton2.BorderSize = 0;
             this.cButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton2.CustomTag = "DefaultButton";
+            this.cButton2.CustomTag = "cButton2";
             this.cButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButton2.FlatAppearance.BorderSize = 0;
             this.cButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -94,6 +95,7 @@
             this.cButton2.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.cButton2.Size = new System.Drawing.Size(250, 50);
             this.cButton2.TabIndex = 4;
+            this.cButton2.Tag = "DefaultButton";
             this.cButton2.Text = "cButton2";
             this.cButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton2.TextColor = System.Drawing.Color.White;
@@ -108,7 +110,7 @@
             this.cButton1.BorderRadius = 0;
             this.cButton1.BorderSize = 0;
             this.cButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButton1.CustomTag = "DefaultButton";
+            this.cButton1.CustomTag = "cButton1";
             this.cButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButton1.FlatAppearance.BorderSize = 0;
             this.cButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -127,6 +129,7 @@
             this.cButton1.Padding = new System.Windows.Forms.Padding(32, 0, 0, 0);
             this.cButton1.Size = new System.Drawing.Size(250, 50);
             this.cButton1.TabIndex = 3;
+            this.cButton1.Tag = "DefaultButton";
             this.cButton1.Text = "cButton1";
             this.cButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cButton1.TextColor = System.Drawing.Color.White;
@@ -141,7 +144,7 @@
             this.cButtonMain.BorderRadius = 0;
             this.cButtonMain.BorderSize = 0;
             this.cButtonMain.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cButtonMain.CustomTag = "DefaultButton";
+            this.cButtonMain.CustomTag = "cButtonMain";
             this.cButtonMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.cButtonMain.FlatAppearance.BorderSize = 0;
             this.cButtonMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -160,8 +163,8 @@
             this.cButtonMain.Name = "cButtonMain";
             this.cButtonMain.Size = new System.Drawing.Size(250, 50);
             this.cButtonMain.TabIndex = 2;
-            this.cButtonMain.Tag = "MainBtn";
-            this.cButtonMain.Text = "cButton1";
+            this.cButtonMain.Tag = "DefaultButton";
+            this.cButtonMain.Text = "cButtonMain";
             this.cButtonMain.TextColor = System.Drawing.Color.White;
             this.cButtonMain.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cButtonMain.UseVisualStyleBackColor = false;

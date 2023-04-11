@@ -20,7 +20,8 @@ namespace CustomControl
         private Color subButtonFillColor = Color.SlateBlue;
         private Color buttonForeColor = Color.White;
         private Color activeButtonColor = Color.Red;
-        private Color hoverButtonColor = Color.Red;
+        private Color hoverButtonColor = Color.SlateBlue;
+        private string mainButtonText = "cButtonMain";
         public CButton newCButton;
         private CButton currencyButton;
         private Image mainButtonImage = Resources.Cutlery_32;
@@ -90,6 +91,16 @@ namespace CustomControl
             }
         }
         [Category("CMenuButton Setting")]
+        public string MainButtonText
+        {
+            get { return mainButtonText; }
+            set
+            {
+                mainButtonText = value;
+                cButtonMain.CustomTag = mainButtonText;
+            }
+        }
+        [Category("CMenuButton Setting")]
         public Image MainButtonImage
         {
             get { return mainButtonImage; }
@@ -122,7 +133,7 @@ namespace CustomControl
                 {
                     foreach (CButton btn in Controls)
                     {
-                        if (btn.CustomTag != "DefaultButton")
+                        if (btn.Tag.ToString() != "DefaultButton")
                             Controls.Remove(btn);
                     }
 
@@ -136,7 +147,7 @@ namespace CustomControl
                 {
                     foreach (CButton btn in Controls)
                     {
-                        if (btn.CustomTag != "DefaultButton")
+                        if (btn.Tag.ToString() != "DefaultButton")
                             Controls.Remove(btn);
                     }
                     subButtonQuantity = value;
@@ -187,8 +198,8 @@ namespace CustomControl
             CButton btn = new CButton
             {
                 Dock = DockStyle.Top,
-                Text = "NewSubButton" + n,
-                Name = "NewSubButton" + n,
+                Text = "cButton" + n,
+                Name = "cButton" + n,
                 Height = 40,
                 BackgroundColor = subButtonFillColor,
                 BorderColor = Color.PaleVioletRed,
@@ -231,32 +242,42 @@ namespace CustomControl
         }
         public void ThisShow()
         {
-            cButtonMain.Text = cButtonMain.Tag.ToString();
+            cButtonMain.Text = cButtonMain.CustomTag;
             cButtonMain.Padding = new Padding(5, 0, 0, 0);
             cButtonMain.TextImageRelation = TextImageRelation.ImageBeforeText;
             cButtonMain.ImageAlign = ContentAlignment.MiddleLeft;
+            Width = 250;
 
             foreach (CButton btn in Controls)
-            {
                 if (btn.Name != "cButtonMain")
                 {
-                    //btn.Text = btn.Tag.ToString();
-                    btn.Padding = new Padding(31, 0, 0, 0);
+                    btn.Text = btn.CustomTag;
+                    btn.Padding = new Padding(36, 0, 0, 0);
                 }
-            }
-            Width = 250;
         }
         public void ThisHide()
         {
             foreach (CButton btn in Controls)
             {
-                btn.Tag = btn.Text;
+                btn.CustomTag = btn.Text;
                 btn.Text = "";
                 btn.Padding = new Padding(0);
                 btn.TextImageRelation = TextImageRelation.Overlay;
                 btn.ImageAlign = ContentAlignment.MiddleCenter;
             }
             Width = 60;
+        }
+        public void SetSubButtonClick(string buttonName, EventHandler clickEvent)
+        {
+            foreach (CButton btn in Controls)
+                if(btn.Name == buttonName)
+                    btn.Click += clickEvent;
+        }
+        public void SetSubButtonText(string buttonName, string text)
+        {
+            foreach (CButton btn in Controls)
+                if (btn.Name == buttonName && !isShow)
+                    btn.CustomTag = text;
         }
         #endregion
     }

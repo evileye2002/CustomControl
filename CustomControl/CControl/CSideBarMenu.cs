@@ -261,5 +261,45 @@ namespace CustomControl
             pnSideBar.Controls.Add(menuButton);
             menuButton.BringToFront();
         }
+        public void SetMenuButtonMainClick(string menuButtonName, EventHandler menuButtonMainClick)
+        {
+            foreach(Control c in pnSideBar.Controls)
+            {
+                if(c.GetType() == typeof(CMenuButton) && c.Name == menuButtonName)
+                {
+                    ((CMenuButton)c)._MainButtonClick += menuButtonMainClick;
+                }
+            }
+        }
+        public void SetMenuButtonMainText(string menuButtonMainName, string text)
+        {
+            foreach (Control c in pnSideBar.Controls)
+            {
+                if (c.GetType() == typeof(CMenuButton) && c.Name == menuButtonMainName)
+                {
+                    ((CMenuButton)c).MainButtonText = text;
+                }
+            }
+        }
+        public void SetMenuButtonSubClick(string menuButtonSubName , string subButton, EventHandler clickEvent)
+        {
+            foreach (Control c in pnSideBar.Controls)
+            {
+                if (c.GetType() == typeof(CMenuButton) && c.Name == menuButtonSubName)
+                {
+                    ((CMenuButton)c).SetSubButtonClick(subButton, clickEvent);
+                }
+            }
+        }
+        public void SetMenuButtonSubText(string menuButtonSubName, string subButton, string text)
+        {
+            foreach (Control c in pnSideBar.Controls)
+            {
+                if (c.GetType() == typeof(CMenuButton) && c.Name == menuButtonSubName)
+                {
+                    ((CMenuButton)c).SetSubButtonText(subButton, text);
+                }
+            }
+        }
     }
 }

@@ -63,7 +63,7 @@
             this.pnSideBar.Controls.Add(this.pnHeader);
             this.pnSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnSideBar.Location = new System.Drawing.Point(0, 0);
-            this.pnSideBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnSideBar.Margin = new System.Windows.Forms.Padding(4);
             this.pnSideBar.Name = "pnSideBar";
             this.pnSideBar.Size = new System.Drawing.Size(292, 738);
             this.pnSideBar.TabIndex = 0;
@@ -77,7 +77,7 @@
             this.pnFooter.Controls.Add(this.pbFooter);
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnFooter.Location = new System.Drawing.Point(0, 689);
-            this.pnFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnFooter.Margin = new System.Windows.Forms.Padding(4);
             this.pnFooter.Name = "pnFooter";
             this.pnFooter.Size = new System.Drawing.Size(292, 49);
             this.pnFooter.TabIndex = 6;
@@ -115,7 +115,7 @@
             this.btnFooter.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnFooter.LeaveImage = null;
             this.btnFooter.Location = new System.Drawing.Point(245, 0);
-            this.btnFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFooter.Margin = new System.Windows.Forms.Padding(4);
             this.btnFooter.Name = "btnFooter";
             this.btnFooter.Size = new System.Drawing.Size(47, 49);
             this.btnFooter.TabIndex = 2;
@@ -139,7 +139,7 @@
             // 
             this.pbFooter.Image = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
             this.pbFooter.Location = new System.Drawing.Point(6, 6);
-            this.pbFooter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbFooter.Margin = new System.Windows.Forms.Padding(4);
             this.pbFooter.Name = "pbFooter";
             this.pbFooter.Size = new System.Drawing.Size(35, 37);
             this.pbFooter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -156,7 +156,7 @@
             this.pnHeader.Controls.Add(this.panel6);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnHeader.Name = "pnHeader";
             this.pnHeader.Size = new System.Drawing.Size(292, 80);
             this.pnHeader.TabIndex = 0;
@@ -179,7 +179,7 @@
             this.pbHeader.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbHeader.Image = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
             this.pbHeader.Location = new System.Drawing.Point(47, 6);
-            this.pbHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pbHeader.Name = "pbHeader";
             this.pbHeader.Size = new System.Drawing.Size(68, 68);
             this.pbHeader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,7 +207,7 @@
             this.btnMenu.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMenu.LeaveImage = null;
             this.btnMenu.Location = new System.Drawing.Point(0, 6);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(47, 68);
             this.btnMenu.TabIndex = 2;
@@ -219,7 +219,7 @@
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 74);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(292, 6);
             this.panel5.TabIndex = 3;
@@ -228,7 +228,7 @@
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(292, 6);
             this.panel6.TabIndex = 4;
@@ -239,8 +239,10 @@
             this.cMenuButton1.ButtonForeColor = System.Drawing.Color.White;
             this.cMenuButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.cMenuButton1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cMenuButton1.HoverButtonColor = System.Drawing.Color.SlateBlue;
             this.cMenuButton1.Location = new System.Drawing.Point(0, 80);
             this.cMenuButton1.MainButtonImage = ((System.Drawing.Image)(resources.GetObject("cMenuButton1.MainButtonImage")));
+            this.cMenuButton1.MainButtonText = "cButtonMain";
             this.cMenuButton1.Margin = new System.Windows.Forms.Padding(0);
             this.cMenuButton1.Name = "cMenuButton1";
             this.cMenuButton1.ShowStatus = true;
@@ -255,8 +257,10 @@
             this.cMenuButton2.ButtonForeColor = System.Drawing.Color.White;
             this.cMenuButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.cMenuButton2.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cMenuButton2.HoverButtonColor = System.Drawing.Color.SlateBlue;
             this.cMenuButton2.Location = new System.Drawing.Point(0, 129);
             this.cMenuButton2.MainButtonImage = ((System.Drawing.Image)(resources.GetObject("cMenuButton2.MainButtonImage")));
+            this.cMenuButton2.MainButtonText = "cButtonMain";
             this.cMenuButton2.Margin = new System.Windows.Forms.Padding(0);
             this.cMenuButton2.Name = "cMenuButton2";
             this.cMenuButton2.ShowStatus = true;
@@ -271,8 +275,10 @@
             this.cMenuButton3.ButtonForeColor = System.Drawing.Color.White;
             this.cMenuButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.cMenuButton3.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cMenuButton3.HoverButtonColor = System.Drawing.Color.SlateBlue;
             this.cMenuButton3.Location = new System.Drawing.Point(0, 178);
             this.cMenuButton3.MainButtonImage = ((System.Drawing.Image)(resources.GetObject("cMenuButton3.MainButtonImage")));
+            this.cMenuButton3.MainButtonText = "cButtonMain";
             this.cMenuButton3.Margin = new System.Windows.Forms.Padding(0);
             this.cMenuButton3.Name = "cMenuButton3";
             this.cMenuButton3.ShowStatus = true;
@@ -287,8 +293,10 @@
             this.cMenuButton4.ButtonForeColor = System.Drawing.Color.White;
             this.cMenuButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.cMenuButton4.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cMenuButton4.HoverButtonColor = System.Drawing.Color.SlateBlue;
             this.cMenuButton4.Location = new System.Drawing.Point(0, 227);
             this.cMenuButton4.MainButtonImage = ((System.Drawing.Image)(resources.GetObject("cMenuButton4.MainButtonImage")));
+            this.cMenuButton4.MainButtonText = "cButtonMain";
             this.cMenuButton4.Margin = new System.Windows.Forms.Padding(0);
             this.cMenuButton4.Name = "cMenuButton4";
             this.cMenuButton4.ShowStatus = true;
@@ -303,7 +311,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnSideBar);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CSideBarMenu";
             this.Size = new System.Drawing.Size(292, 738);
             this.pnSideBar.ResumeLayout(false);
