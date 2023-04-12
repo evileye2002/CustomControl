@@ -67,7 +67,12 @@ namespace CustomControl
         public Image IconImage
         {
             get { return iconImage; }
-            set { iconImage = value; }
+            set
+            {
+                iconImage = value;
+                pbIcon.Image = iconImage;
+                Invalidate();
+            }
         }
 
         public CDragAblePanel()
@@ -83,7 +88,7 @@ namespace CustomControl
 
         private void CDragAblePanel_MouseDown(object sender, MouseEventArgs e)
         {
-            if (form != null)
+            if (form != null && form.WindowState != FormWindowState.Maximized)
             {
                 ReleaseCapture();
                 SendMessage(form.Handle, 0x112, 0xf012, 0);
@@ -105,16 +110,16 @@ namespace CustomControl
                 if (form.WindowState == FormWindowState.Maximized && form != null)
                 {
                     if (FillColor.GetBrightness() >= 0.6F)
-                        btnMaximize.Image = Resources.restore_down_18px1;
+                        btnMaximize.Image = Resources.restore_down10_17px1;
                     else
-                        btnMaximize.Image = Resources.restore_down_18px;
+                        btnMaximize.Image = Resources.restore_down10_17px;
                 }
                 else
                 {
                     if (FillColor.GetBrightness() >= 0.6F)
-                        btnMaximize.Image = Resources.maximize_button10_20px1;
+                        btnMaximize.Image = Resources.maximize_button10_18px;
                     else
-                        btnMaximize.Image = Resources.maximize_button10_20px;
+                        btnMaximize.Image = Resources.maximize_button10_18px1;
                 }
             }
         }

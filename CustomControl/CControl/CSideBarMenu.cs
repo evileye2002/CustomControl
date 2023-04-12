@@ -301,5 +301,16 @@ namespace CustomControl
                 }
             }
         }
+
+        public void SetMenuButtonMainImage(string menuButtonName, Image image32px)
+        {
+            foreach (Control c in pnSideBar.Controls)
+            {
+                if (c.GetType() == typeof(CMenuButton) && c.Name == menuButtonName)
+                {
+                    ((CMenuButton)c).MainButtonImage = image32px;
+                }
+            }
+        }
     }
 }

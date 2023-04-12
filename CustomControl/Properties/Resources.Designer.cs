@@ -323,6 +323,26 @@ namespace CustomControl.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maximize_button10_18px {
+            get {
+                object obj = ResourceManager.GetObject("maximize_button10_18px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximize_button10_18px1 {
+            get {
+                object obj = ResourceManager.GetObject("maximize_button10_18px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximize_button10_20px {
             get {
                 object obj = ResourceManager.GetObject("maximize_button10_20px", resourceCulture);
@@ -386,6 +406,36 @@ namespace CustomControl.Properties {
         internal static System.Drawing.Bitmap restore_down10_16px {
             get {
                 object obj = ResourceManager.GetObject("restore_down10_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restore_down10_16px1 {
+            get {
+                object obj = ResourceManager.GetObject("restore_down10_16px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restore_down10_17px {
+            get {
+                object obj = ResourceManager.GetObject("restore_down10_17px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restore_down10_17px1 {
+            get {
+                object obj = ResourceManager.GetObject("restore_down10_17px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

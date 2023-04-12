@@ -8,7 +8,6 @@ namespace CustomControl
 {
     public partial class CFlatForm : Form
     {
-        string b;
         public CFlatForm()
         {
             InitializeComponent();
@@ -20,6 +19,7 @@ namespace CustomControl
             cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton1", "Anime 1");
             cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton2", "Anime 2");
             cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton3", "Anime 3");
+            cSideBarMenu1.SetMenuButtonMainImage("cMenuButton1", Resources.bulleted_list_32px);
             cSideBarMenu1.SetMenuButtonMainClick("cMenuButton1", clickEvent);
 
         }
@@ -50,7 +50,7 @@ namespace CustomControl
 
         private void cMenuButton1__MainButtonClick(object sender, EventArgs e)
         {
-            foreach(Control c in cSideBarMenu1.Controls)
+            /*foreach(Control c in cSideBarMenu1.Controls)
             {
                 string a = "";
                 if (c.Name == "pnSideBar")
@@ -59,7 +59,7 @@ namespace CustomControl
                             foreach(CButton button in c2.Controls)
                                 a += button.CustomTag;
                 CMessageBox.Show(a);
-            }
+            }*/
         }
     }
 }

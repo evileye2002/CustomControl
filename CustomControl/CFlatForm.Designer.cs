@@ -35,6 +35,7 @@
             this.cMenuButton1 = new CustomControl.CMenuButton();
             this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
             this.cSideBarMenu1 = new CustomControl.CSideBarMenu();
+            this.cNumbricLeftRight1 = new CustomControl.CNumbricLeftRight();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,14 +82,15 @@
             // 
             // cDragAblePanel1
             // 
-            this.cDragAblePanel1.FillColor = System.Drawing.Color.LightSlateGray;
+            this.cDragAblePanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cDragAblePanel1.FillColor = System.Drawing.SystemColors.Control;
             this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.SlateGray;
-            this.cDragAblePanel1.IconImage = ((System.Drawing.Image)(resources.GetObject("cDragAblePanel1.IconImage")));
-            this.cDragAblePanel1.Location = new System.Drawing.Point(72, 28);
+            this.cDragAblePanel1.IconImage = global::CustomControl.Properties.Resources._307458227_183097110912069_8713095141205203505_n;
+            this.cDragAblePanel1.Location = new System.Drawing.Point(10, 10);
             this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);
             this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 49);
             this.cDragAblePanel1.Name = "cDragAblePanel1";
-            this.cDragAblePanel1.Size = new System.Drawing.Size(600, 40);
+            this.cDragAblePanel1.Size = new System.Drawing.Size(913, 26);
             this.cDragAblePanel1.TabIndex = 13;
             this.cDragAblePanel1.TargetForm = this;
             this.cDragAblePanel1._MaximizeClick += new System.EventHandler(this.cDragAblePanel1__MaximizeClick);
@@ -103,20 +105,37 @@
             this.cSideBarMenu1.FooterImage = null;
             this.cSideBarMenu1.HeaderImage = null;
             this.cSideBarMenu1.HoverButtonColor = System.Drawing.Color.SlateBlue;
-            this.cSideBarMenu1.Location = new System.Drawing.Point(10, 10);
+            this.cSideBarMenu1.Location = new System.Drawing.Point(10, 36);
             this.cSideBarMenu1.Margin = new System.Windows.Forms.Padding(4);
             this.cSideBarMenu1.MenuButtonQuantity = 4;
             this.cSideBarMenu1.Name = "cSideBarMenu1";
             this.cSideBarMenu1.ShowStatus = false;
-            this.cSideBarMenu1.Size = new System.Drawing.Size(60, 544);
+            this.cSideBarMenu1.Size = new System.Drawing.Size(60, 518);
             this.cSideBarMenu1.SubButtonFillColor = System.Drawing.Color.SlateBlue;
             this.cSideBarMenu1.TabIndex = 15;
+            // 
+            // cNumbricLeftRight1
+            // 
+            this.cNumbricLeftRight1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.cNumbricLeftRight1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cNumbricLeftRight1.HoverColor = System.Drawing.Color.SandyBrown;
+            this.cNumbricLeftRight1.Location = new System.Drawing.Point(469, 284);
+            this.cNumbricLeftRight1.Margin = new System.Windows.Forms.Padding(4);
+            this.cNumbricLeftRight1.MaximumSize = new System.Drawing.Size(900, 31);
+            this.cNumbricLeftRight1.MinimumSize = new System.Drawing.Size(90, 31);
+            this.cNumbricLeftRight1.Name = "cNumbricLeftRight1";
+            this.cNumbricLeftRight1.NumbericValue = 2;
+            this.cNumbricLeftRight1.Size = new System.Drawing.Size(90, 31);
+            this.cNumbricLeftRight1.TabIndex = 16;
+            this.cNumbricLeftRight1.TextBackColor = System.Drawing.Color.White;
+            this.cNumbricLeftRight1.TextForeColor = System.Drawing.Color.Black;
             // 
             // CFlatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 554);
+            this.Controls.Add(this.cNumbricLeftRight1);
             this.Controls.Add(this.cSideBarMenu1);
             this.Controls.Add(this.cMenuButton1);
             this.Controls.Add(this.cDragAblePanel1);
@@ -142,6 +161,7 @@
         private CDragAblePanel cDragAblePanel1;
         private CMenuButton cMenuButton1;
         private CSideBarMenu cSideBarMenu1;
+        private CNumbricLeftRight cNumbricLeftRight1;
     }
 }
 

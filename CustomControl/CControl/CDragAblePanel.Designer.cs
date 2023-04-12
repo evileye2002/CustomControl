@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pbIcon = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new CustomControl.CButton();
             this.btnMaximize = new CustomControl.CButton();
             this.btnClose = new CustomControl.CButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,14 @@
             this.panel1.Size = new System.Drawing.Size(600, 40);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CDragAblePanel_MouseDown);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 40);
+            this.panel2.TabIndex = 4;
             // 
             // pbIcon
             // 
@@ -80,8 +88,7 @@
             this.btnMinimize.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnMinimize.HoverColor = System.Drawing.Color.SlateBlue;
             this.btnMinimize.HoverImage = null;
-            this.btnMinimize.Image = global::CustomControl.Properties.Resources.subtract_20px;
-            this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimize.Image = global::CustomControl.Properties.Resources.subtract10_20px;
             this.btnMinimize.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMinimize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMinimize.LeaveImage = null;
@@ -109,7 +116,7 @@
             this.btnMaximize.HoverBorderColor = System.Drawing.Color.Empty;
             this.btnMaximize.HoverColor = System.Drawing.Color.SlateBlue;
             this.btnMaximize.HoverImage = null;
-            this.btnMaximize.Image = global::CustomControl.Properties.Resources.maximize_button10_20px;
+            this.btnMaximize.Image = global::CustomControl.Properties.Resources.maximize_button10_18px1;
             this.btnMaximize.LeaveBorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnMaximize.LeaveColor = System.Drawing.Color.MediumSlateBlue;
             this.btnMaximize.LeaveImage = null;
@@ -148,14 +155,6 @@
             this.btnClose.TextColor = System.Drawing.Color.White;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnCloseClick_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 40);
-            this.panel2.TabIndex = 4;
             // 
             // CDragAblePanel
             // 

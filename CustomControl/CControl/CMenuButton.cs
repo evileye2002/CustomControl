@@ -16,6 +16,7 @@ namespace CustomControl
     {
         #region Fields
         private int subButtonQuantity = 3;
+        private int cButtonHeight = 49;
         private Color fillColor = Color.MediumSlateBlue;
         private Color subButtonFillColor = Color.SlateBlue;
         private Color buttonForeColor = Color.White;
@@ -160,7 +161,7 @@ namespace CustomControl
         public CMenuButton()
         {
             InitializeComponent();
-            Size = new Size(250, 49);
+            Size = new Size(250, cButtonHeight);
             foreach (CButton btn in Controls)
             {
                 btn.Size = new Size(Width, 40);
@@ -174,16 +175,20 @@ namespace CustomControl
             if (_MainButtonClick != null)
             {
                 _MainButtonClick.Invoke(sender, e);
-                if (Height != GetHeight(subButtonQuantity) && subButtonQuantity > 0)
+                if (Height != GetHeight(subButtonQuantity) && subButtonQuantity > 0 && isShow)
                 {
                     ActivateButton(sender);
                     Height = GetHeight(subButtonQuantity);
                 }
-                else
+                else if(Height == GetHeight(subButtonQuantity) && subButtonQuantity > 0)
                 {
                     DisableButton();
-                    Height = 49;
+                    Height = cButtonHeight;
                 }
+                else if(!isShow)
+                    ActivateButton(sender);
+                else
+                    DisableButton();
             }
         }
         #endregion
@@ -191,7 +196,7 @@ namespace CustomControl
         #region Methods
         private int GetHeight(int n)
         {
-            return (n + 1) * 49;
+            return (n + 1) * cButtonHeight;
         }
         private void AddSubButton(int n)
         {

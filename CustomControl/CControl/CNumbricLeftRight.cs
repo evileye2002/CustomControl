@@ -85,6 +85,21 @@ namespace CustomControl
             Size = new Size(90, cTextbox1.Height);
             MaximumSize = new Size(900, cTextbox1.Height);
             MinimumSize = new Size(90, cTextbox1.Height);
+            this.MouseWheel += ThisMouseWheelEvent;
+        }
+
+        private void ThisMouseWheelEvent(object sender, MouseEventArgs e)
+        {
+            if(e.Delta > 0)
+            {
+                numbericValue += 1;
+                cTextbox1.Texts = numbericValue.ToString();
+            }
+            else
+            {
+                numbericValue -= 1;
+                cTextbox1.Texts = numbericValue.ToString();
+            }
         }
 
         private void cButton2_Click(object sender, EventArgs e)

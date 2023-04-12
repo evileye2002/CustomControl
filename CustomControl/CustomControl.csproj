@@ -288,5 +288,20 @@
   <ItemGroup>
     <None Include="Resources\restore_down10_16px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down10_16px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down10_17px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_down10_17px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button10_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_button10_18px1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
