@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CustomControl
@@ -61,5 +62,6 @@ namespace CustomControl
                 CMessageBox.Show(a);
             }*/
         }
+
     }
 }

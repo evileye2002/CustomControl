@@ -1,7 +1,9 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Globalization;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CustomControl
@@ -114,6 +116,8 @@ namespace CustomControl
             childForm.BringToFront();
             childForm.Show();
         }
+
+
         #endregion
 
         #endregion

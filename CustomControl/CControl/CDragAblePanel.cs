@@ -16,6 +16,7 @@ namespace CustomControl
         private Image iconImage = Resources.bulleted_list_32px;
 
         public event EventHandler _MaximizeClick;
+        public event MouseEventHandler _Drag;
 
         [Category("CDragAblePanel Setting")]
         public Color HoverButtonColor
@@ -81,19 +82,6 @@ namespace CustomControl
             MaximumSize = new Size(3000, 40);
             Size = new Size(600, 40);
         }
-        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        public extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
-
-        private void CDragAblePanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (form != null && form.WindowState != FormWindowState.Maximized)
-            {
-                ReleaseCapture();
-                SendMessage(form.Handle, 0x112, 0xf012, 0);
-            }
-        }
 
         private void btnCloseClick_Click(object sender, EventArgs e)
         {
@@ -128,6 +116,20 @@ namespace CustomControl
         {
             if (form != null)
                 form.WindowState = FormWindowState.Minimized;
+        }
+
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        public extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (form != null && form.WindowState != FormWindowState.Maximized)
+            {
+                ReleaseCapture();
+                SendMessage(form.Handle, 0x112, 0xf012, 0);
+            }
         }
     }
 }
