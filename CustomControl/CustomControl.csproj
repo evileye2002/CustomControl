@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CControl\Button.cs">
+    <Compile Include="CControl\CButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CControl\CComboBox.cs">
@@ -86,12 +86,6 @@
     <Compile Include="CControl\CRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CControl\CSideBarMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CControl\CSideBarMenu.Designer.cs">
-      <DependentUpon>CSideBarMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="CControl\CTextbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,9 +121,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CNumbricLeftRight.resx">
       <DependentUpon>CNumbricLeftRight.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CControl\CSideBarMenu.resx">
-      <DependentUpon>CSideBarMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CTextbox.resx" />
     <EmbeddedResource Include="CFlatForm.resx">

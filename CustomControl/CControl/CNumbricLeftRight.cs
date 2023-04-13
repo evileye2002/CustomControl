@@ -17,6 +17,9 @@ namespace CustomControl
         private Color textForeColor = Color.Black;
         private Color hoverColor = Color.SandyBrown;
         private int numbericValue = 1;
+        private int minValue = 1;
+
+        public event EventHandler _ValueChange;
 
         [Category("CNumbricLeftRight Setting")]
         public Color FillColor
@@ -27,6 +30,8 @@ namespace CustomControl
                 fillColor = value;
                 cButton1.BackColor = fillColor;
                 cButton2.BackColor = fillColor;
+                cButton1.LeaveColor = fillColor;
+                cButton2.LeaveColor = fillColor;
                 cTextbox1.BorderColor = fillColor;
             }
         }
@@ -58,6 +63,10 @@ namespace CustomControl
             {
                 hoverColor = value;
                 cTextbox1.BorderFocusColor = hoverColor;
+                cButton1.HoverBorderColor = hoverColor;
+                cButton1.HoverColor = hoverColor;
+                cButton2.HoverBorderColor = hoverColor;
+                cButton2.HoverColor = hoverColor;
             }
         }
         [Category("CNumbricLeftRight Setting")]
@@ -67,10 +76,31 @@ namespace CustomControl
             set
             {
                 numbericValue = value;
-                if(numbericValue >= 0 && numbericValue < 10)
-                    cTextbox1.Texts = "0" + numbericValue.ToString();
+                if(numbericValue >= minValue)
+                {
+                    if (numbericValue >= 0 && numbericValue < 10)
+                        cTextbox1.Texts = "0" + numbericValue.ToString();
+                    else
+                        cTextbox1.Texts = numbericValue.ToString();
+                }
                 else
-                    cTextbox1.Texts = numbericValue.ToString();
+                {
+                    if (minValue >= 0 && minValue < 10)
+                        cTextbox1.Texts = "0" + minValue.ToString();
+                    else
+                        cTextbox1.Texts = minValue.ToString();
+                }
+                Invalidate();
+            }
+        }
+
+        [Category("CNumbricLeftRight Setting")]
+        public int MinValue
+        {
+            get { return minValue; }
+            set
+            {
+                minValue = value;
                 Invalidate();
             }
         }
@@ -92,13 +122,12 @@ namespace CustomControl
         {
             if(e.Delta > 0)
             {
-                numbericValue += 1;
-                cTextbox1.Texts = numbericValue.ToString();
+                NumbericValue += 1;
             }
             else
             {
-                numbericValue -= 1;
-                cTextbox1.Texts = numbericValue.ToString();
+                if (numbericValue > minValue)
+                    NumbericValue -= 1;
             }
         }
 
@@ -109,13 +138,18 @@ namespace CustomControl
 
         private void cButton1_Click(object sender, EventArgs e)
         {
-            NumbericValue -= 1;
+            if(numbericValue > minValue)
+                NumbericValue -= 1;
         }
 
         private void cTextbox1__TextChanged(object sender, EventArgs e)
         {
             if(cTextbox1.Texts != string.Empty)
+            {
                 NumbericValue = Int32.Parse(cTextbox1.Texts);
+                if(_ValueChange != null)
+                    _ValueChange.Invoke(sender, e);
+            }
         }
     }
 }

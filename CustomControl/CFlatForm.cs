@@ -16,12 +16,6 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
-            cSideBarMenu1.SetMenuButtonMainText("cMenuButton1", "Anime");
-            cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton1", "Anime 1");
-            cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton2", "Anime 2");
-            cSideBarMenu1.SetMenuButtonSubText("cMenuButton1", "cButton3", "Anime 3");
-            cSideBarMenu1.SetMenuButtonMainImage("cMenuButton1", Resources.bulleted_list_32px);
-            cSideBarMenu1.SetMenuButtonMainClick("cMenuButton1", clickEvent);
 
         }
 
