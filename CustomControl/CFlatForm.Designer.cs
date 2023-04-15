@@ -33,8 +33,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cMenuButton1 = new CustomControl.CMenuButton();
-            this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
             this.cNumbricLeftRight1 = new CustomControl.CNumbricLeftRight();
+            this.cDragAblePanel1 = new CustomControl.CDragAblePanel();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,21 +79,6 @@
             this.cMenuButton1.TabIndex = 14;
             this.cMenuButton1._MainButtonClick += new System.EventHandler(this.cMenuButton1__MainButtonClick);
             // 
-            // cDragAblePanel1
-            // 
-            this.cDragAblePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cDragAblePanel1.FillColor = System.Drawing.Color.Chocolate;
-            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.SlateGray;
-            this.cDragAblePanel1.IconImage = null;
-            this.cDragAblePanel1.Location = new System.Drawing.Point(10, 10);
-            this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 49);
-            this.cDragAblePanel1.Name = "cDragAblePanel1";
-            this.cDragAblePanel1.Size = new System.Drawing.Size(913, 26);
-            this.cDragAblePanel1.TabIndex = 13;
-            this.cDragAblePanel1.TargetForm = this;
-            this.cDragAblePanel1._MaximizeClick += new System.EventHandler(this.cDragAblePanel1__MaximizeClick);
-            // 
             // cNumbricLeftRight1
             // 
             this.cNumbricLeftRight1.FillColor = System.Drawing.Color.MediumSlateBlue;
@@ -111,14 +96,27 @@
             this.cNumbricLeftRight1.TextBackColor = System.Drawing.Color.White;
             this.cNumbricLeftRight1.TextForeColor = System.Drawing.Color.Black;
             // 
+            // cDragAblePanel1
+            // 
+            this.cDragAblePanel1.FillColor = System.Drawing.Color.LightSlateGray;
+            this.cDragAblePanel1.HoverButtonColor = System.Drawing.Color.SlateGray;
+            this.cDragAblePanel1.IconImage = ((System.Drawing.Image)(resources.GetObject("cDragAblePanel1.IconImage")));
+            this.cDragAblePanel1.Location = new System.Drawing.Point(109, 72);
+            this.cDragAblePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cDragAblePanel1.MaximumSize = new System.Drawing.Size(3500, 49);
+            this.cDragAblePanel1.Name = "cDragAblePanel1";
+            this.cDragAblePanel1.Size = new System.Drawing.Size(600, 40);
+            this.cDragAblePanel1.TabIndex = 16;
+            this.cDragAblePanel1.TargetForm = this;
+            // 
             // CFlatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 554);
+            this.Controls.Add(this.cDragAblePanel1);
             this.Controls.Add(this.cNumbricLeftRight1);
             this.Controls.Add(this.cMenuButton1);
-            this.Controls.Add(this.cDragAblePanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -138,9 +136,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private CDragAblePanel cDragAblePanel1;
         private CMenuButton cMenuButton1;
         private CNumbricLeftRight cNumbricLeftRight1;
+        private CDragAblePanel cDragAblePanel1;
     }
 }
 

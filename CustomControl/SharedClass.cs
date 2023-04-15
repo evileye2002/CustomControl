@@ -14,6 +14,7 @@ namespace CustomControl
 
         #region Biến toàn cục
         public static CultureInfo cultureVN =  CultureInfo.GetCultureInfo("vn-VN");
+        public static Form form { get; set; }
 
         #endregion
 
@@ -117,7 +118,19 @@ namespace CustomControl
             childForm.Show();
         }
 
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        public extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
 
+        public static void DragEvent(object sender, MouseEventArgs e)
+        {
+            if (form != null && form.WindowState != FormWindowState.Maximized)
+            {
+                ReleaseCapture();
+                SendMessage(form.Handle, 0x112, 0xf012, 0);
+            }
+        }
         #endregion
 
         #endregion
