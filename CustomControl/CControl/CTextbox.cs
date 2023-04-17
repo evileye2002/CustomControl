@@ -29,6 +29,7 @@ namespace CustomControl
         public CTextbox()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         #region -> Properties
