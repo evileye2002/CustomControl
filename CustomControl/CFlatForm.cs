@@ -14,58 +14,9 @@ namespace CustomControl
             InitializeComponent();
         }
 
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams handleParams = base.CreateParams;
-                handleParams.ExStyle |= 0x02000000;
-                return handleParams;
-            }
-        }
-
         private void CFlatForm_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void clickEvent(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cDragAblePanel1__MaximizeClick(object sender, EventArgs e)
-        {
-            if (WindowState != FormWindowState.Maximized)
-            {
-                MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void CFlatForm_Paint(object sender, PaintEventArgs e)
-        {
-
-            //SharedClass.RoundedForm(this, 18, e.Graphics, Color.Empty, 0);
-        }
-
-        private void cMenuButton1__MainButtonClick(object sender, EventArgs e)
-        {
-            /*foreach(Control c in cSideBarMenu1.Controls)
-            {
-                string a = "";
-                if (c.Name == "pnSideBar")
-                    foreach(Control c2 in c.Controls)
-                        if(c2.Name == "cMenuButton1")
-                            foreach(CButton button in c2.Controls)
-                                a += button.CustomTag;
-                CMessageBox.Show(a);
-            }*/
-        }
-
     }
 }

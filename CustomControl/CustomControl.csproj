@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7C8B039A-BAAD-4C41-A8AD-17623A56F983}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>CustomControl</RootNamespace>
     <AssemblyName>CustomControl</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
@@ -55,7 +55,9 @@
     <Compile Include="CControl\CComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CControl\CComboBox.Designer.cs" />
+    <Compile Include="CControl\CComboBox.designer.cs">
+      <DependentUpon>CComboBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CControl\CDateTimePicker.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -64,6 +66,12 @@
     </Compile>
     <Compile Include="CControl\CDragAblePanel.Designer.cs">
       <DependentUpon>CDragAblePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CControl\CDropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CControl\CGradientPanel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CControl\CLinePanel.cs">
       <SubType>UserControl</SubType>
@@ -83,13 +91,29 @@
     <Compile Include="CControl\CNumbricLeftRight.Designer.cs">
       <DependentUpon>CNumbricLeftRight.cs</DependentUpon>
     </Compile>
+    <Compile Include="CControl\CPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CControl\CProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CControl\CRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CControl\CRoundedControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CControl\CTextbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CControl\CTextbox.Designer.cs" />
+    <Compile Include="CControl\CTextbox.designer.cs">
+      <DependentUpon>CTextbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CControl\CToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UniversalClass\MenuColorTable.cs" />
+    <Compile Include="UniversalClass\MenuRenderer.cs" />
     <Compile Include="CFlatForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,8 +131,8 @@
     <Compile Include="Form_Alert.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SharedClass.cs" />
-    <Compile Include="SqlClass.cs" />
+    <Compile Include="UniversalClass\SharedClass.cs" />
+    <Compile Include="UniversalClass\SqlClass.cs" />
     <EmbeddedResource Include="CControl\CComboBox.resx" />
     <EmbeddedResource Include="CControl\CDragAblePanel.resx">
       <DependentUpon>CDragAblePanel.cs</DependentUpon>
@@ -294,5 +318,6 @@
   <ItemGroup>
     <None Include="Resources\maximize_button10_18px1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -131,6 +131,12 @@ namespace CustomControl
                 SendMessage(form.Handle, 0x112, 0xf012, 0);
             }
         }
+
+        public static void CenterControl(Control control, Control parent)
+        {
+            control.Left = (parent.Width - control.Width) / 2;
+            control.Top = (parent.Height - control.Height) / 2;
+        }
         #endregion
 
         #endregion

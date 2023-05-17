@@ -66,7 +66,7 @@ namespace CustomControl
             try
             {
                 RunSql(sql, sqlConnection);
-                SharedClass.Alert("Xóa Thành Công!", Form_Alert.enmType.Success);
+                CMessageBox.Show("Xóa Thành Công!", "Thông Báo!",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
