@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    class CRoundControl : Component
+    public partial class CRoundControl : Component
     {
         private Control control;
         private int radius = 8;
@@ -29,6 +29,7 @@ namespace CustomControl
                int nHeightEllipse
             );*/
 
+        [Category("Custom Control")]
         public Control TargetControl
         {
             get { return control; }

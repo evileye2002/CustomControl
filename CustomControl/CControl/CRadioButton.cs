@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public class CRadioButton : RadioButton
+    public partial class CRadioButton : RadioButton
     {
         //Fields
         private Color checkedColor = Color.MediumSlateBlue;

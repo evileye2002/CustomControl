@@ -14,7 +14,7 @@ namespace CustomControl
         None
     }
 
-    public class CProgressBar : ProgressBar
+    public partial class CProgressBar : ProgressBar
     {    //Fields
          //-> Appearance
         private Color channelColor = Color.LightSteelBlue;

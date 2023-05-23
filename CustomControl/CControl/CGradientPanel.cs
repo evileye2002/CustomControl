@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    class CGradientPanel : Panel
+    public partial class CGradientPanel : Panel
     {
         //Fields
         Color tran = Color.Transparent;
@@ -21,10 +22,11 @@ namespace CustomControl
 
         Color top = Color.White;
         Color bot = Color.White;
+        float gradientAngle = 90F;
 
-        Color borderColor = Color.Black;
         int radius = 8;
         int borderSize = 0;
+        Color borderColor = Color.Black;
 
         /*public Color ColorTopLeft
         {
@@ -63,6 +65,7 @@ namespace CustomControl
             }
         }*/
 
+        [Category("Custom Control")]
         public Color ColorTop
         {
             get { return top; }
@@ -73,6 +76,7 @@ namespace CustomControl
             }
         }
 
+        [Category("Custom Control")]
         public Color ColorBot
         {
             get { return bot; }
@@ -83,9 +87,35 @@ namespace CustomControl
             }
         }
 
+        [Category("Custom Control")]
+        public float GradientAngle
+        {
+            get { return gradientAngle; }
+            set
+            {
+                gradientAngle = value;
+                Invalidate();
+            }
+        }
+
+       /* [Category("Custom Control")]
+        public int Radius
+        {
+            get { return radius; }
+            set
+            {
+                radius = value;
+                Invalidate();
+            }
+        }*/
+
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            LinearGradientBrush lgbTB = new LinearGradientBrush(ClientRectangle, ColorTop, ColorBot, gradientAngle);
+            Graphics g = e.Graphics;
+            g.FillRectangle(lgbTB, ClientRectangle);
+
             /*LinearGradientBrush lgbT = new LinearGradientBrush(ClientRectangle, ColorTopLeft, tran, 45F);
             LinearGradientBrush lgbB = new LinearGradientBrush(ClientRectangle, ColorTopRight, tran, 135F);
             LinearGradientBrush lgbL = new LinearGradientBrush(ClientRectangle, ColorBotRight, tran, 225F);
@@ -96,11 +126,7 @@ namespace CustomControl
             g.FillRectangle(lgbL, ClientRectangle);
             g.FillRectangle(lgbR, ClientRectangle);*/
 
-            LinearGradientBrush lgbTB = new LinearGradientBrush(ClientRectangle, ColorTop, ColorBot, 90F);
-            Graphics g = e.Graphics;
-            g.FillRectangle(lgbTB, ClientRectangle);
-
-            SharedClass.RoundedControl(this, radius, e.Graphics, borderColor, borderSize);
+            //SharedClass.RoundedControl(this, radius, e.Graphics, Color.Empty, 0);
             base.OnPaint(e);
         }
     }

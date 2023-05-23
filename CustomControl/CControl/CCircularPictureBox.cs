@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace CustomControl
 {
-    class CCircularPictureBox : PictureBox
+    public partial class CCircularPictureBox : PictureBox
     {
         //Fields
         private int borderSize = 2;

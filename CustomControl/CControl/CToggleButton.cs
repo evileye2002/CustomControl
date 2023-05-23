@@ -9,9 +9,9 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
-    public class CToggleButton : CheckBox
+    public partial class CToggleButton : CheckBox
     {
         //Fields
         private Color onBackColor = Color.MediumSlateBlue;
