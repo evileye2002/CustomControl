@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gradientPanel1 = new GradientPanelDemo.GradientPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cRoundControl1 = new CustomControl.CRoundControl();
             this.SuspendLayout();
             // 
-            // gradientPanel1
+            // panel1
             // 
-            this.gradientPanel1.ColorBottom = System.Drawing.Color.Red;
-            this.gradientPanel1.ColorTop = System.Drawing.Color.Lime;
-            this.gradientPanel1.Location = new System.Drawing.Point(365, 186);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(200, 100);
-            this.gradientPanel1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Location = new System.Drawing.Point(245, 172);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 0;
+            // 
+            // cRoundControl1
+            // 
+            this.cRoundControl1.Radius = 8;
+            this.cRoundControl1.TargetControl = this;
             // 
             // CFlatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 554);
-            this.Controls.Add(this.gradientPanel1);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -53,13 +58,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CFlatForm";
             this.Load += new System.EventHandler(this.CFlatForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.CFlatForm_Paint);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private GradientPanelDemo.GradientPanel gradientPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private CRoundControl cRoundControl1;
     }
 }
 

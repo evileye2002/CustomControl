@@ -20,7 +20,7 @@ namespace CustomControl
                 pnBot.Height = borderSize;
                 pnLeft.Width = borderSize;
                 pnRight.Width = borderSize;
-                this.Invalidate();
+                Invalidate();
             }
         }
         [Category("CLinePanel Setting")]
@@ -34,7 +34,7 @@ namespace CustomControl
                 pnBot.BackColor = borderColor;
                 pnLeft.BackColor = borderColor;
                 pnRight.BackColor = borderColor;
-                this.Invalidate();
+                Invalidate();
             }
         }
         public CLinePanel()

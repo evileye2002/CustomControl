@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
-namespace CustomControl.CControl
+namespace CustomControl
 {
     public class CDropdownMenu : ContextMenuStrip
     {

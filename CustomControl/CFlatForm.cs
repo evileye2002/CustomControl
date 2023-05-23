@@ -18,5 +18,10 @@ namespace CustomControl
         {
 
         }
+
+        private void CFlatForm_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }
