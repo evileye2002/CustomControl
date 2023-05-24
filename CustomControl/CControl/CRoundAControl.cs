@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public partial class CRoundAControl : Component
+    class CRoundAControl : Component
     {
         private Control control;
         private int radius = 8;
@@ -33,7 +33,7 @@ namespace CustomControl
                     control = value;
                     control.Paint -= Control_Paint;
                 }
-                else if (value != null)
+                else if (value != null && value.GetType() != typeof(Form))
                 {
                     control = value;
                     control.Paint += Control_Paint;
@@ -56,7 +56,7 @@ namespace CustomControl
             }
         }
 
-        /*public Color BorderColor
+        public Color BorderColor
         {
             get { return borderColor; }
             set
@@ -80,11 +80,11 @@ namespace CustomControl
                     control.Paint += Control_Paint;
                 }
             }
-        }*/
+        }
 
         private void Control_Paint(object sender, PaintEventArgs e)
         {
-            SharedClass.RoundedControl(control, radius, e.Graphics, Color.Empty, 0);
+            //SharedClass.RoundedControl(control, radius, e.Graphics, borderColor, borderSize);
         }
     }
 }

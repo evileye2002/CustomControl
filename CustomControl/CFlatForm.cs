@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace CustomControl
 {
@@ -18,6 +19,11 @@ namespace CustomControl
         private void CFlatForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            //SharedClass.RoundedControl(panel1,16,e.Graphics, Color.BlueViolet, 3);
         }
     }
 }

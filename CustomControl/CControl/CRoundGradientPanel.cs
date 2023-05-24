@@ -13,7 +13,8 @@ namespace CustomControl
     public partial class CRoundGradientPanel : Panel
     {
         //Fields
-        private int radius = 8;
+        private int radius = 16;
+        private int borderSize = 0;
         private Color gradientColor = Color.RoyalBlue;
         private Color gradientColor2 = Color.HotPink;
         private float gradientAngle = 45F;
@@ -76,48 +77,69 @@ namespace CustomControl
         }
 
         //Events
+        private GraphicsPath GetFigurePath(Rectangle rect, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            float curveSize = radius * 2F;
+
+            path.StartFigure();
+            path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90);
+            path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90);
+            path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90);
+            path.CloseFigure();
+            return path;
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Graphics g = e.Graphics;
-            g.SmoothingMode = SmoothingMode.AntiAlias;
-            Rectangle rectBorder = Rectangle.Inflate(ClientRectangle, -1, -1);
+            Rectangle rectSurface = ClientRectangle;
+            Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
             int smoothSize = 2;
+            if (borderSize > 0)
+                smoothSize = borderSize;
 
             if (radius > 2) //Rounded Panel
             {
-                using (GraphicsPath pathSurface = SharedClass.GetRoundedPath(ClientRectangle, radius))
-                using (GraphicsPath pathBorder = SharedClass.GetRoundedPath(rectBorder, radius - 0))
+                //Gradient
+                LinearGradientBrush lgbTB = new LinearGradientBrush(rectSurface, gradientColor, gradientColor2, gradientAngle);
+                g.FillRectangle(lgbTB, rectSurface);
+
+                using (GraphicsPath pathSurface = SharedClass.GetRoundedPath(rectSurface, radius))
+                using (GraphicsPath pathBorder = SharedClass.GetRoundedPath(rectBorder, radius - borderSize))
                 using (Pen penSurface = new Pen(Parent.BackColor, smoothSize))
-                using (Pen penBorder = new Pen(Color.Empty, 0))
+                using (Pen penBorder = new Pen(Color.Empty, borderSize))
                 {
+                    g.SmoothingMode = SmoothingMode.AntiAlias;
                     //Panel surface
-                    this.Region = new Region(pathSurface);
+                    Region = new Region(pathSurface);
                     //Draw surface border for HD result
                     g.DrawPath(penSurface, pathSurface);
-                    //Panel border             
-                    g.DrawPath(penBorder, pathBorder);
                 }
-
-                //Gradient
-                LinearGradientBrush lgbTB = new LinearGradientBrush(ClientRectangle, gradientColor, gradientColor2, gradientAngle);
-                g.FillRectangle(lgbTB, ClientRectangle);
             }
             else //Normal Panel
             {
-                //Panel surface
-                this.Region = new Region(ClientRectangle);
-                //Panel border
-                using (Pen penBorder = new Pen(Color.Empty, 0))
-                {
-                    penBorder.Alignment = PenAlignment.Inset;
-                    g.DrawRectangle(penBorder, 0, 0, this.Width - 1, this.Height - 1);
-                }
-
                 //Gradient
-                LinearGradientBrush lgbTB = new LinearGradientBrush(ClientRectangle, gradientColor, gradientColor2, gradientAngle);
-                g.FillRectangle(lgbTB, ClientRectangle);
+                LinearGradientBrush lgbTB = new LinearGradientBrush(rectSurface, gradientColor, gradientColor2, gradientAngle);
+                g.FillRectangle(lgbTB, rectSurface);
+
+                g.SmoothingMode = SmoothingMode.None;
+                //Panel surface
+                Region = new Region(rectSurface);
             }
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
+        }
+
+        private void Container_BackColorChanged(object sender, EventArgs e)
+        {
+            Invalidate();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace CustomControl
 {
@@ -14,7 +15,7 @@ namespace CustomControl
 
         #region Biến toàn cục
         public static CultureInfo cultureVN = CultureInfo.GetCultureInfo("vn-VN");
-        public static Form form { get; set; }
+        public static Form form2 { get; set; }
 
         #endregion
 
@@ -72,27 +73,35 @@ namespace CustomControl
                 }
             }
         }
-        //Vẽ đường bo tròn cho Control (không có border)
-        public static void RoundedControl(Control c, int radius, Graphics graph, Color borderColor, int borderSize)
+
+        //Vẽ đường bo tròn cho Control
+        public static void RoundedControl(Control c, int radius, Graphics graphics, Color borderColor, int borderSize)
         {
-            using (GraphicsPath roundPath = GetRoundedPath(c.ClientRectangle, radius))
-            using (Pen penBorder = new Pen(borderColor, borderSize))
-            using (Matrix transform = new Matrix())
+            Rectangle rectSurface = c.ClientRectangle;
+            Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
+            int smoothSize = 2;
+            if (borderSize > 0)
+                smoothSize = borderSize;
+
+            if (radius > 2) //Rounded Control
             {
-                graph.SmoothingMode = SmoothingMode.AntiAlias;
-                c.Region = new Region(roundPath);
-                if (borderSize >= 1)
+                using (GraphicsPath pathSurface = GetRoundedPath(rectSurface, radius))
+                using (GraphicsPath pathBorder = GetRoundedPath(rectBorder, radius - borderSize))
+                using (Pen penSurface = new Pen(c.Parent.BackColor, smoothSize))
+                using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
-                    Rectangle rect = c.ClientRectangle;
-                    float scaleX = 1.0F - ((borderSize + 1) / rect.Width);
-                    float scaleY = 1.0F - ((borderSize + 1) / rect.Height);
-
-                    transform.Scale(scaleX, scaleY);
-                    transform.Translate(borderSize / 1.6F, borderSize / 1.6F);
-
-                    graph.Transform = transform;
-                    graph.DrawPath(penBorder, roundPath);
+                    graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    //Control surface
+                    c.Region = new Region(pathSurface);
+                    //Draw surface border for HD result
+                    graphics.DrawPath(penSurface, pathSurface);
                 }
+            }
+            else //Normal Control
+            {
+                graphics.SmoothingMode = SmoothingMode.None;
+                //Control surface
+                c.Region = new Region(rectSurface);
             }
         }
 
@@ -125,10 +134,10 @@ namespace CustomControl
 
         public static void DragEvent(object sender, MouseEventArgs e)
         {
-            if (form != null && form.WindowState != FormWindowState.Maximized)
+            if (form2 != null && form2.WindowState != FormWindowState.Maximized)
             {
                 ReleaseCapture();
-                SendMessage(form.Handle, 0x112, 0xf012, 0);
+                SendMessage(form2.Handle, 0x112, 0xf012, 0);
             }
         }
 
