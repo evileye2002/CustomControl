@@ -1,8 +1,4 @@
-﻿using CustomControl.Properties;
-using System;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Runtime.InteropServices;
+﻿using System;
 using System.Windows.Forms;
 
 namespace CustomControl
@@ -21,7 +17,7 @@ namespace CustomControl
 
         private void CFlatForm_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
     }
 }

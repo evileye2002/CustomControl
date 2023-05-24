@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public partial class CRoundControl : Component
+    public partial class CRoundAControl : Component
     {
         private Control control;
         private int radius = 8;
@@ -35,7 +28,7 @@ namespace CustomControl
             get { return control; }
             set
             {
-                if(control != null && value != control)
+                if (control != null && value != control)
                 {
                     control = value;
                     control.Paint -= Control_Paint;
@@ -46,7 +39,7 @@ namespace CustomControl
                     control.Paint += Control_Paint;
                 }
                 //control.SizeChanged += (sender, eventArgs) => control.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, control.Width, control.Height, radius, radius));
-                }
+            }
         }
 
         public int Radius

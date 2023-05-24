@@ -1,10 +1,9 @@
-﻿using System;
+﻿using CustomControl.Properties;
+using System;
 using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using CustomControl.Properties;
 
 namespace CustomControl
 {
@@ -42,9 +41,9 @@ namespace CustomControl
                 btnMinimize.BackColor = backColor;
                 btnClose.LeaveColor = backColor;
                 btnMaximize.LeaveColor = backColor;
-                btnMinimize.LeaveColor= backColor;
+                btnMinimize.LeaveColor = backColor;
 
-                if (backColor.GetBrightness() >= 0.6F) 
+                if (backColor.GetBrightness() >= 0.6F)
                 {
                     btnMinimize.Image = Resources.subtract10_20px1;
                     btnMaximize.Image = Resources.maximize_button10_20px1;

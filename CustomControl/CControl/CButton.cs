@@ -1,8 +1,8 @@
-﻿using System.Drawing.Drawing2D;
+﻿using System;
 using System.ComponentModel;
-using System.Windows.Forms;
 using System.Drawing;
-using System;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace CustomControl
 {
@@ -150,8 +150,6 @@ namespace CustomControl
         protected override void OnPaint(PaintEventArgs pevent)
         {
             base.OnPaint(pevent);
-
-
             Rectangle rectSurface = this.ClientRectangle;
             Rectangle rectBorder = Rectangle.Inflate(rectSurface, -borderSize, -borderSize);
             int smoothSize = 2;

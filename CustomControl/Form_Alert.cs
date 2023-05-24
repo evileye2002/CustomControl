@@ -32,12 +32,12 @@ namespace CustomControl
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            switch(this.action)
+            switch (this.action)
             {
                 case enmAction.wait:
                     timer1.Interval = 5000;
@@ -101,7 +101,7 @@ namespace CustomControl
             }
             this.x = Screen.PrimaryScreen.WorkingArea.Width - base.Width - 5;
 
-            switch(type)
+            switch (type)
             {
                 case enmType.Success:
                     this.pictureBox1.Image = Resources.success;

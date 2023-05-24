@@ -1,6 +1,6 @@
-﻿using System.Data.SqlClient;
+﻿using System;
 using System.Data;
-using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace CustomControl
@@ -66,7 +66,7 @@ namespace CustomControl
             try
             {
                 RunSql(sql, sqlConnection);
-                CMessageBox.Show("Xóa Thành Công!", "Thông Báo!",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CMessageBox.Show("Xóa Thành Công!", "Thông Báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

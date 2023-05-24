@@ -1,8 +1,8 @@
-﻿using System;
+﻿using CustomControl.Properties;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using CustomControl.Properties;
 
 namespace CustomControl
 {

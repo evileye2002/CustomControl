@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CustomControl.Properties;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using CustomControl.Properties;
 namespace CustomControl
 {
     /// <summary>
@@ -67,7 +66,7 @@ namespace CustomControl
             {
                 subButtonFillColor = value;
                 foreach (CButton btn in Controls)
-                    if(btn != cButtonMain)
+                    if (btn != cButtonMain)
                         btn.BackgroundColor = subButtonFillColor;
             }
         }
@@ -165,7 +164,7 @@ namespace CustomControl
             foreach (CButton btn in Controls)
             {
                 btn.Size = new Size(Width, 40);
-                
+
             }
         }
 
@@ -180,12 +179,12 @@ namespace CustomControl
                     ActivateButton(sender);
                     Height = GetHeight(subButtonQuantity);
                 }
-                else if(Height == GetHeight(subButtonQuantity) && subButtonQuantity > 0)
+                else if (Height == GetHeight(subButtonQuantity) && subButtonQuantity > 0)
                 {
                     DisableButton();
                     Height = cButtonHeight;
                 }
-                else if(!isShow)
+                else if (!isShow)
                     ActivateButton(sender);
                 else
                     DisableButton();
@@ -275,7 +274,7 @@ namespace CustomControl
         public void SetSubButtonClick(string buttonName, EventHandler clickEvent)
         {
             foreach (CButton btn in Controls)
-                if(btn.Name == buttonName)
+                if (btn.Name == buttonName)
                     btn.Click += clickEvent;
         }
         public void SetSubButtonText(string buttonName, string text)

@@ -28,7 +28,7 @@ namespace CustomControl
             set
             {
                 skinColor = value;
-                if(this.ShowUpDown == false)
+                if (this.ShowUpDown == false)
                 {
                     if (skinColor.GetBrightness() >= 0.6F)
                         calendarIcon = Properties.Resources.schedule_16px1;

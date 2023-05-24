@@ -13,7 +13,7 @@ namespace CustomControl
         #region NotFix
 
         #region Biến toàn cục
-        public static CultureInfo cultureVN =  CultureInfo.GetCultureInfo("vn-VN");
+        public static CultureInfo cultureVN = CultureInfo.GetCultureInfo("vn-VN");
         public static Form form { get; set; }
 
         #endregion

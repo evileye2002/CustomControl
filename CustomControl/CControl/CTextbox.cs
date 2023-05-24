@@ -33,50 +33,50 @@ namespace CustomControl
         }
 
         #region -> Properties
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public Color BorderColor
         {
             get { return borderColor; }
             set
             {
                 borderColor = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public Color BorderFocusColor
         {
             get { return borderFocusColor; }
             set { borderFocusColor = value; }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public int BorderSize
         {
             get { return borderSize; }
             set
             {
-                if (value >= 1)
+                if (value >= 1 && value < borderRadius)
                 {
                     borderSize = value;
-                    this.Invalidate();
+                    Invalidate();
                 }
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public bool UnderlinedStyle
         {
             get { return underlinedStyle; }
             set
             {
                 underlinedStyle = value;
-                this.Invalidate();
+                Invalidate();
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public bool PasswordChar
         {
             get { return isPasswordChar; }
@@ -88,14 +88,14 @@ namespace CustomControl
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public bool Multiline
         {
             get { return textBox1.Multiline; }
             set { textBox1.Multiline = value; }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public override Color BackColor
         {
             get { return base.BackColor; }
@@ -106,7 +106,7 @@ namespace CustomControl
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public override Color ForeColor
         {
             get { return base.ForeColor; }
@@ -117,7 +117,7 @@ namespace CustomControl
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public override Font Font
         {
             get { return base.Font; }
@@ -125,18 +125,20 @@ namespace CustomControl
             {
                 base.Font = value;
                 textBox1.Font = value;
-                if (this.DesignMode)
+                if (DesignMode)
                     UpdateControlHeight();
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public string Texts
         {
             get
             {
-                if (isPlaceholder) return "";
-                else return textBox1.Text;
+                if (isPlaceholder)
+                    return "";
+                else
+                    return textBox1.Text;
             }
             set
             {
@@ -145,21 +147,21 @@ namespace CustomControl
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public int BorderRadius
         {
             get { return borderRadius; }
             set
             {
-                if (value >= 0)
+                if (value == 0 || value > borderSize)
                 {
                     borderRadius = value;
-                    this.Invalidate();//Redraw control
+                    Invalidate();//Redraw control
                 }
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public Color PlaceholderColor
         {
             get { return placeholderColor; }
@@ -171,7 +173,7 @@ namespace CustomControl
             }
         }
 
-        [Category("CTextBox Setting")]
+        [Category("Custom Control")]
         public string PlaceholderText
         {
             get { return placeholderText; }
@@ -207,20 +209,19 @@ namespace CustomControl
             if (borderRadius > 1)//Rounded TextBox
             {
                 //-Fields
-                var rectBorderSmooth = this.ClientRectangle;
-                var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
+                var rectBorder = Rectangle.Inflate(ClientRectangle, -borderSize, -borderSize);
                 int smoothSize = borderSize > 0 ? borderSize : 1;
 
-                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
+                using (GraphicsPath pathBorderSmooth = GetFigurePath(ClientRectangle, borderRadius))
                 using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
-                using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
+                using (Pen penBorderSmooth = new Pen(Parent.BackColor, smoothSize))
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     //-Drawing
-                    this.Region = new Region(pathBorderSmooth);//Set the rounded region of UserControl
+                    Region = new Region(pathBorderSmooth);//Set the rounded region of UserControl
                     if (borderRadius > 15) SetTextBoxRoundedRegion();//Set the rounded region of TextBox component
                     graph.SmoothingMode = SmoothingMode.AntiAlias;
-                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+                    penBorder.Alignment = PenAlignment.Center;
                     if (isFocused) penBorder.Color = borderFocusColor;
 
                     if (underlinedStyle) //Line Style
@@ -246,7 +247,7 @@ namespace CustomControl
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
                     this.Region = new Region(this.ClientRectangle);
-                    penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
+                    penBorder.Alignment = PenAlignment.Inset;
                     if (isFocused) penBorder.Color = borderFocusColor;
 
                     if (underlinedStyle) //Line Style

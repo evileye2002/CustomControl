@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CustomControl
@@ -76,7 +71,7 @@ namespace CustomControl
             set
             {
                 numbericValue = value;
-                if(numbericValue >= minValue)
+                if (numbericValue >= minValue)
                 {
                     if (numbericValue >= 0 && numbericValue < 10)
                         cTextbox1.Texts = "0" + numbericValue.ToString();
@@ -120,7 +115,7 @@ namespace CustomControl
 
         private void ThisMouseWheelEvent(object sender, MouseEventArgs e)
         {
-            if(e.Delta > 0)
+            if (e.Delta > 0)
             {
                 NumbericValue += 1;
             }
@@ -138,16 +133,16 @@ namespace CustomControl
 
         private void cButton1_Click(object sender, EventArgs e)
         {
-            if(numbericValue > minValue)
+            if (numbericValue > minValue)
                 NumbericValue -= 1;
         }
 
         private void cTextbox1__TextChanged(object sender, EventArgs e)
         {
-            if(cTextbox1.Texts != string.Empty)
+            if (cTextbox1.Texts != string.Empty)
             {
                 NumbericValue = Int32.Parse(cTextbox1.Texts);
-                if(_ValueChange != null)
+                if (_ValueChange != null)
                     _ValueChange.Invoke(sender, e);
             }
         }
