@@ -13,17 +13,14 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
-
+            //cTextbox1.PlaceholderText = "123";
+            //cTextbox1.Texts = "567";
+            //sTextBox1.Texts = "123";
         }
 
         private void CFlatForm_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            //SharedClass.RoundedControl(panel1,16,e.Graphics, Color.BlueViolet, 3);
         }
     }
 }

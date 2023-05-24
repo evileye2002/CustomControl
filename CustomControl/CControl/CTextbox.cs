@@ -30,6 +30,7 @@ namespace CustomControl
         {
             InitializeComponent();
             DoubleBuffered = true;
+            BackColor = Color.White;
         }
 
         #region -> Properties
@@ -143,6 +144,14 @@ namespace CustomControl
             set
             {
                 textBox1.Text = value;
+                if(textBox1.Text != placeholderText)
+                {
+                    isPlaceholder = false;
+                }
+                else
+                {
+                    isPlaceholder = true;
+                }
                 SetPlaceholder();
             }
         }
@@ -169,7 +178,7 @@ namespace CustomControl
             {
                 placeholderColor = value;
                 if (isPlaceholder)
-                    textBox1.ForeColor = value;
+                    textBox1.ForeColor = placeholderColor;
             }
         }
 
@@ -260,23 +269,34 @@ namespace CustomControl
         #endregion
 
         #region -> Private methods
-        private void SetPlaceholder()
+        private void SetPlaceholder() //HasFix
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) && placeholderText != "")
+            if (!isPlaceholder)
             {
-                isPlaceholder = true;
+                textBox1.ForeColor = ForeColor;
+                if (isPasswordChar)
+                    textBox1.UseSystemPasswordChar = true;
+            }
+            else if (isPlaceholder)
+            {
                 textBox1.Text = placeholderText;
                 textBox1.ForeColor = placeholderColor;
                 if (isPasswordChar)
-                    textBox1.UseSystemPasswordChar = false;
+                    textBox1.UseSystemPasswordChar = true;
             }
         }
-        private void RemovePlaceholder()
+        private void RemovePlaceholder() //HasFix
         {
-            if (isPlaceholder && placeholderText != "")
+            if (isPlaceholder && placeholderText != "" && placeholderText == textBox1.Text)
             {
                 isPlaceholder = false;
                 textBox1.Text = "";
+                textBox1.ForeColor = this.ForeColor;
+                if (isPasswordChar)
+                    textBox1.UseSystemPasswordChar = true;
+            }
+            else if (placeholderText != textBox1.Text)
+            {
                 textBox1.ForeColor = this.ForeColor;
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = true;
