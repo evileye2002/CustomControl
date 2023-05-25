@@ -73,7 +73,7 @@
     <Compile Include="CControl\CDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CControl\CGradientBorderRoundPanel.cs">
+    <Compile Include="Trash\CGradientBorderRoundPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CControl\CLinePanel.cs">
@@ -103,10 +103,13 @@
     <Compile Include="CControl\CRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CControl\CRoundAControl.cs">
+    <Compile Include="Trash\CRoundAControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CControl\CRoundGradientPanel.cs">
+    <Compile Include="Trash\CRoundGradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CControl\CGradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CControl\CTextbox.cs">

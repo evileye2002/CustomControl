@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public partial class CGradientBorderRoundPanel : Panel
+    class CGradientBorderRoundPanel : Panel
     {
         //Fields
         private int borderRadius = 14;
@@ -152,7 +152,6 @@ namespace CustomControl
                     g.DrawPath(penSurface, pathSurface);
                     penBorder.DashStyle = borderLineStyle;
                     penBorder.DashCap = borderCapStyle;
-
                     //Panel border                    
                     if (borderSize >= 1)
                         //Draw control border
@@ -175,7 +174,18 @@ namespace CustomControl
                     }
                 }
             }
-            
+
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
+        }
+
+        private void Container_BackColorChanged(object sender, EventArgs e)
+        {
+            Invalidate();
         }
     }
 }
