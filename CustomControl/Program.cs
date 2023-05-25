@@ -13,7 +13,7 @@ namespace CustomControl
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CFlatForm());
+            Application.Run(new Form_WatchImage());
         }
     }
 }

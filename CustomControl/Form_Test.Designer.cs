@@ -1,6 +1,6 @@
 ﻿namespace CustomControl
 {
-    partial class CFlatForm
+    partial class Form_Test
     {
         /// <summary>
         /// Required designer variable.

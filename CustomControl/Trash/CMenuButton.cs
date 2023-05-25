@@ -11,7 +11,7 @@ namespace CustomControl
     ///             button.Click += <ClickEvent>;
     /// to add "Click Event" or every other Event
     /// </summary>
-    public partial class CMenuButton : UserControl
+    partial class CMenuButton : UserControl
     {
         #region Fields
         private int subButtonQuantity = 3;

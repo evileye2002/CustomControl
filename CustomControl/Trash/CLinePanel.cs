@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public partial class CLinePanel : UserControl
+    partial class CLinePanel : UserControl
     {
         private int borderSize = 0;
         private Color borderColor = Color.IndianRed;

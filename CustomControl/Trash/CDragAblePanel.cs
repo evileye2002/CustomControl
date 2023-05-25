@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace CustomControl
 {
-    public partial class CDragAblePanel : UserControl
+    partial class CDragAblePanel : UserControl
     {
         private Form form;
         private Color backColor = Color.LightSlateGray;

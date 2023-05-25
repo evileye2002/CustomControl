@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7C8B039A-BAAD-4C41-A8AD-17623A56F983}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>CustomControl</RootNamespace>
     <AssemblyName>CustomControl</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
@@ -36,9 +36,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SipaaFramework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SipaaFramework.1.1.0\lib\net46\SipaaFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,28 +61,40 @@
     <Compile Include="CControl\CDateTimePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CControl\CDragAblePanel.cs">
+    <Compile Include="Temp\Form_WatchImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temp\Form_WatchImage.Designer.cs">
+      <DependentUpon>Form_WatchImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trash\CDragAblePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CControl\CDragAblePanel.Designer.cs">
+    <Compile Include="Trash\CDragAblePanel.Designer.cs">
       <DependentUpon>CDragAblePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="CControl\CDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Example\RoundFormExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Example\RoundFormExample.Designer.cs">
+      <DependentUpon>RoundFormExample.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trash\CGradientBorderRoundPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CControl\CLinePanel.cs">
+    <Compile Include="Trash\CLinePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CControl\CLinePanel.Designer.cs">
+    <Compile Include="Trash\CLinePanel.Designer.cs">
       <DependentUpon>CLinePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="CControl\CMenuButton.cs">
+    <Compile Include="Trash\CMenuButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CControl\CMenuButton.Designer.cs">
+    <Compile Include="Trash\CMenuButton.Designer.cs">
       <DependentUpon>CMenuButton.cs</DependentUpon>
     </Compile>
     <Compile Include="CControl\CNumbricLeftRight.cs">
@@ -135,24 +144,28 @@
     </Compile>
     <Compile Include="UniversalClass\MenuColorTable.cs" />
     <Compile Include="UniversalClass\MenuRenderer.cs" />
-    <Compile Include="CFlatForm.cs">
+    <Compile Include="Form_Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CFlatForm.Designer.cs">
-      <DependentUpon>CFlatForm.cs</DependentUpon>
+    <Compile Include="Form_Test.Designer.cs">
+      <DependentUpon>Form_Test.cs</DependentUpon>
     </Compile>
-    <Compile Include="CMessageBox.cs" />
+    <Compile Include="UniversalClass\CMessageBox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniversalClass\RoundAForm.cs" />
     <Compile Include="UniversalClass\SharedClass.cs" />
     <Compile Include="UniversalClass\SqlClass.cs" />
-    <EmbeddedResource Include="CControl\CDragAblePanel.resx">
+    <EmbeddedResource Include="Temp\Form_WatchImage.resx">
+      <DependentUpon>Form_WatchImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trash\CDragAblePanel.resx">
       <DependentUpon>CDragAblePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CControl\CLinePanel.resx">
+    <EmbeddedResource Include="Trash\CLinePanel.resx">
       <DependentUpon>CLinePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CControl\CMenuButton.resx">
+    <EmbeddedResource Include="Trash\CMenuButton.resx">
       <DependentUpon>CMenuButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CControl\CNumbricLeftRight.resx">
@@ -161,8 +174,11 @@
     <EmbeddedResource Include="CControl\CTextbox.resx">
       <DependentUpon>CTextbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CFlatForm.resx">
-      <DependentUpon>CFlatForm.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Test.resx">
+      <DependentUpon>Form_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Example\RoundFormExample.resx">
+      <DependentUpon>RoundFormExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>
@@ -180,7 +196,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

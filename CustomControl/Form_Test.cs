@@ -4,9 +4,9 @@ using System.Drawing;
 
 namespace CustomControl
 {
-    public partial class CFlatForm : Form
+    public partial class Form_Test : Form
     {
-        public CFlatForm()
+        public Form_Test()
         {
             InitializeComponent();
         }
