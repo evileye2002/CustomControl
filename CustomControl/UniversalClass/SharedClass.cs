@@ -154,7 +154,7 @@ namespace CustomControl
         /// </summary>
         /// <param name="root">Control want to get all child</param>
         /// <returns></returns>
-        private IEnumerable<Control> GetAllControls(Control root)
+        public static IEnumerable<Control> GetAllControls(Control root)
         {
             var queue = new Queue<Control>();
 
