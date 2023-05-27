@@ -22,8 +22,6 @@ namespace CustomControl
         private DashStyle borderLineStyle = DashStyle.Solid;
         private DashCap borderCapStyle = DashCap.Flat;
 
-        private bool hasGradientBorder = false;
-
         //Properties - Fill
         [Category("Custom Control")]
         public int Radius
@@ -192,10 +190,9 @@ namespace CustomControl
                 //Panel border
                 if (borderSize >= 1)
                 {
-                    using (Pen penBorder = new Pen(gradientColor, borderSize))
+                    using (var borderGColor = new LinearGradientBrush(rectBorder, gradientColor, gradientColor2, gradientAngle))
+                    using (Pen penBorder = new Pen(borderGColor, borderSize))
                     {
-                        penBorder.DashStyle = borderLineStyle;
-                        penBorder.DashCap = borderCapStyle;
                         penBorder.Alignment = PenAlignment.Inset;
 
                         g.DrawRectangle(penBorder, 0, 0, this.Width - 1, this.Height - 1);

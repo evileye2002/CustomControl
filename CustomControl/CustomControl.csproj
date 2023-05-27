@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7C8B039A-BAAD-4C41-A8AD-17623A56F983}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>CustomControl</RootNamespace>
     <AssemblyName>CustomControl</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
@@ -38,6 +38,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,12 +64,7 @@
     <Compile Include="CControl\CDateTimePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Temp\Form_WatchImage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Temp\Form_WatchImage.Designer.cs">
-      <DependentUpon>Form_WatchImage.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Temp\CShadowPanel.cs" />
     <Compile Include="Trash\CDragAblePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,11 +74,11 @@
     <Compile Include="CControl\CDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Example\RoundFormExample.cs">
+    <Compile Include="Example\Form_RoundExample.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Example\RoundFormExample.Designer.cs">
-      <DependentUpon>RoundFormExample.cs</DependentUpon>
+    <Compile Include="Example\Form_RoundExample.Designer.cs">
+      <DependentUpon>Form_RoundExample.cs</DependentUpon>
     </Compile>
     <Compile Include="Trash\CGradientBorderRoundPanel.cs">
       <SubType>Component</SubType>
@@ -156,9 +154,6 @@
     <Compile Include="UniversalClass\RoundAForm.cs" />
     <Compile Include="UniversalClass\SharedClass.cs" />
     <Compile Include="UniversalClass\SqlClass.cs" />
-    <EmbeddedResource Include="Temp\Form_WatchImage.resx">
-      <DependentUpon>Form_WatchImage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Trash\CDragAblePanel.resx">
       <DependentUpon>CDragAblePanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,8 +172,8 @@
     <EmbeddedResource Include="Form_Test.resx">
       <DependentUpon>Form_Test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Example\RoundFormExample.resx">
-      <DependentUpon>RoundFormExample.cs</DependentUpon>
+    <EmbeddedResource Include="Example\Form_RoundExample.resx">
+      <DependentUpon>Form_RoundExample.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMessageBox.resx">
       <DependentUpon>FormMessageBox.cs</DependentUpon>

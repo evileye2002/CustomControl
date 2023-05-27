@@ -52,12 +52,19 @@ namespace CustomControl
         /// <param name="borderColor"></param>
         public static void ControlRegionAndBorder(Control control, float radius, Graphics graph, Color borderColor)
         {
-            using (GraphicsPath roundPath = SharedClass.GetRoundedPath(control.ClientRectangle, radius))
-            using (Pen penBorder = new Pen(borderColor, 1))
+            if(radius > 0)
             {
-                graph.SmoothingMode = SmoothingMode.AntiAlias;
-                control.Region = new Region(roundPath);
-                graph.DrawPath(penBorder, roundPath);
+                using (GraphicsPath roundPath = SharedClass.GetRoundedPath(control.ClientRectangle, radius))
+                using (Pen penBorder = new Pen(borderColor, 1))
+                {
+                    graph.SmoothingMode = SmoothingMode.AntiAlias;
+                    control.Region = new Region(roundPath);
+                    graph.DrawPath(penBorder, roundPath);
+                }
+            }
+            else
+            {
+                control.Region = new Region(control.ClientRectangle);
             }
         }
 
@@ -128,22 +135,29 @@ namespace CustomControl
             //-> SMOOTH OUTER BORDER
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             Rectangle rectForm = form.ClientRectangle;
-            int mWidht = rectForm.Width / 2;
-            int mHeight = rectForm.Height / 2;
-            var fbColors = RoundAForm.GetFormBoundsColors(form);
-            //Top Left
-            RoundAForm.DrawPath(rectForm, e.Graphics, fbColors.TopLeftColor, borderRadius);
-            //Top Right
-            Rectangle rectTopRight = new Rectangle(mWidht, rectForm.Y, mWidht, mHeight);
-            RoundAForm.DrawPath(rectTopRight, e.Graphics, fbColors.TopRightColor, borderRadius);
-            //Bottom Left
-            Rectangle rectBottomLeft = new Rectangle(rectForm.X, rectForm.X + mHeight, mWidht, mHeight);
-            RoundAForm.DrawPath(rectBottomLeft, e.Graphics, fbColors.BottomLeftColor, borderRadius);
-            //Bottom Right
-            Rectangle rectBottomRight = new Rectangle(mWidht, rectForm.Y + mHeight, mWidht, mHeight);
-            RoundAForm.DrawPath(rectBottomRight, e.Graphics, fbColors.BottomRightColor, borderRadius);
-            //-> SET ROUNDED REGION AND BORDER
-            RoundAForm.FormRegionAndBorder(form, borderRadius, e.Graphics, borderColor, borderSize);
+            if(borderRadius > 0)
+            {
+                int mWidht = rectForm.Width / 2;
+                int mHeight = rectForm.Height / 2;
+                var fbColors = GetFormBoundsColors(form);
+                //Top Left
+                DrawPath(rectForm, e.Graphics, fbColors.TopLeftColor, borderRadius);
+                //Top Right
+                Rectangle rectTopRight = new Rectangle(mWidht, rectForm.Y, mWidht, mHeight);
+                DrawPath(rectTopRight, e.Graphics, fbColors.TopRightColor, borderRadius);
+                //Bottom Left
+                Rectangle rectBottomLeft = new Rectangle(rectForm.X, rectForm.X + mHeight, mWidht, mHeight);
+                DrawPath(rectBottomLeft, e.Graphics, fbColors.BottomLeftColor, borderRadius);
+                //Bottom Right
+                Rectangle rectBottomRight = new Rectangle(mWidht, rectForm.Y + mHeight, mWidht, mHeight);
+                DrawPath(rectBottomRight, e.Graphics, fbColors.BottomRightColor, borderRadius);
+                //-> SET ROUNDED REGION AND BORDER
+                FormRegionAndBorder(form, borderRadius, e.Graphics, borderColor, borderSize);
+            }
+            else
+            {
+                form.Region = new Region(rectForm);
+            }
         }
     }
 
