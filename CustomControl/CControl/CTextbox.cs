@@ -144,14 +144,10 @@ namespace CustomControl
             set
             {
                 textBox1.Text = value;
-                if(textBox1.Text != placeholderText)
-                {
+                if (placeholderText == "" || textBox1.Text != "")
                     isPlaceholder = false;
-                }
                 else
-                {
                     isPlaceholder = true;
-                }
                 SetPlaceholder();
             }
         }
@@ -189,7 +185,10 @@ namespace CustomControl
             set
             {
                 placeholderText = value;
-                textBox1.Text = "";
+                if (placeholderText == "" || textBox1.Text != "")
+                    isPlaceholder = false;
+                else
+                    isPlaceholder = true;
                 SetPlaceholder();
             }
         }
@@ -277,7 +276,7 @@ namespace CustomControl
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = true;
             }
-            else if (isPlaceholder)
+            else
             {
                 textBox1.Text = placeholderText;
                 textBox1.ForeColor = placeholderColor;
@@ -287,7 +286,7 @@ namespace CustomControl
         }
         private void RemovePlaceholder() //HasFix
         {
-            if (isPlaceholder && placeholderText != "" && placeholderText == textBox1.Text)
+            if (isPlaceholder)
             {
                 isPlaceholder = false;
                 textBox1.Text = "";
@@ -295,7 +294,7 @@ namespace CustomControl
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = true;
             }
-            else if (placeholderText != textBox1.Text)
+            else
             {
                 textBox1.ForeColor = this.ForeColor;
                 if (isPasswordChar)
@@ -377,6 +376,10 @@ namespace CustomControl
         {
             isFocused = false;
             this.Invalidate();
+            if (placeholderText == "" || textBox1.Text != "")
+                isPlaceholder = false;
+            else
+                isPlaceholder = true;
             SetPlaceholder();
         }
         ///::::+

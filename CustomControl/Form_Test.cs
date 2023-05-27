@@ -13,9 +13,7 @@ namespace CustomControl
 
         private void CFlatForm_Load(object sender, EventArgs e)
         {
-            //cTextbox1.PlaceholderText = "123";
-            //cTextbox1.Texts = "567";
-            //sTextBox1.Texts = "123";
+            //cTextbox2.Texts = "333";
         }
 
         private void CFlatForm_Paint(object sender, PaintEventArgs e)

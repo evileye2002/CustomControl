@@ -36,6 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CustomControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Debug\CustomControl.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -65,12 +69,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Temp\CShadowPanel.cs" />
-    <Compile Include="Trash\CDragAblePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Trash\CDragAblePanel.Designer.cs">
-      <DependentUpon>CDragAblePanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="CControl\CDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -79,21 +77,6 @@
     </Compile>
     <Compile Include="Example\Form_RoundExample.Designer.cs">
       <DependentUpon>Form_RoundExample.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Trash\CGradientBorderRoundPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Trash\CLinePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Trash\CLinePanel.Designer.cs">
-      <DependentUpon>CLinePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Trash\CMenuButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Trash\CMenuButton.Designer.cs">
-      <DependentUpon>CMenuButton.cs</DependentUpon>
     </Compile>
     <Compile Include="CControl\CNumbricLeftRight.cs">
       <SubType>UserControl</SubType>
@@ -108,12 +91,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CControl\CRadioButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Trash\CRoundAControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Trash\CRoundGradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CControl\CGradientPanel.cs">
@@ -154,15 +131,6 @@
     <Compile Include="UniversalClass\RoundAForm.cs" />
     <Compile Include="UniversalClass\SharedClass.cs" />
     <Compile Include="UniversalClass\SqlClass.cs" />
-    <EmbeddedResource Include="Trash\CDragAblePanel.resx">
-      <DependentUpon>CDragAblePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Trash\CLinePanel.resx">
-      <DependentUpon>CLinePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Trash\CMenuButton.resx">
-      <DependentUpon>CMenuButton.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CControl\CNumbricLeftRight.resx">
       <DependentUpon>CNumbricLeftRight.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +313,8 @@
   <ItemGroup>
     <None Include="Resources\maximize_button10_18px1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Trash\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
