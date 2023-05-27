@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cButton2 = new CustomControl.CButton();
-            this.cButton1 = new CustomControl.CButton();
-            this.cTextbox1 = new CustomControl.CTextbox();
+            this.cButton2 = new CButton();
+            this.cButton1 = new CButton();
+            this.cTextbox1 = new CTextbox();
             this.SuspendLayout();
             // 
             // cButton2
