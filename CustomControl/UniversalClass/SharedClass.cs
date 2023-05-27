@@ -113,7 +113,7 @@ namespace CustomControl
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
-        public static void OpenChildForm(Form childForm, object btnSender, Form activateForm, Panel pnMain)
+        public static Form OpenChildForm(Form childForm, Form activateForm, Panel pnMain)
         {
             if (activateForm != null)
             {
@@ -127,6 +127,7 @@ namespace CustomControl
             pnMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+            return activateForm;
         }
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
