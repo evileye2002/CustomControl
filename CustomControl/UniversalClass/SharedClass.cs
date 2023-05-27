@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Globalization;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -145,6 +147,30 @@ namespace CustomControl
         {
             control.Left = (parent.Width - control.Width) / 2;
             control.Top = (parent.Height - control.Height) / 2;
+        }
+
+        /// <summary>
+        /// Get all child controls of a control
+        /// </summary>
+        /// <param name="root">Control want to get all child</param>
+        /// <returns></returns>
+        private IEnumerable<Control> GetAllControls(Control root)
+        {
+            var queue = new Queue<Control>();
+
+            queue.Enqueue(root);
+
+            do
+            {
+                var control = queue.Dequeue();
+
+                yield return control;
+
+                foreach (var child in control.Controls.OfType<Control>())
+                    queue.Enqueue(child);
+
+            } while (queue.Count > 0);
+
         }
         #endregion
 
