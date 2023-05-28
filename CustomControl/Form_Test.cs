@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace CustomControl
 {
@@ -19,6 +20,11 @@ namespace CustomControl
         private void CFlatForm_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cComboBox1_Paint(object sender, PaintEventArgs e)
+        {
+            //SharedClass.RoundedControl(cComboBox1, 16, e.Graphics, Color.Empty, 0);
         }
     }
 }

@@ -18,14 +18,14 @@ namespace CustomControl
         Color onLeaveColor;
 
         [Category("Custom Control")]
-        public Color OnHoverColor
+        public Color OnHover_Color
         {
             get { return onHoverColor; }
             set { onHoverColor = value; }
         }
 
         [Category("Custom Control")]
-        public Color OnLeaveColor
+        public Color OnLeave_Color
         {
             get { return onLeaveColor; }
             set
